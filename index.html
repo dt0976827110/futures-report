@@ -253,42 +253,39 @@ function render(d) {
 // ── 1. Futures ──────────────────────────────────────────
 function renderFutures(data) {
   const el = document.getElementById('s-futures');
+  const tvSymMap = { YM1:'CBOT_MINI:YM1!', NQ1:'CME_MINI:NQ1!', TXF1:'TWSE:TAIEX' };
   Object.entries(data).forEach(([sym, f]) => {
-    const up = (f.change_points || f.change_percent || 0) >= 0;
-    const clr = up ? 'var(--green)' : 'var(--red)';
-    const sign = up ? '+' : '';
-    const trendSvg = up
-      ? `<svg style="width:20px;height:20px;color:var(--green)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`
-      : `<svg style="width:20px;height:20px;color:var(--red)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>`;
+    const tvSym = tvSymMap[sym] || (sym + '!');
     const div = document.createElement('div');
     div.className = 'card';
     div.innerHTML = `
-      <div class="card-hd" style="padding-bottom:12px">
+      <div class="card-hd" style="padding-bottom:8px">
         <div class="f-head">
           <div><div class="f-sym">${sym}!</div><div class="f-name">${f.name}</div></div>
-          ${trendSvg}
         </div>
       </div>
       <div class="card-bd" style="padding-top:0">
-        <p class="f-price">${Number(f.current_price).toLocaleString()}</p>
-        <p class="f-cur">${f.currency}</p>
-        <div class="f-chgrow">
-          <div>
-            <p class="f-chg" style="color:${clr}">${sign}${Number(f.change_points).toFixed(2)}</p>
-            <p class="f-pct" style="color:${clr}">${sign}${Number(f.change_percent).toFixed(2)}%</p>
-          </div>
-          <div style="flex:1">
-            <p class="f-vl">成交量</p>
-            <p class="f-vv">${f.volume}</p>
-          </div>
+        <div class="tradingview-widget-container" id="tv-${sym}">
+          <div class="tradingview-widget-container__widget"></div>
         </div>
-        <div class="f-div">
+        <div class="f-div" style="margin-top:8px">
           <div class="f-sr"><span class="f-sl">支撐</span><span class="f-sv">${Number(f.support).toLocaleString()}</span></div>
           <div class="f-sr"><span class="f-sl">阻力</span><span class="f-sv">${Number(f.resistance).toLocaleString()}</span></div>
         </div>
-        
       </div>`;
     el.appendChild(div);
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js';
+    script.async = true;
+    script.textContent = JSON.stringify({
+      symbol: tvSym,
+      width: '100%',
+      locale: 'zh_TW',
+      colorTheme: 'dark',
+      isTransparent: true
+    });
+    div.querySelector('.tradingview-widget-container').appendChild(script);
   });
 }
 
