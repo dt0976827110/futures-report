@@ -256,6 +256,7 @@ function renderFutures(data) {
   const tvSymMap = { YM1:'CBOT_MINI:YM1!', NQ1:'CME_MINI:NQ1!', TXF1:'TWSE:TAIEX' };
   Object.entries(data).forEach(([sym, f]) => {
     const tvSym = tvSymMap[sym] || (sym + '!');
+    const widgetId = 'tv-' + sym + '-' + Date.now();
     const div = document.createElement('div');
     div.className = 'card';
     div.innerHTML = `
@@ -265,27 +266,39 @@ function renderFutures(data) {
         </div>
       </div>
       <div class="card-bd" style="padding-top:0">
-        <div class="tradingview-widget-container" id="tv-${sym}">
-          <div class="tradingview-widget-container__widget"></div>
-        </div>
+        <div id="${widgetId}" style="height:200px;overflow:hidden;border-radius:4px"></div>
         <div class="f-div" style="margin-top:8px">
           <div class="f-sr"><span class="f-sl">支撐</span><span class="f-sv">${Number(f.support).toLocaleString()}</span></div>
           <div class="f-sr"><span class="f-sl">阻力</span><span class="f-sv">${Number(f.resistance).toLocaleString()}</span></div>
         </div>
       </div>`;
     el.appendChild(div);
+
+    const container = document.getElementById(widgetId);
+    const wrapper = document.createElement('div');
+    wrapper.className = 'tradingview-widget-container';
+    wrapper.style.height = '200px';
+    const inner = document.createElement('div');
+    inner.className = 'tradingview-widget-container__widget';
+    inner.style.height = '200px';
+    wrapper.appendChild(inner);
+    container.appendChild(wrapper);
+
     const script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js';
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
     script.async = true;
     script.textContent = JSON.stringify({
       symbol: tvSym,
       width: '100%',
+      height: 200,
       locale: 'zh_TW',
       colorTheme: 'dark',
-      isTransparent: true
+      isTransparent: true,
+      autosize: true,
+      largeChartUrl: ''
     });
-    div.querySelector('.tradingview-widget-container').appendChild(script);
+    wrapper.appendChild(script);
   });
 }
 
