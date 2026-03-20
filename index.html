@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>國際金融期貨日報</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg-950:#020617;--bg-900:#0f172a;--s800:#1e293b;--s700:#334155;
+  --s600:#475569;--s500:#64748b;--s400:#94a3b8;--s300:#cbd5e1;--white:#f8fafc;
+  --green:#22c55e;--red:#ef4444;--yellow:#eab308;--blue:#3b82f6;
+  --mono:'JetBrains Mono',monospace;
+  --sans:'Noto Sans TC',sans-serif;
+  --r:0.65rem;
+}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{background:linear-gradient(to bottom right,var(--bg-950),var(--bg-900),var(--bg-950));min-height:100vh;color:var(--s300);font-family:var(--sans);line-height:1.5}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg-950)}::-webkit-scrollbar-thumb{background:var(--s700);border-radius:3px}
+
+/* ── HEADER ── */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--s800);padding:24px 0}
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 16px}
+@media(min-width:640px){.container{padding:0 24px}}
+@media(min-width:1024px){.container{padding:0 32px}}
+.hdr-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.hdr-left h1{font-size:clamp(20px,4vw,30px);font-weight:700;color:var(--white);margin-bottom:8px}
+.hdr-sub{color:var(--s400);font-size:14px}
+.hdr-right{text-align:right}
+.hdr-lbl{font-size:13px;color:var(--s500)}
+.hdr-val{font-family:var(--mono);font-size:18px;color:var(--s300);margin-top:2px}
+
+/* ── MAIN ── */
+.main{padding:32px 0 64px}
+.section{margin-bottom:32px}
+.sec-h2{font-size:clamp(18px,3vw,24px);font-weight:700;color:var(--white);margin-bottom:24px;display:flex;align-items:center;gap:8px}
+.ic-blue{color:var(--blue)}
+.ic-yellow{color:var(--yellow)}
+
+/* ── CARD ── */
+.card{background:rgba(30,41,59,.5);border:1px solid var(--s700);border-radius:var(--r);transition:border-color .3s;overflow:hidden}
+.card:hover{border-color:var(--s600)}
+.card-hd{padding:20px 20px 0}
+.card-bd{padding:20px}
+.card-title{font-weight:700;color:var(--white)}
+.card-desc{color:var(--s400);font-size:14px;margin-top:2px}
+
+/* ── GRIDS ── */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.g1{display:flex;flex-direction:column;gap:16px}
+@media(max-width:767px){.g3,.g2{grid-template-columns:1fr}.main{padding:20px 0 48px}}
+@media(min-width:768px)and(max-width:1023px){.g3{grid-template-columns:repeat(2,1fr)}}
+
+/* ── FUTURES ── */
+.f-head{display:flex;align-items:flex-start;justify-content:space-between}
+.f-sym{font-family:var(--mono);font-size:24px;font-weight:700;color:var(--white)}
+.f-name{color:var(--s400);font-size:14px;margin-top:2px}
+.f-price{font-family:var(--mono);font-size:32px;font-weight:700;color:var(--white);margin-top:4px}
+.f-cur{font-size:13px;color:var(--s500);margin-top:2px}
+.f-chgrow{display:flex;align-items:center;gap:16px;margin-top:8px}
+.f-chg{font-family:var(--mono);font-size:18px;font-weight:700}
+.f-pct{font-family:var(--mono);font-size:14px;margin-top:2px}
+.f-vl{font-size:12px;color:var(--s500)}
+.f-vv{font-family:var(--mono);font-size:14px;color:var(--s300);margin-top:2px}
+.f-div{border-top:1px solid var(--s700);margin-top:12px;padding-top:12px;display:flex;flex-direction:column;gap:8px}
+.f-sr{display:flex;justify-content:space-between;font-size:12px}
+.f-sl{color:var(--s500)}.f-sv{font-family:var(--mono);color:var(--s300)}
+.f-ts{border-top:1px solid var(--s700);margin-top:8px;padding-top:8px;font-size:12px;color:var(--s500)}
+
+/* ── ANALYSIS ── */
+.a-title{font-size:18px;font-weight:700;color:var(--white);margin-bottom:8px}
+.a-body{font-size:14px;color:var(--s300);line-height:1.7}
+
+/* ── PROB ── */
+.p-sym{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--white);margin-bottom:16px}
+.p-row{margin-bottom:16px}
+.p-rh{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.p-lbl{font-size:14px;font-weight:600}
+.p-pct{font-family:var(--mono);font-size:18px;font-weight:700}
+.p-track{width:100%;background:var(--s700);border-radius:9999px;height:8px;overflow:hidden}
+.p-fill{height:100%;border-radius:9999px;width:0%;transition:width .5s ease}
+.fg{background:var(--green)}.fr{background:var(--red)}.fs{background:var(--s500)}
+.p-sr{padding-top:12px;border-top:1px solid var(--s700);display:flex;flex-direction:column;gap:8px}
+.p-srr{display:flex;justify-content:space-between;font-size:12px}
+.p-ana{margin-top:12px;padding-top:12px;border-top:1px solid var(--s700);font-size:13px;color:var(--s400);line-height:1.6}
+
+/* ── ADVICE ── */
+.adv-hd{display:flex;align-items:center;gap:12px;margin-bottom:4px}
+.adv-icon{color:var(--s400);font-size:18px;flex-shrink:0}
+.adv-title{font-size:18px;font-weight:700;color:var(--white)}
+.adv-list{display:flex;flex-direction:column;gap:12px;margin-top:16px}
+.adv-item{display:flex;gap:12px;font-size:14px;color:var(--s300)}
+.adv-bul{color:var(--s500);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── NEWS ── */
+.news-card{cursor:pointer}
+.n-in{display:flex;align-items:flex-start;gap:16px}
+.n-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:8px}
+.dot-h{background:var(--red)}.dot-m{background:var(--yellow)}.dot-l{background:var(--green)}
+.n-body{flex:1;min-width:0}
+.n-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:8px}
+.n-title{font-size:18px;font-weight:600;color:var(--white);line-height:1.4}
+.n-meta{display:flex;align-items:center;gap:8px;margin-top:4px;flex-wrap:wrap}
+.n-cat{font-size:12px;padding:4px 8px;border-radius:6px;background:var(--s700);color:var(--s300)}
+.n-imp{font-size:12px;font-weight:600}
+.ih{color:var(--red)}.im{color:var(--yellow)}.il{color:var(--green)}
+.n-desc{color:var(--s400);font-size:14px;margin-bottom:12px;line-height:1.6}
+.n-det{padding-top:12px;border-top:1px solid var(--s700);margin-top:12px;color:var(--s300);font-size:14px;line-height:1.7;display:none}
+.n-det.open{display:block}
+.n-ts{font-size:12px;color:var(--s500)}
+.chev{color:var(--s400);flex-shrink:0;transition:transform .3s;font-size:18px;margin-top:2px;line-height:1}
+.chev.open{transform:rotate(180deg)}
+
+/* ── RISK ── */
+.risk-card{background:linear-gradient(to right,rgba(30,41,59,.5),rgba(51,65,85,.3));border:1px solid var(--s700);border-radius:var(--r)}
+.risk-sh{font-weight:600;color:var(--white);font-size:14px;margin-bottom:8px}
+.risk-ul{list-style:disc;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.risk-ul li{font-size:14px;color:var(--s300)}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:32px 0;border-top:1px solid var(--s800)}
+.footer p{font-size:13px;color:var(--s500);margin-bottom:4px}
+
+/* colors */
+.up{color:var(--green)!important}.dn{color:var(--red)!important}.neu{color:var(--s400)!important}
+
+/* loading */
+#loading{position:fixed;inset:0;background:var(--bg-950);display:flex;align-items:center;justify-content:center;z-index:999;transition:opacity .4s}
+#loading.hide{opacity:0;pointer-events:none}
+.spin{width:36px;height:36px;border:3px solid var(--s700);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<div id="loading"><div class="spin"></div></div>
+
+<!-- HEADER -->
+<div class="topbar">
+  <div class="container">
+    <div class="hdr-row">
+      <div class="hdr-left">
+        <h1>國際金融期貨日報</h1>
+        <p class="hdr-sub" id="hdr-sub">Futures Daily Report</p>
+      </div>
+      <div class="hdr-right">
+        <p class="hdr-lbl">最後更新</p>
+        <p class="hdr-val" id="hdr-val">—</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main" id="app" style="display:none">
+<div class="container">
+
+  <section class="section">
+    <h2 class="sec-h2">
+      <svg style="width:24px;height:24px" class="ic-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+      三大期貨實時行情
+    </h2>
+    <div class="g3" id="s-futures"></div>
+  </section>
+
+  <section class="section">
+    <h2 class="sec-h2">昨日走勢分析</h2>
+    <div class="g2" id="s-analysis"></div>
+  </section>
+
+  <section class="section">
+    <h2 class="sec-h2">
+      <svg style="width:24px;height:24px" class="ic-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      今日走勢機率評估
+    </h2>
+    <div class="g3" id="s-prob"></div>
+  </section>
+
+  <section class="section">
+    <h2 class="sec-h2">投資建議</h2>
+    <div class="g2" id="s-advice"></div>
+  </section>
+
+  <section class="section">
+    <h2 class="sec-h2">國際金融新聞</h2>
+    <div class="g1" id="s-news"></div>
+  </section>
+
+  <section class="section">
+    <div class="risk-card">
+      <div class="card-hd" style="padding-bottom:16px">
+        <div class="card-title" style="font-size:20px">風險提示與監控點</div>
+      </div>
+      <div class="card-bd">
+        <ul class="risk-ul" id="s-risk"></ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>本報告由自動化系統生成 | 數據來源：TradingView、Reuters、美聯儲官方</p>
+    <p>免責聲明：本報告僅供參考，不構成投資建議。交易涉及風險，請謹慎決策。</p>
+    <p id="next-update"></p>
+  </div>
+
+</div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+// 預覽時：用內嵌資料
+// 上線時：把 JSON_URL 換成 GitHub raw URL，並刪掉 INLINE_DATA
+// ═══════════════════════════════════════════════════════
+const JSON_URL = "./data/report.json";
+// const JSON_URL = 'https://raw.githubusercontent.com/YOUR/REPO/main/data/report.json';
+
+const INLINE_DATA = {"report_date":"2026-03-20","report_time":"2026-03-20 06:00 (台灣時間)","last_update":"2026-03-20 07:59 (台灣時間)","futures_data":{"YM1":{"name":"E-迷你道瓊指數","current_price":46420,"currency":"USD","change_points":120.00,"change_percent":0.26,"volume":"3.51K","support":46200,"resistance":46600,"timestamp":"2026-03-20 07:59 (台灣時間)"},"NQ1":{"name":"E-迷你納斯達克100","current_price":24619.5,"currency":"USD","change_points":49.00,"change_percent":0.20,"volume":"19.32K","support":24400,"resistance":24800,"timestamp":"2026-03-20 07:59 (台灣時間)"},"TXF1":{"name":"台灣加權指數期貨","current_price":33738,"currency":"TWD","change_points":179.00,"change_percent":0.53,"volume":"296.15K","support":33500,"resistance":34000,"timestamp":"2026-03-20 07:21 (台灣時間)"}},"yesterday_analysis":{"title":"昨日走勢分析","events":[{"title":"美聯儲政策轉向","description":"聯準會維持利率不變在3.5%-3.75%，但上調2026年PCE通膨預測至2.7%，釋放鷹派訊號。長期中性利率從3.0%上調至3.1%，市場解讀為'利率更高更久'。"},{"title":"油價劇烈波動","description":"伊朗衝突升溫導致油價飆升，布蘭特原油盤中觸及119.13美元（3年半高點），最終收在108.65美元。美國財政部允許部分俄羅斯原油流通，油價自高點回落。"},{"title":"美股承壓下跌","description":"道瓊工業指數下跌203.72點（-0.44%），標普500下滑18.21點（-0.27%），那斯達克跌幅控制在0.5%以內。通膨預期升溫打擊科技股，但經濟韌性提供支撐。"},{"title":"台股失守月線","description":"台股大盤下跌658.9點，失守月線。鮑爾放鷹言論推升通膨憂慮，塑化油電族群逆勢稱雄。"}]},"today_probability":{"title":"今日走勢機率評估","YM1":{"up_probability":"40%","down_probability":"50%","sideways_probability":"10%","analysis":"美聯儲鷹派立場對科技股和成長股構成壓力，但經濟數據向好提供支撐。短期內下行風險大於上行。"},"NQ1":{"up_probability":"30%","down_probability":"60%","sideways_probability":"10%","analysis":"升息預期對高估值科技股打擊最大。那指面臨較大下行壓力，需要關鍵支撐位24400點。"},"TXF1":{"up_probability":"50%","down_probability":"35%","sideways_probability":"15%","analysis":"台指期相對抗跌，製造業受惠於油價上漲。本土資金支撐，上漲機率較高。"}},"investment_advice":{"short_term_strategy":["謹慎操作：控制風險敞口，美聯儲鷹派立場增加市場不確定性","設置止損：控制下行風險不超過2%，防範突發事件衝擊","分批布局：在支撐位(YM1: 46200、NQ1: 24400、TXF1: 33500)分批介入","動態調整：根據政策信號實時調整倉位，密切關注後續經濟數據"],"trading_opportunities":["反彈機會：經濟數據向好提供反彈機會，特別是製造業數據","台指期超配：相對抗跌，製造業受惠，建議超配台指期","能源股機會：油價上漲受益，能源相關個股值得關注","選擇性做多：在支撐位布局優質個股，等待反彈"],"risk_avoidance":["科技股風險：升息預期打擊高估值科技股，應適度減持","避免高槓桿：市場波動性較大，避免過度槓桿操作","避免追高：等待回調後介入，不要在高點追進","地緣政治：密切關注中東局勢，防範油價再度飆升"],"position_allocation":["台指期：40% (相對抗跌，製造業受惠)","小道瓊：35% (經濟韌性提供支撐)","小那指：25% (科技股承壓，風險較大)","現金儲備：10-20% (保持靈活性，等待機會)"]},"news":[{"title":"聯準會維持利率不變，上調通膨預測至2.7%","description":"美國聯準會在台灣時間3月19日凌晨宣布維持聯邦基金利率在3.5%-3.75%不變，但將2026年PCE通膨預測上調至2.7%，釋放鷹派訊號。點陣圖顯示2026年全年僅降息一次。","impact":"高","timestamp":"2026-03-19 (台灣時間)"},{"title":"油價劇烈波動，伊朗衝突升溫","description":"伊朗衝突升溫導致油價飆升，布蘭特原油盤中觸及119.13美元（3年半高點），最終收在108.65美元。美國財政部允許部分俄羅斯原油流通，油價自高點回落。","impact":"高","timestamp":"2026-03-20 (台灣時間)"},{"title":"美股多收黑，道瓊下跌0.44%","description":"隨著油價回落，美股跌幅收斂。道瓊工業指數下跌203.72點（-0.44%），標普500下滑18.21點（-0.27%），那斯達克跌幅控制在0.5%以內。","impact":"中","timestamp":"2026-03-20 (台灣時間)"},{"title":"台股失守月線，下跌658.9點","description":"台股大盤下跌658.9點，失守月線。鮑爾放鷹言論推升通膨憂慮，塑化油電族群逆勢稱雄。","impact":"中","timestamp":"2026-03-20 (台灣時間)"}],"risk_warning":{"title":"風險提示","items":["美聯儲政策轉向存在不確定性，可能對市場造成衝擊","地緣政治局勢升溫，油價波動加劇，增加市場風險","通膨預期升溫，可能推升長期利率，打擊成長股","市場波動性較大，請謹慎決策，控制風險敞口"]}};
+// ═══════════════════════════════════════════════════════
+
+async function init() {
+  let d;
+  if (JSON_URL) {
+    try {
+      const res = await fetch(JSON_URL + '?t=' + Date.now());
+      d = await res.json();
+    } catch(e) {
+      d = INLINE_DATA;
+    }
+  } else {
+    d = INLINE_DATA;
+  }
+  render(d);
+  document.getElementById('app').style.display = 'block';
+  const l = document.getElementById('loading');
+  l.classList.add('hide');
+  setTimeout(() => l.style.display = 'none', 450);
+}
+
+function render(d) {
+  // Header
+  document.getElementById('hdr-sub').textContent = 'Futures Daily Report | ' + d.report_date + ' (GMT+8)';
+  document.getElementById('hdr-val').textContent = d.last_update || d.report_date;
+  if (d.report_time) document.getElementById('next-update').textContent = '報告時間：' + d.report_time;
+
+  renderFutures(d.futures_data || {});
+  renderAnalysis(d.yesterday_analysis?.events || []);
+  renderProb(d.today_probability || {});
+  renderAdvice(d.investment_advice || {});
+  renderNews(d.news || []);
+  renderRisk(d.risk_warning?.items || []);
+}
+
+// ── 1. Futures ──────────────────────────────────────────
+function renderFutures(data) {
+  const el = document.getElementById('s-futures');
+  Object.entries(data).forEach(([sym, f]) => {
+    const up = (f.change_points || f.change_percent || 0) >= 0;
+    const clr = up ? 'var(--green)' : 'var(--red)';
+    const sign = up ? '+' : '';
+    const trendSvg = up
+      ? `<svg style="width:20px;height:20px;color:var(--green)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`
+      : `<svg style="width:20px;height:20px;color:var(--red)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>`;
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML = `
+      <div class="card-hd" style="padding-bottom:12px">
+        <div class="f-head">
+          <div><div class="f-sym">${sym}!</div><div class="f-name">${f.name}</div></div>
+          ${trendSvg}
+        </div>
+      </div>
+      <div class="card-bd" style="padding-top:0">
+        <p class="f-price">${Number(f.current_price).toLocaleString()}</p>
+        <p class="f-cur">${f.currency}</p>
+        <div class="f-chgrow">
+          <div>
+            <p class="f-chg" style="color:${clr}">${sign}${Number(f.change_points).toFixed(2)}</p>
+            <p class="f-pct" style="color:${clr}">${sign}${Number(f.change_percent).toFixed(2)}%</p>
+          </div>
+          <div style="flex:1">
+            <p class="f-vl">成交量</p>
+            <p class="f-vv">${f.volume}</p>
+          </div>
+        </div>
+        <div class="f-div">
+          <div class="f-sr"><span class="f-sl">支撐</span><span class="f-sv">${Number(f.support).toLocaleString()}</span></div>
+          <div class="f-sr"><span class="f-sl">阻力</span><span class="f-sv">${Number(f.resistance).toLocaleString()}</span></div>
+        </div>
+        <div class="f-ts">${f.timestamp}</div>
+      </div>`;
+    el.appendChild(div);
+  });
+}
+
+// ── 2. Analysis ─────────────────────────────────────────
+function renderAnalysis(events) {
+  const el = document.getElementById('s-analysis');
+  events.forEach(e => {
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML = `
+      <div class="card-hd"><div class="card-title a-title">${e.title}</div></div>
+      <div class="card-bd"><p class="a-body">${e.description}</p></div>`;
+    el.appendChild(div);
+  });
+}
+
+// ── 3. Probability ──────────────────────────────────────
+function renderProb(data) {
+  const el = document.getElementById('s-prob');
+  const syms = ['YM1', 'NQ1', 'TXF1'];
+  const parse = s => parseInt(String(s).replace('%','')) || 0;
+  syms.forEach(sym => {
+    const p = data[sym]; if (!p) return;
+    const up   = parse(p.up_probability);
+    const dn   = parse(p.down_probability);
+    const side = parse(p.sideways_probability);
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML = `
+      <div class="card-hd"><div class="p-sym">${sym}!</div></div>
+      <div class="card-bd" style="padding-top:0">
+        <div class="p-row">
+          <div class="p-rh"><span class="p-lbl up">上漲</span><span class="p-pct up">${up}%</span></div>
+          <div class="p-track"><div class="p-fill fg" data-w="${up}"></div></div>
+        </div>
+        <div class="p-row">
+          <div class="p-rh"><span class="p-lbl dn">下跌</span><span class="p-pct dn">${dn}%</span></div>
+          <div class="p-track"><div class="p-fill fr" data-w="${dn}"></div></div>
+        </div>
+        <div class="p-row" style="margin-bottom:0">
+          <div class="p-rh"><span class="p-lbl neu">震盪</span><span class="p-pct neu">${side}%</span></div>
+          <div class="p-track"><div class="p-fill fs" data-w="${side}"></div></div>
+        </div>
+        <div class="p-sr">
+          <div class="p-srr"><span style="color:var(--s500)">支撐</span><span style="font-family:var(--mono);color:var(--s300)">${data[sym] ? Number(data[sym+' support']||0).toLocaleString() || '—' : '—'}</span></div>
+          <div class="p-srr"><span style="color:var(--s500)">阻力</span><span style="font-family:var(--mono);color:var(--s300)">—</span></div>
+        </div>
+        ${p.analysis ? `<div class="p-ana">${p.analysis}</div>` : ''}
+      </div>`;
+    el.appendChild(div);
+  });
+
+  // animate
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.querySelectorAll('.p-fill').forEach(f => f.style.width = f.dataset.w + '%');
+      io.unobserve(e.target);
+    });
+  }, {threshold:0.3});
+  document.querySelectorAll('#s-prob .card').forEach(c => io.observe(c));
+}
+
+// ── 4. Advice ───────────────────────────────────────────
+function renderAdvice(adv) {
+  const el = document.getElementById('s-advice');
+  const cfg = [
+    { key:'short_term_strategy',    label:'短期策略', icon:`<svg style="width:20px;height:20px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>` },
+    { key:'trading_opportunities',  label:'交易機會', icon:`<svg style="width:20px;height:20px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>` },
+    { key:'risk_avoidance',         label:'風險規避', icon:`<svg style="width:20px;height:20px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>` },
+    { key:'position_allocation',    label:'倉位配置', icon:`<svg style="width:20px;height:20px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>` },
+  ];
+  cfg.forEach(c => {
+    const items = adv[c.key]; if (!items?.length) return;
+    const li = items.map(i => `<li class="adv-item"><span class="adv-bul">•</span><span>${i}</span></li>`).join('');
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML = `
+      <div class="card-hd">
+        <div class="adv-hd">
+          <span class="adv-icon">${c.icon}</span>
+          <div class="adv-title">${c.label}</div>
+        </div>
+      </div>
+      <div class="card-bd" style="padding-top:0"><ul class="adv-list">${li}</ul></div>`;
+    el.appendChild(div);
+  });
+}
+
+// ── 5. News ─────────────────────────────────────────────
+function renderNews(news) {
+  const el = document.getElementById('s-news');
+  // impact: 高/中/低 or high/medium/low
+  const impMap = { '高':'h','high':'h','medium':'m','中':'m','低':'l','low':'l' };
+  const impTxt = { h:'高影響', m:'中影響', l:'低影響' };
+  news.forEach((n, i) => {
+    const imp = impMap[n.impact] || 'm';
+    const div = document.createElement('div');
+    div.className = 'card news-card';
+    div.innerHTML = `
+      <div class="card-bd">
+        <div class="n-in">
+          <div class="n-dot dot-${imp}"></div>
+          <div class="n-body">
+            <div class="n-top">
+              <div>
+                <h3 class="n-title">${n.title}</h3>
+                <div class="n-meta">
+                  ${n.category ? `<span class="n-cat">${n.category}</span>` : ''}
+                  <span class="n-imp i${imp}">${impTxt[imp]}</span>
+                </div>
+              </div>
+              <span class="chev" id="chev-${i}">▾</span>
+            </div>
+            <p class="n-desc">${n.description}</p>
+            ${n.details ? `<div class="n-det" id="det-${i}">${n.details}</div>` : ''}
+            <p class="n-ts">${n.timestamp}</p>
+          </div>
+        </div>
+      </div>`;
+    if (n.details) {
+      div.addEventListener('click', () => {
+        document.getElementById('det-'+i).classList.toggle('open');
+        document.getElementById('chev-'+i).classList.toggle('open');
+      });
+    }
+    el.appendChild(div);
+  });
+}
+
+// ── 6. Risk ─────────────────────────────────────────────
+function renderRisk(items) {
+  const el = document.getElementById('s-risk');
+  items.forEach(r => {
+    const li = document.createElement('li');
+    li.textContent = r;
+    el.appendChild(li);
+  });
+}
+
+init();
+</script>
+</body>
+</html>
