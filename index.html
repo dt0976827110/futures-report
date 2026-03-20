@@ -10,7 +10,7 @@
 :root{
   --bg:#111827;--bg2:#0D1117;--bg3:#1F2937;
   --border:#374151;--dim:#6B7280;--muted:#9CA3AF;--text:#E5E7EB;
-  --green:#10B981;--red:#EF4444;--blue:#0EA5E9;--amber:#F59E0B;
+  --green:#10B981;--red:#EF4444;--blue:#0EA5E9;--amber:#F59E0B;--purple:#8B5CF6;
   --fh:'Montserrat','Noto Sans TC',sans-serif;
   --fb:'Noto Sans TC','Montserrat',sans-serif;
 }
@@ -19,32 +19,27 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);line-height:1.
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--border)}
+.grid-bg{background-color:var(--bg);background-image:linear-gradient(rgba(55,65,81,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(55,65,81,.15) 1px,transparent 1px);background-size:40px 40px}
 
-.grid-bg{
-  background-color:var(--bg);
-  background-image:linear-gradient(rgba(55,65,81,.15) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(55,65,81,.15) 1px,transparent 1px);
-  background-size:40px 40px;
-}
-
-/* ── SLIDE ── */
-.slide{min-height:100vh;width:100%;position:relative;overflow:hidden;display:flex;align-items:center;padding:64px 0 48px}
+/* SLIDE */
+.slide{width:100%;position:relative;padding:80px 0 64px}
 .inner{width:100%;max-width:1100px;margin:0 auto;padding:0 48px}
 
-/* ── NAV DOTS ── */
+/* NAV DOTS */
 #nav{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:1000;display:flex;flex-direction:column;gap:10px}
-.dot{width:8px;height:8px;background:var(--border);border:none;cursor:pointer;transition:all .3s;display:block;padding:0;-webkit-tap-highlight-color:transparent}
+.dot{width:8px;height:8px;background:var(--border);border:none;cursor:pointer;transition:all .3s;display:block;padding:0}
 .dot.active{background:var(--green);transform:scale(1.6)}
 
-/* ── SECTION TITLE ── */
+/* SECTION TITLE */
 .s-title{font-family:var(--fh);font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--text);padding-left:16px;margin-bottom:6px;line-height:1.3}
 .s-sub{font-size:12px;color:var(--dim);padding-left:19px;margin-bottom:28px}
 .tag{display:inline-block;border:1px solid var(--green);color:var(--green);font-family:var(--fh);font-size:9px;letter-spacing:.22em;text-transform:uppercase;padding:3px 12px;margin-bottom:18px}
 
-/* ── TWO COL ── */
+/* LAYOUT */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 
-/* ── TABLE ── */
+/* TABLE */
 .dtable{width:100%;border-collapse:collapse;font-size:13px}
 .dtable th{font-family:var(--fh);font-size:10px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;padding:10px 8px;border-bottom:1px solid var(--border);text-align:right;font-weight:600}
 .dtable th.L,.dtable td.L{text-align:left!important}
@@ -53,26 +48,38 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);line-height:1.
 .code-l{font-weight:700;font-size:13px;color:var(--text)}
 .name-l{font-size:10px;color:var(--dim);margin-top:2px}
 
-/* ── COLORS ── */
+/* COLORS */
 .green{color:var(--green)!important}
 .red{color:var(--red)!important}
 .muted{color:var(--muted)!important}
-.dim{color:var(--dim)!important}
 .amber{color:var(--amber)!important}
+.blue{color:var(--blue)!important}
 
-/* ── COUNT ROW ── */
+/* COUNT ROW */
 .count-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
 .count-card{padding-left:12px}
 .count-code{font-family:var(--fh);font-size:10px;color:var(--dim)}
 .count-val{font-family:var(--fh);font-size:clamp(18px,3vw,24px);font-weight:700}
 
-/* ── DRIVER CARDS ── */
+/* ECON DATA TABLE */
+.econ-badge{display:inline-block;font-size:10px;font-family:var(--fh);font-weight:700;padding:2px 7px}
+.badge-pos{background:rgba(16,185,129,.15);color:var(--green)}
+.badge-neg{background:rgba(239,68,68,.15);color:var(--red)}
+.badge-neu{background:rgba(107,114,128,.15);color:var(--muted)}
+
+/* DRIVER / ANALYSIS CARDS */
 .driver-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
 .driver-card{background:var(--bg2);border-left:3px solid var(--amber);padding:18px 20px}
 .driver-title{font-family:var(--fh);font-weight:700;font-size:13px;color:var(--text);margin-bottom:8px}
 .driver-body{font-size:12px;color:var(--muted);line-height:1.65}
 
-/* ── PROB BARS ── */
+/* FUTURES ANALYSIS */
+.fa-sym{font-family:var(--fh);font-weight:700;font-size:14px;color:var(--text);margin-bottom:12px;border-bottom:1px solid var(--bg3);padding-bottom:8px}
+.fa-point{margin-bottom:12px}
+.fa-point-title{font-family:var(--fh);font-size:12px;font-weight:700;color:var(--amber);margin-bottom:4px}
+.fa-point-detail{font-size:12px;color:var(--muted);line-height:1.6}
+
+/* PROB BARS */
 .prob-item{margin-bottom:24px}
 .prob-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
 .prob-sym{font-family:var(--fh);font-weight:700;font-size:14px}
@@ -81,27 +88,45 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);line-height:1.
 .prob-bar{width:100%;height:24px;display:flex;overflow:hidden;background:var(--bg3)}
 .prob-up{background:var(--green);color:#111827;font-family:var(--fh);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;width:0%;transition:width 1.3s cubic-bezier(.22,1,.36,1)}
 .prob-dn{background:var(--red);color:#111827;font-family:var(--fh);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;width:0%;transition:width 1.3s cubic-bezier(.22,1,.36,1)}
+.prob-sd{background:var(--bg3);color:var(--muted);font-family:var(--fh);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;width:0%;transition:width 1.3s cubic-bezier(.22,1,.36,1)}
 .prob-reason{font-size:11px;color:var(--dim);margin-top:6px;line-height:1.6}
+.prob-summary{background:rgba(16,185,129,.08);border-left:3px solid var(--green);padding:12px 14px;font-size:13px;color:var(--text);margin-bottom:24px;line-height:1.6}
 
-/* ── NEWS ── */
-.news-item{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--bg3)}
+/* NEWS */
+.news-item{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--bg3);cursor:pointer}
 .news-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px}
 .news-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px}
-.news-desc{font-size:12px;color:var(--muted);line-height:1.55}
+.chev{font-size:12px;color:var(--dim);transition:transform .25s;flex-shrink:0;margin-top:2px}
+.chev.open{transform:rotate(180deg)}
+.news-det{display:none;font-size:12px;color:var(--muted);line-height:1.6;margin-top:6px;padding-top:6px;border-top:1px solid var(--bg3)}
+.news-det.open{display:block}
 
-/* ── RISK/ADVICE ── */
-.blk-title{font-family:var(--fh);font-weight:700;font-size:13px;margin-bottom:12px}
-.item-list{list-style:none}
-.item-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
-.pip{width:6px;height:6px;flex-shrink:0;margin-top:5px}
-.item-text{font-size:12px;color:var(--muted);line-height:1.65}
+/* RISK CARDS */
+.risk-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.risk-card{background:var(--bg2);border-left:3px solid var(--red);padding:16px 18px}
+.risk-card-title{font-family:var(--fh);font-weight:700;font-size:13px;color:var(--red);margin-bottom:8px}
+.risk-card-detail{font-size:12px;color:var(--muted);line-height:1.65}
 
-/* ── FOOTER ── */
+/* ADVICE */
+.adv-section{border-left:3px solid var(--green);padding-left:14px;margin-bottom:20px}
+.adv-title{font-family:var(--fh);font-weight:700;font-size:13px;color:var(--green);margin-bottom:10px}
+.adv-list{list-style:none}
+.adv-item{display:flex;gap:8px;font-size:12px;color:var(--muted);margin-bottom:8px;line-height:1.6}
+.adv-bul{color:var(--dim);font-weight:700;flex-shrink:0}
+
+/* CONCLUSION */
+.conclusion-summary{background:rgba(139,92,246,.08);border-left:3px solid var(--purple);padding:14px 16px;font-size:13px;color:var(--text);line-height:1.7;margin-bottom:20px}
+.concl-card{background:var(--bg2);border-left:3px solid var(--purple);padding:16px 18px;margin-bottom:12px}
+.concl-title{font-family:var(--fh);font-weight:700;font-size:13px;color:var(--purple);margin-bottom:6px}
+.concl-detail{font-size:12px;color:var(--muted);line-height:1.65}
+.concl-advice{border-left:3px solid var(--amber);padding-left:14px;font-size:13px;color:var(--text);line-height:1.7;margin-top:16px}
+
+/* FOOTER */
 .rep-footer{border-top:1px solid var(--bg3);margin-top:32px;padding-top:14px;display:flex;justify-content:space-between;font-size:11px;color:#4B5563;flex-wrap:wrap;gap:6px}
 .disclaimer{background:rgba(31,41,55,.5);border-left:3px solid var(--border);padding:12px;font-size:11px;color:var(--dim);line-height:1.6;margin-top:16px}
 
-/* ── COVER ── */
-#s0{justify-content:center;text-align:center}
+/* COVER */
+#s0{justify-content:center;text-align:center;display:flex;align-items:center;min-height:100vh}
 #s0::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(16,185,129,.07) 0%,transparent 65%),radial-gradient(ellipse at 80% 100%,rgba(239,68,68,.05) 0%,transparent 60%);pointer-events:none}
 .cover-h1{font-family:var(--fh);font-size:clamp(28px,6vw,56px);font-weight:900;letter-spacing:-.02em;color:var(--text);margin-bottom:10px;line-height:1.1}
 .cover-date{color:var(--muted);font-size:clamp(13px,2vw,16px);margin-bottom:32px}
@@ -113,30 +138,26 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);line-height:1.
 .scroll-pip{width:3px;height:7px;background:var(--green)}
 @keyframes bounceY{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-7px)}}
 
-/* ── LOADING ── */
+/* LOADING */
 #loading{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .4s}
 #loading.hide{opacity:0;pointer-events:none}
 .spin{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* ── MOBILE ── */
-.mob{display:none}
-.dsk{display:block}
+/* MOBILE */
+.mob{display:none}.dsk{display:block}
 @media(max-width:700px){
-  .slide{padding:56px 0 36px}
+  .slide{padding:56px 0 40px}
   .inner{padding:0 16px}
-  #nav{right:7px;gap:8px}
-  .dot{width:6px;height:6px}
-  .two-col,.driver-grid{grid-template-columns:1fr;gap:16px}
-  .dsk{display:none!important}
-  .mob{display:flex!important}
-  .s-title{font-size:18px}
-  .count-row{grid-template-columns:repeat(3,1fr)}
-  .count-val{font-size:16px}
+  #nav{right:7px;gap:8px}.dot{width:6px;height:6px}
+  .two-col,.driver-grid,.risk-cards,.three-col{grid-template-columns:1fr;gap:12px}
+  .dsk{display:none!important}.mob{display:flex!important}
+  .s-title{font-size:18px}.count-row{grid-template-columns:repeat(3,1fr)}
+  #s0{min-height:100svh}
 }
 /* Mobile futures cards */
 .fut-cards{flex-direction:column;gap:10px}
-.fut-card{background:var(--bg2);border-left:3px solid var(--green);padding:14px 16px}
+.fut-card{background:var(--bg2);border-left:3px solid var(--green);padding:14px 16px;display:block}
 .fc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
 .fc-code{font-family:var(--fh);font-weight:700;font-size:15px}
 .fc-name{font-size:10px;color:var(--dim);margin-top:2px}
@@ -164,10 +185,12 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);line-height:1.
     <h1 class="cover-h1">國際金融期貨日報</h1>
     <p class="cover-date" id="cover-date">—</p>
     <div class="toc-box">
-      <div class="toc-item"><span class="toc-num">01</span><span>昨日三大期貨數據表現總覽</span></div>
-      <div class="toc-item"><span class="toc-num">02</span><span>走勢原因深度剖析</span></div>
-      <div class="toc-item"><span class="toc-num">03</span><span>今日走勢機率評估模型</span></div>
-      <div class="toc-item"><span class="toc-num">04</span><span>風險提示與操作建議</span></div>
+      <div class="toc-item"><span class="toc-num">01</span><span>昨日三大期貨數據表現</span></div>
+      <div class="toc-item"><span class="toc-num">02</span><span>關鍵國際事件與經濟數據</span></div>
+      <div class="toc-item"><span class="toc-num">03</span><span>期貨走勢深度剖析</span></div>
+      <div class="toc-item"><span class="toc-num">04</span><span>今日走勢機率評估</span></div>
+      <div class="toc-item"><span class="toc-num">05</span><span>國際金融新聞</span></div>
+      <div class="toc-item"><span class="toc-num">06</span><span>投資建議與風險提示</span></div>
     </div>
   </div>
   <div class="scroll-hint"><div class="scroll-box"><div class="scroll-pip"></div></div></div>
@@ -178,87 +201,98 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);line-height:1.
   <div class="inner">
     <div class="s-title" style="border-left:3px solid var(--green)">昨日三大期貨數據表現</div>
     <div class="s-sub" id="s1-sub">—</div>
+    <div class="dsk">
+      <table class="dtable">
+        <thead><tr>
+          <th class="L">期貨代碼</th><th>收盤</th><th>漲跌幅</th><th style="color:var(--green)">支撐</th><th style="color:var(--red)">壓力</th>
+        </tr></thead>
+        <tbody id="tb-futures"></tbody>
+      </table>
+    </div>
+    <div class="mob fut-cards" id="mb-futures"></div>
+  </div>
+</section>
+
+<!-- S2 事件 + 經濟數據 -->
+<section class="slide" id="s2" style="background:var(--bg)">
+  <div class="inner">
+    <div class="s-title" style="border-left:3px solid var(--blue)">關鍵國際事件與經濟數據</div>
+    <div class="s-sub">昨日影響市場的重要事件與數據發布</div>
     <div class="two-col">
       <div>
-        <!-- Desktop table -->
-        <div class="dsk">
-          <table class="dtable">
-            <thead><tr>
-              <th class="L">期貨代碼</th>
-              <th>收盤</th>
-              <th>漲跌幅</th>
-            </tr></thead>
-            <tbody id="tb-futures"></tbody>
-          </table>
+        <div style="border-left:3px solid var(--blue);padding-left:14px;margin-bottom:14px">
+          <span style="font-family:var(--fh);font-weight:700;font-size:14px;color:var(--blue)">國際金融事件</span>
         </div>
-        <!-- Mobile cards -->
-        <div class="mob fut-cards" id="mb-futures"></div>
-        <!-- Count row (both) -->
-        <div class="count-row" id="count-row"></div>
+        <div id="events-list"></div>
       </div>
-      <!-- Right: SR table -->
       <div>
-        <div style="border-left:3px solid var(--dim);padding-left:14px;margin-bottom:12px">
-          <span style="font-family:var(--fh);font-weight:700;font-size:15px">關鍵支撐與壓力位</span>
+        <div style="border-left:3px solid var(--amber);padding-left:14px;margin-bottom:14px">
+          <span style="font-family:var(--fh);font-weight:700;font-size:14px;color:var(--amber)">關鍵經濟數據</span>
         </div>
-        <!-- Desktop SR -->
         <div class="dsk">
           <table class="dtable">
             <thead><tr>
-              <th class="L">期貨</th>
-              <th class="green" style="color:var(--green)">支撐</th>
-              <th class="red" style="color:var(--red)">壓力</th>
+              <th class="L">指標</th><th>實際值</th><th>預測值</th><th>前值</th><th>影響</th>
             </tr></thead>
-            <tbody id="tb-sr"></tbody>
+            <tbody id="tb-econ"></tbody>
           </table>
         </div>
-        <!-- Mobile SR -->
-        <div class="mob sr-cards" id="mb-sr"></div>
+        <div class="mob" id="mb-econ" style="flex-direction:column;gap:8px"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- S2 走勢剖析 -->
-<section class="slide grid-bg" id="s2">
+<!-- S3 期貨走勢剖析 -->
+<section class="slide grid-bg" id="s3">
   <div class="inner">
-    <div class="s-title" style="border-left:3px solid var(--amber)">走勢原因深度剖析</div>
-    <div class="s-sub">宏觀經濟、地緣政治、市場情緒與技術面綜合分析</div>
-    <div class="driver-grid" id="driver-grid"></div>
+    <div class="s-title" style="border-left:3px solid var(--amber)">期貨走勢深度剖析</div>
+    <div class="s-sub">各期貨昨日走勢驅動因素分析</div>
+    <div class="three-col" id="futures-analysis"></div>
   </div>
 </section>
 
-<!-- S3 機率評估 -->
-<section class="slide grid-bg" id="s3">
+<!-- S4 機率評估 -->
+<section class="slide grid-bg" id="s4">
   <div class="inner">
     <div class="s-title" style="border-left:3px solid var(--green)">今日走勢機率評估模型</div>
     <div class="s-sub">基於前一晚國際盤勢與技術面分析之量化評估</div>
-    <div class="two-col">
-      <div id="prob-list"></div>
-      <div id="news-list" style="display:flex;flex-direction:column;gap:0"></div>
-    </div>
+    <div id="prob-summary-wrap"></div>
+    <div id="prob-list"></div>
   </div>
 </section>
 
-<!-- S4 風險提示 -->
-<section class="slide" id="s4" style="background:var(--bg)">
+<!-- S5 新聞 -->
+<section class="slide" id="s5" style="background:var(--bg)">
   <div class="inner">
-    <div class="s-title" style="border-left:3px solid var(--red)">風險提示與操作建議</div>
-    <div class="two-col" style="margin-top:8px">
-      <div>
-        <div style="border-left:3px solid var(--red);padding-left:14px">
-          <div class="blk-title red">風險因素</div>
-          <ul class="item-list" id="risk-list"></ul>
-        </div>
-      </div>
-      <div>
-        <div style="border-left:3px solid var(--green);padding-left:14px">
-          <div class="blk-title green">操作建議</div>
-          <ul class="item-list" id="adv-list"></ul>
-        </div>
-        <div class="disclaimer">免責聲明：本報告僅供參考，不構成任何投資建議。期貨交易具有高度風險，投資人應審慎評估自身風險承受能力。過去的表現不代表未來的結果。</div>
-      </div>
+    <div class="s-title" style="border-left:3px solid var(--blue)">國際金融新聞</div>
+    <div class="s-sub">點擊展開詳細內容</div>
+    <div id="news-list"></div>
+  </div>
+</section>
+
+<!-- S6 投資建議 + 結論 + 風險 -->
+<section class="slide grid-bg" id="s6">
+  <div class="inner">
+    <div class="s-title" style="border-left:3px solid var(--red)">投資建議與風險提示</div>
+    <div class="s-sub" style="margin-bottom:20px">—</div>
+
+    <!-- 結論 -->
+    <div id="conclusion-wrap" style="margin-bottom:32px"></div>
+
+    <!-- 風險卡片 -->
+    <div style="border-left:3px solid var(--red);padding-left:14px;margin-bottom:14px">
+      <span style="font-family:var(--fh);font-weight:700;font-size:15px">風險提示</span>
     </div>
+    <div class="risk-cards" id="risk-cards" style="margin-bottom:32px"></div>
+
+    <!-- 投資建議 -->
+    <div style="border-left:3px solid var(--green);padding-left:14px;margin-bottom:14px">
+      <span style="font-family:var(--fh);font-weight:700;font-size:15px">操作建議</span>
+    </div>
+    <div class="two-col" id="adv-grid"></div>
+
+    <div class="disclaimer">免責聲明：本報告僅供參考，不構成任何投資建議。期貨交易具有高度風險，投資人應審慎評估自身風險承受能力。過去的表現不代表未來的結果。</div>
     <div class="rep-footer">
       <span>資料來源：TradingView 連續合約 | Trading Economics | Reuters | Bloomberg</span>
       <span style="font-family:var(--fh)" id="footer-date">QUANTITATIVE PULSE</span>
@@ -268,80 +302,80 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);line-height:1.
 
 <script>
 const JSON_URL = './report.json';
+const slideIds = ['s0','s1','s2','s3','s4','s5','s6'];
 
-// ── Nav dots ──
-const slideIds = ['s0','s1','s2','s3','s4'];
+// Nav
 const nav = document.getElementById('nav');
 slideIds.forEach((id,i) => {
   const b = document.createElement('button');
-  b.className = 'dot' + (i===0?' active':'');
+  b.className = 'dot'+(i===0?' active':'');
   b.onclick = () => document.getElementById(id).scrollIntoView({behavior:'smooth'});
   nav.appendChild(b);
 });
 const dots = nav.querySelectorAll('.dot');
-const io = new IntersectionObserver(entries => {
+const ioNav = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
     const i = slideIds.indexOf(e.target.id);
     dots.forEach((d,j) => d.classList.toggle('active', i===j));
-    if (e.target.id === 's3') animateBars();
+    if (e.target.id==='s4') animateBars();
   });
-}, {threshold:0.45});
-slideIds.forEach(id => io.observe(document.getElementById(id)));
+},{threshold:0.3});
+slideIds.forEach(id => ioNav.observe(document.getElementById(id)));
 
-// ── Fetch ──
+// Fetch
 async function init() {
   try {
     const res = await fetch(JSON_URL + '?t=' + Date.now());
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    const d = await res.json();
-    render(d);
+    render(await res.json());
   } catch(e) {
-    document.getElementById('loading').style.display = 'none';
     document.getElementById('s0').querySelector('.inner').innerHTML =
-      '<p style="color:var(--red);font-size:14px">⚠ 無法載入 report.json：' + e.message + '</p>';
+      '<p style="color:var(--red);font-size:14px;text-align:center">⚠ 無法載入 report.json：'+e.message+'</p>';
   } finally {
     const l = document.getElementById('loading');
     l.classList.add('hide');
-    setTimeout(() => l.style.display='none', 450);
+    setTimeout(()=>l.style.display='none',450);
   }
 }
 
 function render(d) {
-  const date = d.report_date || '—';
-  document.getElementById('cover-date').textContent = date + ' (GMT+8)';
-  document.getElementById('footer-date').textContent = 'QUANTITATIVE PULSE — ' + date;
-  document.getElementById('s1-sub').textContent = date + ' | 數據來源：TradingView 連續合約';
-  document.title = '國際金融期貨日報 — ' + date;
+  const date = d.report_date||'—';
+  document.getElementById('cover-date').textContent = date+' (GMT+8)';
+  document.getElementById('footer-date').textContent = 'QUANTITATIVE PULSE — '+date;
+  document.getElementById('s1-sub').textContent = date+' | 數據來源：TradingView 連續合約';
+  document.title = '國際金融期貨日報 — '+date;
 
-  renderFutures(d.futures_data || {});
-  renderDrivers(d.yesterday_analysis?.events || []);
-  renderProb(d.today_probability || {});
-  renderNews(d.news || []);
-  renderRisk(d.risk_warning?.items || []);
-  renderAdvice(d.investment_advice || {});
+  renderFutures(d.futures_data||{});
+  renderEvents(d.yesterday_analysis?.events||[]);
+  renderEcon(d.yesterday_analysis?.economic_data||[]);
+  renderFuturesAnalysis(d.futures_analysis||{});
+  renderProb(d.today_probability||{});
+  renderNews(d.news||[]);
+  renderConclusion(d.conclusion||{});
+  renderRisk(d.risk_warning?.items||[]);
+  renderAdvice(d.investment_advice||{});
 }
 
 // ── 1. Futures ──
 function renderFutures(data) {
   const tbody = document.getElementById('tb-futures');
   const mbCards = document.getElementById('mb-futures');
-  const tbSR = document.getElementById('tb-sr');
-  const mbSR = document.getElementById('mb-sr');
-  const countRow = document.getElementById('count-row');
 
-  Object.entries(data).forEach(([sym, f]) => {
-    const pct = Number(f.change_percent || 0);
+  Object.entries(data).forEach(([sym,f]) => {
+    const pct = Number(f.change_percent||0);
     const up = pct >= 0;
     const clr = up ? 'var(--green)' : 'var(--red)';
     const sign = up ? '+' : '';
 
-    // Desktop table
+    // Desktop row
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td class="L"><div class="code-l">${sym}!</div><div class="name-l">${f.name}</div></td>
       <td>${Number(f.current_price).toLocaleString()}</td>
-      <td style="font-weight:700;color:${clr}">${sign}${pct.toFixed(2)}%</td>`;
+      <td style="font-weight:700;color:${clr}">${sign}${pct.toFixed(2)}%</td>
+      <td class="green">${f.support ? Number(f.support).toLocaleString() : '—'}</td>
+      <td class="red">${f.resistance ? Number(f.resistance).toLocaleString() : '—'}</td>`;
     tbody.appendChild(tr);
 
     // Mobile card
@@ -353,131 +387,209 @@ function renderFutures(data) {
         <div><div class="fc-code">${sym}!</div><div class="fc-name">${f.name}</div></div>
         <div class="fc-chg" style="color:${clr}">${sign}${pct.toFixed(2)}%</div>
       </div>
-      <div class="fc-row">
+      <div style="display:flex;flex-direction:column;gap:10px">
         <div><div class="fc-lbl">收盤</div><div class="fc-val">${Number(f.current_price).toLocaleString()}</div></div>
-        <div><div class="fc-lbl">成交量</div><div class="fc-val muted">${f.volume||'—'}</div></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <div><div class="fc-lbl">支撐</div><div class="fc-val green">${f.support ? Number(f.support).toLocaleString() : '—'}</div></div>
+          <div><div class="fc-lbl">壓力</div><div class="fc-val red">${f.resistance ? Number(f.resistance).toLocaleString() : '—'}</div></div>
+        </div>
       </div>`;
     mbCards.appendChild(mc);
 
-    // Desktop SR row
-    const sr = document.createElement('tr');
-    sr.innerHTML = `
-      <td class="L"><div class="code-l">${sym}!</div><div class="name-l">${f.name}</div></td>
-      <td class="green">${f.support ? Number(f.support).toLocaleString() : '—'}</td>
-      <td class="red">${f.resistance ? Number(f.resistance).toLocaleString() : '—'}</td>`;
-    tbSR.appendChild(sr);
 
-    // Mobile SR card
-    const msr = document.createElement('div');
-    msr.className = 'sr-card';
-    msr.innerHTML = `
-      <div class="sr-head">${sym}! <span style="font-size:10px;color:var(--dim);font-family:var(--fb)">${f.name}</span></div>
-      <div class="sr-row">
-        <div><div class="sr-lbl">支撐</div><div class="sr-val green">${f.support ? Number(f.support).toLocaleString() : '—'}</div></div>
-        <div><div class="sr-lbl">壓力</div><div class="sr-val red">${f.resistance ? Number(f.resistance).toLocaleString() : '—'}</div></div>
-      </div>`;
-    mbSR.appendChild(msr);
 
-    // Count card
-    const cc = document.createElement('div');
-    cc.className = 'count-card';
-    cc.style.borderLeft = '3px solid ' + clr;
-    cc.innerHTML = `<div class="count-code">${sym}!</div><div class="count-val" style="color:${clr}">${sign}${Math.abs(pct).toFixed(2)}%</div>`;
-    countRow.appendChild(cc);
+
   });
 }
 
-// ── 2. Drivers ──
-function renderDrivers(events) {
-  const grid = document.getElementById('driver-grid');
-  const icons = ['🏛','⚠','📊','💻','📰','🌐'];
-  events.forEach((e, i) => {
+// ── 2. Events ──
+function renderEvents(events) {
+  const el = document.getElementById('events-list');
+  events.forEach(e => {
     const d = document.createElement('div');
-    d.className = 'driver-card';
-    d.innerHTML = `<div class="driver-title">${icons[i]||'📌'} ${e.title}</div><div class="driver-body">${e.description}</div>`;
-    grid.appendChild(d);
+    d.style.cssText = 'border-left:3px solid var(--bg3);padding-left:12px;margin-bottom:16px';
+    d.innerHTML = `<div style="font-family:var(--fh);font-weight:700;font-size:13px;color:var(--text);margin-bottom:4px">${e.title}</div><div style="font-size:12px;color:var(--muted);line-height:1.6">${e.description}</div>`;
+    el.appendChild(d);
   });
 }
 
-// ── 3. Probability ──
+// ── 3. Economic Data ──
+function renderEcon(data) {
+  const tbody = document.getElementById('tb-econ');
+  const mbEcon = document.getElementById('mb-econ');
+  const impMap = {正面:'badge-pos',負面:'badge-neg',中性:'badge-neu',positive:'badge-pos',negative:'badge-neg',neutral:'badge-neu'};
+  const impTxt = {正面:'正面',負面:'負面',中性:'中性',positive:'正面',negative:'負面',neutral:'中性'};
+
+  data.forEach(d => {
+    const cls = impMap[d.impact]||'badge-neu';
+    const txt = impTxt[d.impact]||d.impact;
+
+    // Desktop
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="L"><div style="color:var(--text)">${d.indicator}</div><div class="name-l">${d.note||''}</div></td>
+      <td style="font-weight:700">${d.actual}</td>
+      <td class="muted">${d.forecast}</td>
+      <td style="color:var(--dim)">${d.previous}</td>
+      <td><span class="econ-badge ${cls}">${txt}</span></td>`;
+    tbody.appendChild(tr);
+
+    // Mobile
+    const mc = document.createElement('div');
+    mc.style.cssText = 'background:var(--bg2);padding:12px 14px;border-left:3px solid var(--border)';
+    mc.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">${d.indicator}</div><div style="font-size:10px;color:var(--dim);margin-top:2px">${d.note||''}</div></div>
+        <span class="econ-badge ${cls}">${txt}</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+        <div><div style="font-size:10px;color:var(--dim)">實際值</div><div style="font-family:var(--fh);font-size:13px;font-weight:700">${d.actual}</div></div>
+        <div><div style="font-size:10px;color:var(--dim)">預測值</div><div style="font-family:var(--fh);font-size:13px;color:var(--muted)">${d.forecast}</div></div>
+        <div><div style="font-size:10px;color:var(--dim)">前值</div><div style="font-family:var(--fh);font-size:13px;color:var(--dim)">${d.previous}</div></div>
+      </div>`;
+    mbEcon.appendChild(mc);
+  });
+}
+
+// ── 4. Futures Analysis ──
+function renderFuturesAnalysis(data) {
+  const el = document.getElementById('futures-analysis');
+  const symColors = {YM1:'var(--blue)',NQ1:'var(--green)',TXF1:'var(--amber)'};
+  Object.entries(data).forEach(([sym,fa]) => {
+    const clr = symColors[sym]||'var(--amber)';
+    const points = (fa.points||[]).map(p =>
+      `<div class="fa-point"><div class="fa-point-title">${p.title}</div><div class="fa-point-detail">${p.detail}</div></div>`
+    ).join('');
+    const card = document.createElement('div');
+    card.style.cssText = `background:var(--bg2);border-left:3px solid ${clr};padding:18px 20px`;
+    card.innerHTML = `<div class="fa-sym" style="border-color:${clr}">${sym}! <span style="font-size:11px;color:var(--dim);font-family:var(--fb)">${fa.name||''}</span></div>${points}`;
+    el.appendChild(card);
+  });
+}
+
+// ── 5. Probability ──
 const probBars = [];
 let barsAnimated = false;
 function renderProb(data) {
+  if (data.summary) {
+    document.getElementById('prob-summary-wrap').innerHTML =
+      `<div class="prob-summary">${data.summary}</div>`;
+  }
   const list = document.getElementById('prob-list');
   const syms = ['YM1','NQ1','TXF1'];
   const names = {YM1:'小道瓊',NQ1:'小那斯達克',TXF1:'台指期'};
   const parse = s => parseInt(String(s||0).replace('%',''))||0;
-  syms.forEach((sym, i) => {
+  syms.forEach((sym,i) => {
     const p = data[sym]; if (!p) return;
     const up = parse(p.up_probability);
     const dn = parse(p.down_probability);
+    const sd = parse(p.sideways_probability);
     const d = document.createElement('div');
     d.className = 'prob-item';
     d.innerHTML = `
       <div class="prob-header">
         <div><span class="prob-sym">${sym}!</span><span class="prob-name">${names[sym]}</span></div>
-        <div class="prob-pcts"><span class="green">漲 ${up}%</span>&nbsp;&nbsp;<span class="red">跌 ${dn}%</span></div>
       </div>
       <div class="prob-bar">
         <div class="prob-up" id="pu${i}" data-w="${up}"></div>
         <div class="prob-dn" id="pd${i}" data-w="${dn}"></div>
+        <div class="prob-sd" id="ps${i}" data-w="${sd}"></div>
+      </div>
+      <div style="display:flex;gap:14px;margin-top:5px;font-size:11px;font-family:var(--fh)">
+        <span class="green">漲 ${up}%</span>
+        <span class="red">跌 ${dn}%</span>
+        <span style="color:var(--muted)">震盪 ${sd}%</span>
       </div>
       ${p.analysis ? `<div class="prob-reason">${p.analysis}</div>` : ''}`;
     list.appendChild(d);
-    probBars.push({u:`pu${i}`,d:`pd${i}`,up,dn});
+    probBars.push({u:`pu${i}`,d:`pd${i}`,s:`ps${i}`,up,dn,sd});
   });
 }
 function animateBars() {
   if (barsAnimated) return; barsAnimated = true;
   probBars.forEach((b,i) => setTimeout(() => {
     const u = document.getElementById(b.u), d = document.getElementById(b.d);
-    if(u){u.style.width=b.up+'%';u.textContent=b.up+'%'}
-    if(d){d.style.width=b.dn+'%';d.textContent=b.dn+'%'}
+    if(u){u.style.width=b.up+'%'}
+    if(d){d.style.width=b.dn+'%'}
+    const s=document.getElementById(b.s);if(s){s.style.width=b.sd+'%'}
   }, i*200));
 }
 
-// ── 4. News ──
+// ── 6. News ──
 function renderNews(news) {
   const list = document.getElementById('news-list');
   const clrMap = {高:'var(--red)',high:'var(--red)',中:'var(--amber)',medium:'var(--amber)',低:'var(--green)',low:'var(--green)'};
-  news.forEach(n => {
+  news.forEach((n,i) => {
     const d = document.createElement('div');
     d.className = 'news-item';
     d.innerHTML = `
       <div class="news-dot" style="background:${clrMap[n.impact]||'var(--muted)'}"></div>
-      <div>
-        <div class="news-title">${n.title}</div>
-        <div class="news-desc">${n.description}</div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;justify-content:space-between;gap:8px">
+          <div class="news-title">${n.title}</div>
+          <span class="chev" id="nchev${i}">▾</span>
+        </div>
+        <div class="news-det" id="ndet${i}">${n.description}<div style="font-size:11px;color:var(--dim);margin-top:6px">${n.timestamp||''}</div></div>
       </div>`;
+    d.addEventListener('click', () => {
+      document.getElementById('ndet'+i).classList.toggle('open');
+      document.getElementById('nchev'+i).classList.toggle('open');
+    });
     list.appendChild(d);
   });
 }
 
-// ── 5. Risk ──
+// ── 7. Conclusion ──
+function renderConclusion(c) {
+  if (!c.summary && !c.points?.length && !c.advice) return;
+  const el = document.getElementById('conclusion-wrap');
+  const points = (c.points||[]).map(p =>
+    `<div class="concl-card"><div class="concl-title">${p.title}</div><div class="concl-detail">${p.detail}</div></div>`
+  ).join('');
+  el.innerHTML = `
+    <div style="border-left:3px solid var(--purple);padding-left:14px;margin-bottom:14px">
+      <span style="font-family:var(--fh);font-weight:700;font-size:15px">分析結論</span>
+    </div>
+    ${c.summary ? `<div class="conclusion-summary">${c.summary}</div>` : ''}
+    ${points}
+    ${c.advice ? `<div class="concl-advice">${c.advice}</div>` : ''}`;
+}
+
+// ── 8. Risk ──
 function renderRisk(items) {
-  const list = document.getElementById('risk-list');
+  const el = document.getElementById('risk-cards');
   items.forEach(r => {
-    const li = document.createElement('li');
-    li.className = 'item-row';
-    li.innerHTML = `<div class="pip" style="background:var(--red)"></div><div class="item-text">${r}</div>`;
-    list.appendChild(li);
+    const card = document.createElement('div');
+    card.className = 'risk-card';
+    // Support both string and {title, detail} format
+    if (typeof r === 'string') {
+      card.innerHTML = `<div class="risk-card-detail">${r}</div>`;
+    } else {
+      card.innerHTML = `<div class="risk-card-title">${r.title||''}</div><div class="risk-card-detail">${r.detail||r.description||''}</div>`;
+    }
+    el.appendChild(card);
   });
 }
 
-// ── 6. Advice ──
+// ── 9. Advice ──
 function renderAdvice(adv) {
-  const list = document.getElementById('adv-list');
-  const all = [
-    ...(adv.short_term_strategy||[]),
-    ...(adv.trading_opportunities||[]),
-    ...(adv.risk_avoidance||[]),
-    ...(adv.position_allocation||[]),
+  const el = document.getElementById('adv-grid');
+  const cfg = [
+    {key:'short_term_strategy', label:'短期策略', clr:'var(--blue)'},
+    {key:'trading_opportunities', label:'交易機會', clr:'var(--green)'},
+    {key:'risk_avoidance', label:'風險規避', clr:'var(--red)'},
+    {key:'position_allocation', label:'倉位配置', clr:'var(--amber)'},
   ];
-  all.forEach(item => {
-    const li = document.createElement('li');
-    li.className = 'item-row';
-    li.innerHTML = `<div class="pip" style="background:var(--green)"></div><div class="item-text">${item}</div>`;
-    list.appendChild(li);
+  cfg.forEach(c => {
+    const items = adv[c.key]; if(!items?.length) return;
+    const li = items.map(i=>`<li class="adv-item"><span class="adv-bul">•</span><span>${i}</span></li>`).join('');
+    const div = document.createElement('div');
+    div.innerHTML = `
+      <div style="border-left:3px solid ${c.clr};padding-left:12px;margin-bottom:16px">
+        <div style="font-family:var(--fh);font-weight:700;font-size:13px;color:${c.clr};margin-bottom:10px">${c.label}</div>
+        <ul class="adv-list">${li}</ul>
+      </div>`;
+    el.appendChild(div);
   });
 }
 
