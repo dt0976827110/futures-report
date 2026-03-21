@@ -1,0 +1,35 @@
+name: Daily Futures Report
+
+on:
+  schedule:
+    - cron: '22 21 * * *' # 每天 21:22 UTC (即 05:22 GMT+8)，確保 06:00 前完成
+  workflow_dispatch: # 允許手動觸發
+
+jobs:
+  generate-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install openai requests beautifulsoup4
+
+      - name: Run analysis script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python analysis_script.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add report.json
+          git commit -m "Update daily report: $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push
