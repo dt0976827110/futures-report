@@ -9,7 +9,6 @@ client = OpenAI()
 
 def fetch_futures_data():
     # Mapping Yahoo Finance symbols to our report keys
-    # YM=F: Dow Jones, NQ=F: Nasdaq 100, ^TWII: TAIEX (Proxy for TXF1)
     symbols_map = {
         'YM=F': 'YM1',
         'NQ=F': 'NQ1',
