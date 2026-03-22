@@ -1,251 +1,93 @@
 {
-  "report_date": "2026-03-22",
-  "report_time": "2026-03-22 11:11 (台灣時間)",
-  "last_update": "2026-03-22 11:11 (台灣時間)",
+  "date": "2026-03-20",
+  "summary": "2026年3月20日，全球金融市場陷入劇烈動盪。受中東局勢升級及美國通膨數據全線超預期的雙重打擊，市場恐慌情緒大幅飆升，VIX 指數單日大漲 11.31% 至 26.78。美國 2 月 PPI 年增率達 3.4%，核心 PPI 亦高於預期，顯示通膨壓力依然頑強，市場已基本排除年內降息的可能性。美股三大指數連跌四週，科技股受利率預期走高影響跌勢尤重，小那指 (NQ1!) 收盤重挫 1.95%。原油價格受戰火影響持續走高，布蘭特原油收於 113.51 美元，進一步加劇了市場對滯脹的擔憂。",
+  "economic_data": [
+    {
+      "indicator": "PPI MoM",
+      "actual": "0.7%",
+      "forecast": "0.3%",
+      "previous": "0.5%",
+      "impact": "High"
+    },
+    {
+      "indicator": "Core PPI MoM",
+      "actual": "0.5%",
+      "forecast": "0.3%",
+      "previous": "0.5%",
+      "impact": "Medium"
+    },
+    {
+      "indicator": "Initial Jobless Claims",
+      "actual": "205K",
+      "forecast": "215K",
+      "previous": "213K",
+      "impact": "Medium"
+    },
+    {
+      "indicator": "Philadelphia Fed Manufacturing Index",
+      "actual": "18.1",
+      "forecast": "10",
+      "previous": "16.3",
+      "impact": "Low"
+    }
+  ],
   "market_sentiment": {
     "vix": {
       "value": 26.78,
-      "change": "+3.27",
-      "level": "高",
-      "note": "VIX 飆升 13.9%，顯示市場恐慌情緒因中東戰火升溫而急遽擴張。"
+      "change_pct": "+11.31%",
+      "status": "Panic"
     },
     "dxy": {
-      "value": 99.503,
-      "direction": "↓",
-      "note": "美元指數小幅回落，但仍維持在 99.5 高位，避險需求支撐美元強勢。"
+      "value": 99.661,
+      "change_pct": "+0.16%",
+      "status": "Strong"
     },
-    "oil_brent": {
-      "value": 106.41,
-      "direction": "↑",
-      "note": "布蘭特原油大漲 2.89%，突破 106 美元，通膨壓力再度成為市場焦點。"
-    },
-    "today_focus": [
-      "中東衝突升級對能源供應鏈的持續衝擊",
-      "美聯儲 3 月利率決策會議前的通膨預期調整",
-      "全球製造業數據（如費城聯準會指數）對經濟衰退風險的啟示"
-    ]
-  },
-  "futures_data": {
-    "YM1": {
-      "name": "E-迷你道瓊指數",
-      "current_price": 45893.0,
-      "previous_close": 47039.0,
-      "currency": "USD",
-      "change_points": -1146.0,
-      "change_percent": -2.44,
-      "volume": "154218",
-      "support": 45662.0,
-      "resistance": 48266.0,
-      "support_basis": "前波低點及 45,600 心理關卡",
-      "resistance_basis": "5日均線 (46,220) 及前高壓力",
-      "timestamp": "2026-03-20 16:59"
-    },
-    "NQ1": {
-      "name": "E-迷你那斯達克 100 指數",
-      "current_price": 24101.5,
-      "previous_close": 24795.5,
-      "currency": "USD",
-      "change_points": -694.0,
-      "change_percent": -2.8,
-      "volume": "584456",
-      "support": 23971.25,
-      "resistance": 25217.5,
-      "support_basis": "24,000 整數關卡及近期低點",
-      "resistance_basis": "5日均線 (24,397) 及 20日均線壓力",
-      "timestamp": "2026-03-20 16:59"
-    },
-    "TXF1": {
-      "name": "台指期",
-      "current_price": 32737.0,
-      "previous_close": 33342.51,
-      "currency": "TWD",
-      "change_points": -605.51,
-      "change_percent": -1.82,
-      "volume": "88225",
-      "support": 32455.2,
-      "resistance": 33858.0,
-      "support_basis": "近期低點支撐",
-      "resistance_basis": "月線 (33,858) 壓力位",
-      "timestamp": "2026-03-21 05:00"
+    "brent_oil": {
+      "value": 113.51,
+      "change_pct": "+3.61%",
+      "status": "Bullish"
     }
   },
-  "yesterday_analysis": {
-    "title": "昨日走勢分析",
-    "events": [
-      {
-        "title": "中東戰火升溫",
-        "description": "美以對伊朗軍事行動導致油價飆升，布蘭特原油一度突破 112 美元，引發市場對通膨與經濟衰退的雙重憂慮。"
-      },
-      {
-        "title": "美股技術面修正",
-        "description": "美股三大指數因避險情緒升溫集體下挫，道瓊與那指分別下跌超過 2%，跌破多條短期均線。"
-      }
-    ],
-    "economic_data": [
-      {
-        "indicator": "費城聯準會製造業指數",
-        "actual": "18.1",
-        "forecast": "16.3",
-        "previous": "16.3",
-        "impact": "正面",
-        "note": "數據優於預期，顯示製造業活動仍在擴張，但被地緣政治風險掩蓋。"
-      },
-      {
-        "indicator": "布蘭特原油價格",
-        "actual": "106.41",
-        "forecast": "102.0",
-        "previous": "103.42",
-        "impact": "負面",
-        "note": "油價大漲推升通膨預期，壓抑股市估值。"
-      }
-    ]
-  },
-  "futures_analysis": {
-    "YM1": {
-      "name": "小道瓊",
-      "points": [
-        {
-          "title": "基本面驅動因素",
-          "detail": "地緣政治風險導致傳統藍籌股避險資金流出，高油價威脅工業與運輸成本。"
-        },
-        {
-          "title": "技術面分析",
-          "detail": "價格跌破 5日與 20日均線，RSI 降至 20.61 進入超賣區，短線雖有反彈機會但趨勢偏弱。"
-        }
-      ]
-    },
-    "NQ1": {
-      "name": "小那指",
-      "points": [
-        {
-          "title": "基本面驅動因素",
-          "detail": "美債殖利率飆升壓抑科技股估值，市場對 2026 年降息預期降溫。"
-        },
-        {
-          "title": "技術面分析",
-          "detail": "跌破 24,500 關鍵支撐，目前在 24,000 附近尋求支撐，RSI 為 38.5 仍有下探空間。"
-        }
-      ]
-    },
-    "TXF1": {
-      "name": "台指期",
-      "points": [
-        {
-          "title": "基本面驅動因素",
-          "detail": "外資連續三週賣超，資金撤出新興市場回流美元避險。"
-        },
-        {
-          "title": "技術面分析",
-          "detail": "跌破月線 (33,858)，成交量放大顯示殺盤力道強勁，需關注 32,500 附近支撐。"
-        }
-      ]
-    }
-  },
-  "today_probability": {
-    "title": "今日走勢機率評估",
-    "summary": "全球市場進入避險模式，短期震盪下行壓力巨大。",
-    "YM1": {
-      "up_probability": "35%",
-      "down_probability": "65%",
-      "analysis": "RSI 處於 20.61 極度超賣，雖有技術性反彈可能，但均線空頭排列且 VIX 高企，下行風險仍大。",
-      "key_level": "46,220 (5日均線) 若無法站穩，將下探 45,000。"
-    },
-    "NQ1": {
-      "up_probability": "30%",
-      "down_probability": "70%",
-      "analysis": "科技股對利率與油價敏感度高，目前均線下彎，空方佔優。",
-      "key_level": "24,400 為短線壓力，跌破 23,970 將開啟新一波跌勢。"
-    },
-    "TXF1": {
-      "up_probability": "40%",
-      "down_probability": "60%",
-      "analysis": "台股具備 AI 基本面支撐，但受美股拖累與外資提款壓力，短線偏空震盪。",
-      "key_level": "33,000 心理關卡，若跌破則看 32,500。"
-    }
-  },
-  "operation_level": {
-    "rating": "高風險",
-    "position_size": "減半倉位",
-    "reason": "地緣政治不確定性極高，市場波動率 VIX 飆升，建議保守操作。"
-  },
-  "investment_advice": {
-    "short_term_strategy": [
-      "YM1 建議在 46,100 附近建立短空，停損設 46,350",
-      "NQ1 觀察 24,000 支撐，若跌破可順勢放空至 23,800",
-      "TXF1 待反彈至 33,200 附近減碼多單",
-      "嚴格執行停損，避免在地緣政治消息面下硬扛"
-    ],
-    "trading_opportunities": [
-      "油價相關 ETF 或能源股具備避險機會",
-      "VIX 指數期貨短線仍有衝高空間",
-      "黃金作為避險資產可適度配置",
-      "台股 AI 強勢股回測支撐後的低吸機會"
-    ],
-    "risk_avoidance": [
-      "避開高槓桿操作，防止跳空風險",
-      "關注中東最新新聞，消息面隨時可能反轉",
-      "注意美元持續強勢對新興市場資金的抽離",
-      "避免在 VIX 高點盲目追多"
-    ],
-    "position_allocation": [
-      "現金比例提升至 50% 以上",
-      "避險資產（黃金、能源）配置 15%",
-      "期貨空單避險配置 10%",
-      "長期價值股保留 25%"
-    ]
-  },
-  "conclusion": {
-    "summary": "中東戰火引發全球避險潮，短期期貨市場以偏空震盪為主。",
-    "points": [
-      {
-        "title": "通膨與戰爭雙重打擊",
-        "detail": "油價飆升重燃通膨疑慮，美聯儲降息預期延後，壓抑股市表現。"
-      },
-      {
-        "title": "技術面全面轉弱",
-        "detail": "三大期貨均跌破短期均線，需時間消化賣壓並尋求底部支撐。"
-      }
-    ],
-    "advice": "目前市場情緒極度不穩定，建議投資人以現金為王，減少操作頻率，靜待地緣政治局勢明朗。"
-  },
-  "news": [
+  "futures_analysis": [
     {
-      "title": "中東戰火熾 2026 全球 CPI 上調至 4%",
-      "description": "牛津經濟研究院因能源設施受損，上調全球通膨預測。",
-      "impact": "高",
-      "timestamp": "2026-03-21"
+      "symbol": "YM1!",
+      "name": "E-mini Dow Jones",
+      "last": 45893,
+      "change": -448,
+      "change_pct": "-0.97%",
+      "volume": "154.22K",
+      "support": 45500,
+      "resistance": 46341,
+      "technical_view": "道指表現相對抗跌，但仍受制於 46,000 點整數關卡。目前回測 45,500 點支撐，若失守恐進一步下探年線位置。"
     },
     {
-      "title": "美聯儲 3 月會議維持利率不變預期升溫",
-      "description": "因油價飆升複雜化通膨前景，市場預期利率將維持在 3.50%-3.75%。",
-      "impact": "中",
-      "timestamp": "2026-03-21"
+      "symbol": "NQ1!",
+      "name": "E-mini Nasdaq 100",
+      "last": 24101.5,
+      "change": -478.5,
+      "change_pct": "-1.95%",
+      "volume": "584.46K",
+      "support": 24000,
+      "resistance": 24580,
+      "technical_view": "科技股賣壓沉重，NQ 已跌破 20 日均線，RSI 進入超賣區邊緣。24,000 點為關鍵心理支撐，若無法止跌，回調幅度將擴大。"
     },
     {
-      "title": "外資連續三週賣超台股逾千億",
-      "description": "地緣政治壓力下，資金加速撤離台股，月線支撐失守。",
-      "impact": "高",
-      "timestamp": "2026-03-21"
+      "symbol": "TXF1!",
+      "name": "Taiwan Index Futures",
+      "last": 33559,
+      "change": -145,
+      "change_pct": "-0.43%",
+      "volume": "9661B (Spot)",
+      "support": 33380,
+      "resistance": 34279,
+      "technical_view": "台指期受美股拖累開低，但在 33,500 點附近展現一定韌性。外資現貨大賣近 400 億，短線籌碼面偏空，需觀察台積電能否守穩支撐。"
     }
   ],
-  "risk_warning": {
-    "title": "風險提示",
-    "items": [
-      {
-        "title": "中東衝突擴大至霍爾木茲海峽",
-        "detail": "若封鎖海峽，油價可能衝破 150 美元。",
-        "impact_if_triggered": "全球股市將面臨崩盤式下跌，VIX 可能突破 40。"
-      },
-      {
-        "title": "美債殖利率失控飆升",
-        "detail": "通膨預期失控導致長債遭拋售。",
-        "impact_if_triggered": "科技股 NQ1 將面臨劇烈估值修正。"
-      },
-      {
-        "title": "台海局勢聯動風險",
-        "detail": "全球地緣政治動盪引發對台海安全的擔憂。",
-        "impact_if_triggered": "台指期 TXF1 可能出現極端跳空缺口。"
-      }
-    ]
-  }
+  "news_highlights": [
+    "美以對伊朗戰爭進入第四週，荷莫茲海峽通行受阻風險增加，油價飆升。",
+    "美國 PPI 全線超預期，聯準會官員立場轉向鷹派，市場排除年內降息可能。",
+    "鮑威爾表示通膨進展停滯，聯準會立場轉向鷹派。",
+    "美股三大指數連跌四週，道指與那指逼近回調區間。"
+  ],
+  "investment_strategy": "當前市場處於高波動環境，建議投資者採取防禦性策略。短期內避險情緒濃厚，美元與黃金具備支撐。期貨操作上，建議以反彈放空為主，嚴格執行停損，並關注中東局勢的進一步發展。"
 }
