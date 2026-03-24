@@ -3,51 +3,51 @@
   "report_time": "2026-03-24 06:00 (台灣時間)",
   "last_update": "2026-03-24 05:55 (台灣時間)",
   "market_sentiment": {
-    "vix": { "value": 25.0, "change": "-6.0", "level": "高", "note": "VIX 從 31 高位回落至 25，顯示川普推遲對伊打擊後市場極度恐慌情緒有所緩解，但仍處於警戒區間。" },
+    "vix": { "value": 24.85, "change": "-6.15", "level": "高", "note": "VIX 從 31 高位回落至 24.85，顯示川普推遲對伊打擊後市場極度恐慌情緒有所緩解，但仍處於警戒區間。" },
     "dxy": { "value": 104.2, "direction": "↓", "note": "避險需求降溫導致美元指數小幅回落，有利於風險資產反彈。" },
     "oil_brent": { "value": 99.94, "direction": "↓", "note": "布蘭特原油暴跌近 11% 跌破 100 大關，顯著減輕通膨壓力及全球經濟衰退擔憂。" },
     "today_focus": [
       "川普推遲對伊朗電力設施打擊後的後續地緣政治談判進展",
       "美國 2 月營建支出數據發布（預期 0.1%，前值 -0.3%）",
-      "台股日盤開盤是否能延續夜盤 1059 點的報復性反彈漲勢"
+      "台股日盤開盤是否能延續夜盤 1086 點的報復性反彈漲勢"
     ]
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
-      "current_price": 46223,
-      "previous_close": 45592,
+      "current_price": 46236,
+      "previous_close": 46522,
       "currency": "USD",
-      "change_points": 631,
-      "change_percent": 1.38,
-      "volume": "8.34K",
-      "support": 45500,
-      "resistance": 47000,
-      "support_basis": "前波低點支撐與 45500 整數關卡",
-      "resistance_basis": "47000 整數心理壓力位與 20 日均線位置",
+      "change_points": -286,
+      "change_percent": -0.61,
+      "volume": "8.31K",
+      "support": 45800,
+      "resistance": 46800,
+      "support_basis": "前波低點支撐與 45800 技術支撐位",
+      "resistance_basis": "46800 整數心理壓力位與 20 日均線位置",
       "timestamp": "2026-03-24 05:50 (台灣時間)"
     },
     "NQ1": {
       "name": "NASDAQ 100 E-mini",
-      "current_price": 24247,
+      "current_price": 24242,
       "previous_close": 24408,
       "currency": "USD",
-      "change_points": -161,
-      "change_percent": -0.66,
-      "volume": "29.86K",
-      "support": 24000,
+      "change_points": -166,
+      "change_percent": -0.68,
+      "volume": "30.69K",
+      "support": 24052,
       "resistance": 24520,
-      "support_basis": "24000 整數支撐與近期盤整區間下緣",
+      "support_basis": "24052 低分佈區間支撐（DrWallstreet 分析點位）",
       "resistance_basis": "24520 關鍵技術壓力位（MAZing 分析點位）",
       "timestamp": "2026-03-24 05:50 (台灣時間)"
     },
     "TXF1": {
       "name": "台指期",
       "current_price": 33618,
-      "previous_close": 32559,
+      "previous_close": 32532,
       "currency": "TWD",
-      "change_points": 1059,
-      "change_percent": 3.25,
+      "change_points": 1086,
+      "change_percent": 3.34,
       "volume": "117.89K",
       "support": 32858,
       "resistance": 34000,
@@ -86,14 +86,14 @@
       "name": "小道瓊",
       "points": [
         { "title": "基本面驅動因素", "detail": "地緣政治緊張局勢緩解，資金從避險資產回流藍籌股，道瓊成分股受惠於能源成本下降帶來的利潤預期改善。" },
-        { "title": "技術面分析", "detail": "價格強勢收復 46000 關卡，RSI 從超賣區反彈，目前站上 5 日均線，短線呈現報復性反彈格局。" }
+        { "title": "技術面分析", "detail": "價格在 46500 附近遇阻回落，RSI 從超賣區反彈後在 50 附近震盪，短線呈現報復性反彈後的修復格局。" }
       ]
     },
     "NQ1": {
       "name": "小那指",
       "points": [
         { "title": "基本面驅動因素", "detail": "雖然地緣風險緩解，但芝加哥聯準會數據疲軟引發對科技股增長動能的擔憂，且債券殖利率波動仍壓抑高估值板塊。" },
-        { "title": "技術面分析", "detail": "走勢相對道瓊疲軟，受阻於 24500 壓力區，成交量放大顯示上方拋壓仍重，需觀察能否站穩 24200。" }
+        { "title": "技術面分析", "detail": "走勢相對疲軟，受阻於 24500 壓力區，成交量放大顯示上方拋壓仍重，需觀察能否站穩 24200。" }
       ]
     },
     "TXF1": {
@@ -108,9 +108,9 @@
     "title": "今日走勢機率評估",
     "summary": "地緣政治風險驟降引發空單回補與報復性反彈，市場進入情緒修復期。",
     "YM1": {
-      "up_probability": "65%",
-      "down_probability": "35%",
-      "analysis": "RSI 回升至 52，價格站上 5 日線，且 VIX 大幅回落，有利多頭延續反彈。",
+      "up_probability": "60%",
+      "down_probability": "40%",
+      "analysis": "RSI 回升至 50 附近，價格站上 5 日線，且 VIX 大幅回落，有利多頭延續反彈。",
       "key_level": "46500 突破則確認反彈趨勢，跌破 45800 則反彈夭折。"
     },
     "NQ1": {
@@ -129,7 +129,7 @@
   "operation_level": {
     "rating": "中等風險",
     "position_size": "減半倉位",
-    "reason": "雖然地緣風險緩解，但市場波動率仍高（VIX=25），且報復性反彈後易有獲利了結賣壓。"
+    "reason": "雖然地緣風險緩解，但市場波動率仍高（VIX=24.85），且報復性反彈後易有獲利了結賣壓。"
   },
   "investment_advice": {
     "short_term_strategy": ["台指期開盤若回測 33500 不破可短多", "小道瓊 46100 附近建立多單，目標 46800", "小那指 24450 附近逢高減碼", "嚴格執行 150 點停損策略"],
@@ -159,7 +159,7 @@
       "timestamp": "2026-03-24 (台灣時間)"
     },
     {
-      "title": "台指期夜盤狂飆 1059 點",
+      "title": "台指期夜盤狂飆 1086 點",
       "description": "受美股反彈帶動，台指期夜盤創下近期最大單日漲幅，站上 33600 點。",
       "impact": "高",
       "timestamp": "2026-03-24 (台灣時間)"
