@@ -92,6 +92,12 @@
   "futures_analysis": {
     "YM1": {
       "name": "小道瓊",
+      "up_probability": 55,
+      "down_probability": 45,
+      "probability_basis": "RSI 處於 45 附近，顯示超賣後具備反彈動能；價格在 46,000 關口獲得支撐。",
+      "core_reason": "低位支撐強勁，短線有技術性反彈需求。",
+      "key_observation_level": "46,500",
+      "market_summary": "道指在 46,000 關口企穩，短線看反彈。",
       "points": [
         { "title": "基本面驅動因素", "detail": "地緣政治緊張引發避險，但防禦性板塊在低位獲得買盤支撐。" },
         { "title": "技術面分析", "detail": "價格在 46,000 關口獲得支撐，RSI 約 45，顯示超賣後的回升，但受制於 20 日均線壓力。" }
@@ -99,6 +105,12 @@
     },
     "NQ1": {
       "name": "小那指",
+      "up_probability": 45,
+      "down_probability": 55,
+      "probability_basis": "RSI 接近 40，處於弱勢區間；美債收益率上升壓制科技股估值。",
+      "core_reason": "受美債收益率壓制，反彈動力不足。",
+      "key_observation_level": "24,500",
+      "market_summary": "科技股受利率壓力，走勢相對疲軟。",
       "points": [
         { "title": "基本面驅動因素", "detail": "高收益率環境持續壓制科技股估值，AI 板塊出現分歧。" },
         { "title": "技術面分析", "detail": "形成低位十字星，顯示多空拉鋸。RSI 接近 40，處於弱勢區間。" }
@@ -106,16 +118,17 @@
     },
     "TXF1": {
       "name": "台指期",
+      "up_probability": 60,
+      "down_probability": 40,
+      "probability_basis": "夜盤跳空突破 33,000 壓力位，成交量放大，顯示多頭反撲動能強勁。",
+      "core_reason": "夜盤強勢補漲，日盤開盤預計跳空高開。",
+      "key_observation_level": "33,300",
+      "market_summary": "台指期夜盤強勁，日盤多頭佔優。",
       "points": [
         { "title": "基本面驅動因素", "detail": "受美股夜盤反彈帶動，台指期夜盤大幅補漲，反映市場對超跌後的修復預期。" },
         { "title": "技術面分析", "detail": "跳空突破 33,000 壓力位，轉為支撐。成交量放大，顯示多頭反撲。" }
       ]
     }
-  },
-  "probability_assessment": {
-    "YM1": { "up": 55, "down": 45, "core_reason": "低位支撐強勁，短線有技術性反彈需求。", "key_level": "46,500", "summary": "道指在 46,000 關口企穩，短線看反彈。" },
-    "NQ1": { "up": 45, "down": 55, "core_reason": "受美債收益率壓制，反彈動力不足。", "key_level": "24,500", "summary": "科技股受利率壓力，走勢相對疲軟。" },
-    "TXF1": { "up": 60, "down": 40, "core_reason": "夜盤強勢補漲，日盤開盤預計跳空高開。", "key_level": "33,300", "summary": "台指期夜盤強勁，日盤多頭佔優。" }
   },
   "investment_advice": {
     "short_term_strategy": [
