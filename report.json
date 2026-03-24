@@ -1,90 +1,102 @@
 {
-  "report_date": "YYYY-MM-DD",
-  "report_time": "YYYY-MM-DD HH:MM (台灣時間)",
-  "last_update": "YYYY-MM-DD HH:MM (台灣時間)",
+  "report_date": "2026-03-24",
+  "report_time": "2026-03-24 06:00 (台灣時間)",
+  "last_update": "2026-03-24 06:00 (台灣時間)",
   "market_sentiment": {
     "vix": {
-      "value": 0,
-      "change": "±0",
-      "level": "低/中/高/極高",
-      "note": "市場含義說明"
+      "value": 26.95,
+      "change": "+0.80",
+      "level": "高",
+      "note": "VIX 指數上升至 26.95，顯示市場對地緣政治風險及通膨壓力仍感不安，避險情緒濃厚。"
     },
     "dxy": {
-      "value": 0,
-      "direction": "↑/↓/→",
-      "note": "對市場影響說明"
+      "value": 99.18,
+      "direction": "↓",
+      "note": "美元指數微幅回落，主要受美聯儲維持利率不變及市場對未來降息預期影響，對商品期貨提供支撐。"
     },
     "oil_brent": {
-      "value": 0,
-      "direction": "↑/↓/→",
-      "note": "對通膨及市場影響說明"
+      "value": 100.35,
+      "direction": "↓",
+      "note": "布蘭特原油價格在 100 美元關卡震盪，地緣政治溢價部分消退，但供應擔憂仍存。"
     },
     "today_focus": [
-      "今日重點事件或數據1",
-      "今日重點事件或數據2",
-      "今日重點事件或數據3"
+      "美聯儲官員談話對未來利率路徑的指引",
+      "中東地緣政治局勢的最新進展及對油價影響",
+      "台股盤中電子權值股的表現與外資動向"
     ]
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
-      "current_price": 0,
-      "previous_close": 0,
+      "current_price": 46768.00,
+      "previous_close": 46415.00,
       "currency": "USD",
-      "change_points": 0,
-      "change_percent": 0,
-      "volume": "0",
-      "support": 0,
-      "resistance": 0,
-      "support_basis": "支撐位計算依據說明",
-      "resistance_basis": "壓力位計算依據說明",
-      "timestamp": "YYYY-MM-DD HH:MM (台灣時間)"
+      "change_points": 353.00,
+      "change_percent": 0.76,
+      "volume": "1750",
+      "support": 46200,
+      "resistance": 47000,
+      "support_basis": "參考前低支撐及 200 日均線位置計算",
+      "resistance_basis": "參考前高壓力及 20 日均線反壓計算",
+      "timestamp": "2026-03-24 06:00 (台灣時間)"
     },
     "NQ1": {
       "name": "E-迷你那斯達克指數",
-      "current_price": 0,
-      "previous_close": 0,
+      "current_price": 24439.00,
+      "previous_close": 24213.75,
       "currency": "USD",
-      "change_points": 0,
-      "change_percent": 0,
-      "volume": "0",
-      "support": 0,
-      "resistance": 0,
-      "support_basis": "支撐位計算依據說明",
-      "resistance_basis": "壓力位計算依據說明",
-      "timestamp": "YYYY-MM-DD HH:MM (台灣時間)"
+      "change_points": 225.25,
+      "change_percent": 0.93,
+      "volume": "10330",
+      "support": 24150,
+      "resistance": 24700,
+      "support_basis": "參考 200 日均線及近期低點支撐",
+      "resistance_basis": "參考 20 日均線及整數關卡壓力",
+      "timestamp": "2026-03-24 06:00 (台灣時間)"
     },
     "TXF1": {
       "name": "台灣加權指數期貨",
-      "current_price": 0,
-      "previous_close": 0,
+      "current_price": 33459,
+      "previous_close": 32781,
       "currency": "TWD",
-      "change_points": 0,
-      "change_percent": 0,
-      "volume": "0",
-      "support": 0,
-      "resistance": 0,
-      "support_basis": "支撐位計算依據說明",
-      "resistance_basis": "壓力位計算依據說明",
-      "timestamp": "YYYY-MM-DD HH:MM (台灣時間)"
+      "change_points": 678,
+      "change_percent": 2.07,
+      "volume": "85273",
+      "support": 33000,
+      "resistance": 33800,
+      "support_basis": "參考夜盤開盤價及近期技術支撐位",
+      "resistance_basis": "參考前高壓力及近期跳空缺口位置",
+      "timestamp": "2026-03-24 05:00 (台灣時間)"
     }
   },
   "yesterday_analysis": {
     "title": "昨日走勢分析",
     "events": [
       {
-        "title": "事件標題",
-        "description": "詳細說明"
+        "title": "美股三大指數反彈",
+        "description": "受科技股買盤回流及市場對美聯儲政策預期穩定影響，美股三大指數昨日全面收紅。"
+      },
+      {
+        "title": "地緣政治風險緩解",
+        "description": "中東局勢未進一步惡化，避險情緒小幅降溫，帶動風險資產走揚。"
       }
     ],
     "economic_data": [
       {
-        "indicator": "指標名稱",
-        "actual": "實際值",
-        "forecast": "預測值",
-        "previous": "前值",
-        "impact": "正面/負面/中性",
-        "note": "簡短備註"
+        "indicator": "芝加哥聯儲國家活動指數",
+        "actual": "-0.11",
+        "forecast": "0.10",
+        "previous": "0.20",
+        "impact": "負面",
+        "note": "數據低於預期，顯示經濟活動擴張速度放緩。"
+      },
+      {
+        "indicator": "台灣 2 月外銷訂單",
+        "actual": "23.8%",
+        "forecast": "30.0%",
+        "previous": "60.1%",
+        "impact": "負面",
+        "note": "增長大幅放緩，顯示全球需求不確定性增加。"
       }
     ]
   },
@@ -94,11 +106,11 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "詳細說明"
+          "detail": "市場對美聯儲維持利率不變的預期已大致消化，投資者轉向關注企業獲利前景。"
         },
         {
           "title": "技術面分析",
-          "detail": "均線位置、型態、量價關係說明"
+          "detail": "價格目前在 200 日均線附近獲得支撐，但上方受制於 20 日及 50 日均線反壓，呈現區間震盪格局。"
         }
       ]
     },
@@ -107,11 +119,11 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "詳細說明"
+          "detail": "科技龍頭股表現強勁，AI 相關題材持續吸引資金流入，支撐那指走勢。"
         },
         {
           "title": "技術面分析",
-          "detail": "均線位置、型態、量價關係說明"
+          "detail": "RSI 指數回升至 50 附近，顯示空方力道減弱，但需突破 24700 壓力位方能確認轉強。"
         }
       ]
     },
@@ -120,97 +132,125 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "詳細說明"
+          "detail": "受美股科技股反彈帶動，台指期夜盤表現強勁，外資在期貨市場的空單回補亦提供支撐。"
         },
         {
           "title": "技術面分析",
-          "detail": "均線位置、型態、量價關係說明"
+          "detail": "夜盤大漲突破多條短期均線，型態上出現止跌回穩跡象，今日需觀察日盤是否能站穩 33400。"
         }
       ]
     }
   },
   "today_probability": {
     "title": "今日走勢機率評估",
-    "summary": "整體市場格局一句話總結",
+    "summary": "市場情緒轉向中性偏多，但高波動格局仍將持續。",
     "YM1": {
-      "up_probability": "XX%",
-      "down_probability": "XX%",
-      "analysis": "核心理由（引用具體技術指標，如RSI值、均線位置等）",
-      "key_level": "關鍵觀察價位，突破/跌破此位將改變走勢判斷"
+      "up_probability": "55%",
+      "down_probability": "45%",
+      "analysis": "價格在 200 日均線 (46784) 附近震盪，RSI 顯示超賣區反彈，短期有向上挑戰 20 日線空間。",
+      "key_level": "47000"
     },
     "NQ1": {
-      "up_probability": "XX%",
-      "down_probability": "XX%",
-      "analysis": "核心理由（引用具體技術指標，如RSI值、均線位置等）",
-      "key_level": "關鍵觀察價位，突破/跌破此位將改變走勢判斷"
+      "up_probability": "60%",
+      "down_probability": "40%",
+      "analysis": "科技股買盤回溫，價格站穩 200 日均線 (24267)，短期技術指標轉強。",
+      "key_level": "24700"
     },
     "TXF1": {
-      "up_probability": "XX%",
-      "down_probability": "XX%",
-      "analysis": "核心理由（引用具體技術指標，如RSI值、均線位置等）",
-      "key_level": "關鍵觀察價位，突破/跌破此位將改變走勢判斷"
+      "up_probability": "65%",
+      "down_probability": "35%",
+      "analysis": "夜盤大漲近 700 點，站穩 33400 關鍵價位，顯示多方奪回主導權。",
+      "key_level": "33000"
     }
   },
   "operation_level": {
-    "rating": "低風險/中等風險/高風險/極高風險",
-    "position_size": "正常倉位/減半倉位/觀望為主",
-    "reason": "評級依據說明"
+    "rating": "中等風險",
+    "position_size": "減半倉位",
+    "reason": "雖然市場出現反彈，但地緣政治及通膨不確定性仍高，建議保守操作。"
   },
   "investment_advice": {
     "short_term_strategy": [
-      "含具體價位的建議1",
-      "含具體價位的建議2",
-      "建議3",
-      "建議4"
+      "台指期若站穩 33400 可輕倉試多，目標 33800",
+      "小那指突破 24700 可加碼，停損設於 24400",
+      "小道瓊在 46500 附近可分批佈局多單",
+      "關注盤中量價配合，若無量反彈應及時獲利了結"
     ],
     "trading_opportunities": [
-      "含進出場價位的機會1",
-      "機會2",
-      "機會3",
-      "機會4"
+      "台指期回測 33200 不破為進場機會",
+      "小那指回測 24300 支撐強勁可做多",
+      "小道瓊突破 47000 為短線轉強訊號",
+      "利用 VIX 高檔震盪進行選擇權賣方策略"
     ],
     "risk_avoidance": [
-      "風險1",
-      "風險2",
-      "風險3",
-      "風險4"
+      "嚴格執行停損，單筆損失控制在總資金 2% 以內",
+      "避免在地緣政治消息發布前過度曝險",
+      "注意匯率波動對台指期的間接影響",
+      "防止追高殺低，待價格回測支撐再進場"
     ],
     "position_allocation": [
-      "具體比例配置1",
-      "配置2",
-      "配置3",
-      "配置4"
+      "台指期配置 30%",
+      "小那指配置 40%",
+      "小道瓊配置 20%",
+      "現金留存 10%"
     ]
   },
   "conclusion": {
-    "summary": "整體市場結論一句話",
+    "summary": "全球市場在震盪中尋求底部支撐，短期反彈可期。",
     "points": [
       {
-        "title": "結論標題",
-        "detail": "詳細說明"
+        "title": "科技股領漲",
+        "detail": "AI 題材仍是市場核心，帶動那指及台指期表現優於大盤。"
       },
       {
-        "title": "結論標題",
-        "detail": "詳細說明"
+        "title": "通膨壓力仍存",
+        "detail": "油價高企及美聯儲態度將持續壓抑市場估值。"
       }
     ],
-    "advice": "操作建議一段話"
+    "advice": "今日操作以偏多震盪為主，但需隨時注意地緣政治突發消息。"
   },
   "news": [
     {
-      "title": "新聞標題",
-      "description": "新聞摘要50字以內",
-      "impact": "高/中/低",
-      "timestamp": "YYYY-MM-DD (台灣時間)"
+      "title": "美股三大指數全面收紅",
+      "description": "受科技股買盤帶動，道瓊、那指及標普 500 昨日全面上漲，市場情緒回溫。",
+      "impact": "高",
+      "timestamp": "2026-03-24 (台灣時間)"
+    },
+    {
+      "title": "美聯儲維持利率不變",
+      "description": "FOMC 會議決定維持利率在 3.5%-3.75% 區間，符合市場預期。",
+      "impact": "中",
+      "timestamp": "2026-03-24 (台灣時間)"
+    },
+    {
+      "title": "台灣 2 月外銷訂單遜於預期",
+      "description": "受全球終端需求疲軟影響，台灣 2 月外銷訂單年增率大幅放緩至 23.8%。",
+      "impact": "中",
+      "timestamp": "2026-03-24 (台灣時間)"
+    },
+    {
+      "title": "布蘭特原油回落至 100 美元",
+      "description": "地緣政治緊張局勢稍緩，油價從高點回落，減輕市場通膨壓力。",
+      "impact": "高",
+      "timestamp": "2026-03-24 (台灣時間)"
     }
   ],
   "risk_warning": {
     "title": "風險提示",
     "items": [
       {
-        "title": "風險標題",
-        "detail": "詳細說明",
-        "impact_if_triggered": "若此風險發生，對三大期貨走勢的具體影響"
+        "title": "地緣政治衝突升級",
+        "detail": "若中東局勢再度惡化，將引發油價飆升及避險情緒反彈。",
+        "impact_if_triggered": "三大期貨將面臨劇烈回檔壓力。"
+      },
+      {
+        "title": "通膨數據超預期",
+        "detail": "若後續 CPI 數據顯示通膨僵固，美聯儲可能轉向鷹派。",
+        "impact_if_triggered": "科技股將首當其衝，那指及台指期跌幅較大。"
+      },
+      {
+        "title": "外資持續匯出",
+        "detail": "若台幣持續貶值引發外資撤離，將對台股及台指期造成壓力。",
+        "impact_if_triggered": "台指期表現將弱於美股期貨。"
       }
     ]
   }
