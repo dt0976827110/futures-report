@@ -1,183 +1,217 @@
 {
-  "report_date": "2026-03-25",
-  "report_time": "2026-03-25 06:00 (台灣時間)",
-  "last_update": "2026-03-25 06:00 (台灣時間)",
+  "report_date": "YYYY-MM-DD",
+  "report_time": "YYYY-MM-DD HH:MM (台灣時間)",
+  "last_update": "YYYY-MM-DD HH:MM (台灣時間)",
   "market_sentiment": {
-    "vix": { "value": 26.95, "change": "+0.80", "level": "高", "note": "市場恐慌情緒升溫，受中東局勢不確定性影響。" },
-    "dxy": { "value": 99.21, "direction": "↑", "note": "美元指數受避險情緒及美債收益率上升支撐走強。" },
-    "oil_brent": { "value": 99.94, "direction": "↑", "note": "原油價格因地緣政治風險維持高位，增加通膨壓力。" },
+    "vix": {
+      "value": 0,
+      "change": "±0",
+      "level": "低/中/高/極高",
+      "note": "市場含義說明"
+    },
+    "dxy": {
+      "value": 0,
+      "direction": "↑/↓/→",
+      "note": "對市場影響說明"
+    },
+    "oil_brent": {
+      "value": 0,
+      "direction": "↑/↓/→",
+      "note": "對通膨及市場影響說明"
+    },
     "today_focus": [
-      "中東局勢進展：伊朗衝突是否進一步升級。",
-      "美債收益率走勢：10年期美債收益率對科技股的壓力。",
-      "聯準會官員講話：市場對利率路徑的預期調整。"
+      "今日重點事件或數據1",
+      "今日重點事件或數據2",
+      "今日重點事件或數據3"
     ]
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
-      "current_price": 46693.00,
-      "previous_close": 46415.00,
+      "current_price": 0,
+      "previous_close": 0,
       "currency": "USD",
-      "change_points": 278.00,
-      "change_percent": 0.60,
-      "volume": "114.86k",
-      "support": 46046,
-      "resistance": 46905,
-      "support_basis": "昨日盤中低點支撐位",
-      "resistance_basis": "昨日盤中高點壓力位",
-      "timestamp": "2026-03-25 06:00 (台灣時間)"
+      "change_points": 0,
+      "change_percent": 0,
+      "volume": "0",
+      "support": 0,
+      "resistance": 0,
+      "support_basis": "支撐位計算依據說明",
+      "resistance_basis": "壓力位計算依據說明",
+      "timestamp": "YYYY-MM-DD HH:MM (台灣時間)"
     },
     "NQ1": {
       "name": "E-迷你那斯達克指數",
-      "current_price": 24403.75,
-      "previous_close": 24408.25,
+      "current_price": 0,
+      "previous_close": 0,
       "currency": "USD",
-      "change_points": -4.50,
-      "change_percent": -0.02,
-      "volume": "538.34k",
-      "support": 24134,
-      "resistance": 24550,
-      "support_basis": "昨日盤中低點支撐位",
-      "resistance_basis": "昨日盤中高點壓力位",
-      "timestamp": "2026-03-25 06:00 (台灣時間)"
+      "change_points": 0,
+      "change_percent": 0,
+      "volume": "0",
+      "support": 0,
+      "resistance": 0,
+      "support_basis": "支撐位計算依據說明",
+      "resistance_basis": "壓力位計算依據說明",
+      "timestamp": "YYYY-MM-DD HH:MM (台灣時間)"
     },
     "TXF1": {
       "name": "台灣加權指數期貨",
-      "current_price": 33459,
-      "previous_close": 32771,
+      "current_price": 0,
+      "previous_close": 0,
       "currency": "TWD",
-      "change_points": 688,
-      "change_percent": 2.10,
-      "volume": "85.9k",
-      "support": 32771,
-      "resistance": 33600,
-      "support_basis": "昨日日盤收盤價支撐位",
-      "resistance_basis": "夜盤高點壓力位",
-      "timestamp": "2026-03-25 06:00 (台灣時間)"
+      "change_points": 0,
+      "change_percent": 0,
+      "volume": "0",
+      "support": 0,
+      "resistance": 0,
+      "support_basis": "支撐位計算依據說明",
+      "resistance_basis": "壓力位計算依據說明",
+      "timestamp": "YYYY-MM-DD HH:MM (台灣時間)"
     }
   },
   "yesterday_analysis": {
     "title": "昨日走勢分析",
     "events": [
-      { "title": "中東局勢緊張", "description": "伊朗戰爭疑慮引發全球股市劇烈波動，避險情緒濃厚。" },
-      { "title": "美債收益率上升", "description": "10年期美債收益率走高，壓制科技股表現，那指相對疲軟。" }
+      {
+        "title": "事件標題",
+        "description": "詳細說明"
+      }
     ],
     "economic_data": [
       {
-        "indicator": "美國 S&P 全球製造業 PMI 初值",
-        "actual": "51.6",
-        "forecast": "51.6",
-        "previous": "51.9",
-        "impact": "中性",
-        "note": "符合預期，但較前值略有下滑。"
-      },
-      {
-        "indicator": "美國第四季非農生產力終值",
-        "actual": "1.8%",
-        "forecast": "2.0%",
-        "previous": "5.2%",
-        "impact": "負面",
-        "note": "生產力增長放緩，增加勞動力成本壓力。"
-      },
-      {
-        "indicator": "美國里奇蒙聯邦儲備銀行製造業指數",
-        "actual": "-10",
-        "forecast": "-5",
-        "previous": "-10",
-        "impact": "負面",
-        "note": "製造業活動持續萎縮，低於市場預期。"
+        "indicator": "指標名稱",
+        "actual": "實際值",
+        "forecast": "預測值",
+        "previous": "前值",
+        "impact": "正面/負面/中性",
+        "note": "簡短備註"
       }
     ]
   },
   "futures_analysis": {
     "YM1": {
       "name": "小道瓊",
-      "up_probability": 55,
-      "down_probability": 45,
-      "probability_basis": "RSI 處於 45 附近，顯示超賣後具備反彈動能；價格在 46,000 關口獲得支撐。",
-      "core_reason": "低位支撐強勁，短線有技術性反彈需求。",
-      "key_observation_level": "46,500",
-      "market_summary": "道指在 46,000 關口企穩，短線看反彈。",
       "points": [
-        { "title": "基本面驅動因素", "detail": "地緣政治緊張引發避險，但防禦性板塊在低位獲得買盤支撐。" },
-        { "title": "技術面分析", "detail": "價格在 46,000 關口獲得支撐，RSI 約 45，顯示超賣後的回升，但受制於 20 日均線壓力。" }
+        {
+          "title": "基本面驅動因素",
+          "detail": "詳細說明"
+        },
+        {
+          "title": "技術面分析",
+          "detail": "均線位置、型態、量價關係說明"
+        }
       ]
     },
     "NQ1": {
       "name": "小那指",
-      "up_probability": 45,
-      "down_probability": 55,
-      "probability_basis": "RSI 接近 40，處於弱勢區間；美債收益率上升壓制科技股估值。",
-      "core_reason": "受美債收益率壓制，反彈動力不足。",
-      "key_observation_level": "24,500",
-      "market_summary": "科技股受利率壓力，走勢相對疲軟。",
       "points": [
-        { "title": "基本面驅動因素", "detail": "高收益率環境持續壓制科技股估值，AI 板塊出現分歧。" },
-        { "title": "技術面分析", "detail": "形成低位十字星，顯示多空拉鋸。RSI 接近 40，處於弱勢區間。" }
+        {
+          "title": "基本面驅動因素",
+          "detail": "詳細說明"
+        },
+        {
+          "title": "技術面分析",
+          "detail": "均線位置、型態、量價關係說明"
+        }
       ]
     },
     "TXF1": {
       "name": "台指期",
-      "up_probability": 60,
-      "down_probability": 40,
-      "probability_basis": "夜盤跳空突破 33,000 壓力位，成交量放大，顯示多頭反撲動能強勁。",
-      "core_reason": "夜盤強勢補漲，日盤開盤預計跳空高開。",
-      "key_observation_level": "33,300",
-      "market_summary": "台指期夜盤強勁，日盤多頭佔優。",
       "points": [
-        { "title": "基本面驅動因素", "detail": "受美股夜盤反彈帶動，台指期夜盤大幅補漲，反映市場對超跌後的修復預期。" },
-        { "title": "技術面分析", "detail": "跳空突破 33,000 壓力位，轉為支撐。成交量放大，顯示多頭反撲。" }
+        {
+          "title": "基本面驅動因素",
+          "detail": "詳細說明"
+        },
+        {
+          "title": "技術面分析",
+          "detail": "均線位置、型態、量價關係說明"
+        }
       ]
     }
   },
-  "investment_advice": {
-    "short_term_strategy": [
-      "YM1!: 46,500 附近做多，止損 46,300，目標 46,850。",
-      "NQ1!: 24,500 附近做空，止損 24,600，目標 24,200。",
-      "TXF1!: 開盤若不破 33,300 可輕倉試多，目標 33,600。",
-      "避險資產：關注黃金及美元回調後的短線機會。"
-    ],
-    "trading_opportunities": [
-      "YM1!: 突破 46,900 可加倉看 47,200。",
-      "NQ1!: 跌破 24,100 可追空看 23,800。",
-      "TXF1!: 33,600 附近若受阻可反手短空。",
-      "原油期貨：高位震盪，適合區間操作。"
-    ],
-    "risk_mitigation": [
-      "嚴格執行止損，避免地緣政治突發新聞導致的穿倉風險。",
-      "避開重要經濟數據發布時段的盲目操作。",
-      "關注 VIX 指數，若 VIX 突破 30 應全面觀望。",
-      "分散投資，避免單一期貨品種倉位過重。"
-    ],
-    "position_allocation": [
-      "總倉位建議控制在 50% 以內。",
-      "YM1!: 建議配置 20% 倉位。",
-      "NQ1!: 建議配置 15% 倉位。",
-      "TXF1!: 建議配置 15% 倉位。"
-    ]
+  "today_probability": {
+    "title": "今日走勢機率評估",
+    "summary": "整體市場格局一句話總結",
+    "YM1": {
+      "up_probability": "XX%",
+      "down_probability": "XX%",
+      "analysis": "核心理由（引用具體技術指標，如RSI值、均線位置等）",
+      "key_level": "關鍵觀察價位，突破/跌破此位將改變走勢判斷"
+    },
+    "NQ1": {
+      "up_probability": "XX%",
+      "down_probability": "XX%",
+      "analysis": "核心理由（引用具體技術指標，如RSI值、均線位置等）",
+      "key_level": "關鍵觀察價位，突破/跌破此位將改變走勢判斷"
+    },
+    "TXF1": {
+      "up_probability": "XX%",
+      "down_probability": "XX%",
+      "analysis": "核心理由（引用具體技術指標，如RSI值、均線位置等）",
+      "key_level": "關鍵觀察價位，突破/跌破此位將改變走勢判斷"
+    }
   },
   "operation_level": {
-    "level": "高風險",
-    "suggested_volume": "減半倉位",
-    "reason": "地緣政治不確定性極高，VIX 處於高位，市場情緒脆弱。"
+    "rating": "低風險/中等風險/高風險/極高風險",
+    "position_size": "正常倉位/減半倉位/觀望為主",
+    "reason": "評級依據說明"
+  },
+  "investment_advice": {
+    "short_term_strategy": [
+      "含具體價位的建議1",
+      "含具體價位的建議2",
+      "建議3",
+      "建議4"
+    ],
+    "trading_opportunities": [
+      "含進出場價位的機會1",
+      "機會2",
+      "機會3",
+      "機會4"
+    ],
+    "risk_avoidance": [
+      "風險1",
+      "風險2",
+      "風險3",
+      "風險4"
+    ],
+    "position_allocation": [
+      "具體比例配置1",
+      "配置2",
+      "配置3",
+      "配置4"
+    ]
   },
   "conclusion": {
-    "summary": "全球市場受中東局勢主導，波動性加劇，操作應趨於保守。",
-    "key_conclusions": [
-      { "title": "避險情緒主導", "description": "VIX 及美元走強，顯示市場避險需求旺盛。" },
-      { "title": "科技股承壓", "description": "高收益率環境對那指形成持續壓力。" }
+    "summary": "整體市場結論一句話",
+    "points": [
+      {
+        "title": "結論標題",
+        "detail": "詳細說明"
+      },
+      {
+        "title": "結論標題",
+        "detail": "詳細說明"
+      }
     ],
-    "advice": "建議以短線操作為主，嚴格止損，控制倉位，靜待局勢明朗。"
+    "advice": "操作建議一段話"
   },
-  "risk_factors": [
-    { "title": "中東衝突升級", "description": "若伊朗衝突擴大，將引發油價暴漲及股市崩盤。", "impact": "YM1!/NQ1!/TXF1! 全面大跌" },
-    { "title": "通膨預期回升", "description": "油價高企可能導致通膨數據超預期，引發聯準會鷹派轉向。", "impact": "NQ1! 跌幅擴大" },
-    { "title": "流動性風險", "description": "市場劇烈波動可能導致流動性枯竭，增加交易成本。", "impact": "滑價風險增加" }
+  "news": [
+    {
+      "title": "新聞標題",
+      "description": "新聞摘要50字以內",
+      "impact": "高/中/低",
+      "timestamp": "YYYY-MM-DD (台灣時間)"
+    }
   ],
-  "news_summary": [
-    { "title": "中東戰爭疑慮引發股市大跌", "summary": "伊朗局勢緊張導致全球股市重挫，投資者湧向避險資產。", "impact": "高", "time": "2026-03-24" },
-    { "title": "美債收益率攀升壓制科技股", "summary": "10年期美債收益率上升，那斯達克指數表現落後於道指。", "impact": "中", "time": "2026-03-24" },
-    { "title": "美元指數走強", "summary": "受避險需求及利差支撐，美元指數突破 99 關口。", "impact": "中", "time": "2026-03-24" },
-    { "title": "原油價格高位震盪", "summary": "布蘭特原油接近 100 美元，市場擔憂供應中斷。", "impact": "高", "time": "2026-03-24" }
-  ]
+  "risk_warning": {
+    "title": "風險提示",
+    "items": [
+      {
+        "title": "風險標題",
+        "detail": "詳細說明",
+        "impact_if_triggered": "若此風險發生，對三大期貨走勢的具體影響"
+      }
+    ]
+  }
 }
