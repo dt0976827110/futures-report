@@ -1,0 +1,217 @@
+{
+  "report_date": "YYYY-MM-DD",
+  "report_time": "YYYY-MM-DD HH:MM (台灣時間)",
+  "last_update": "YYYY-MM-DD HH:MM (台灣時間)",
+  "market_sentiment": {
+    "vix": {
+      "value": 0,
+      "change": "±0",
+      "level": "低/中/高/極高",
+      "note": "市場含義說明"
+    },
+    "dxy": {
+      "value": 0,
+      "direction": "↑/↓/→",
+      "note": "對市場影響說明"
+    },
+    "oil_brent": {
+      "value": 0,
+      "direction": "↑/↓/→",
+      "note": "對通膨及市場影響說明"
+    },
+    "today_focus": [
+      "今日重點事件或數據1",
+      "今日重點事件或數據2",
+      "今日重點事件或數據3"
+    ]
+  },
+  "futures_data": {
+    "YM1": {
+      "name": "E-迷你道瓊指數",
+      "current_price": 0,
+      "previous_close": 0,
+      "currency": "USD",
+      "change_points": 0,
+      "change_percent": 0,
+      "volume": "0",
+      "support": 0,
+      "resistance": 0,
+      "support_basis": "支撐位計算依據說明",
+      "resistance_basis": "壓力位計算依據說明",
+      "timestamp": "YYYY-MM-DD HH:MM (台灣時間)"
+    },
+    "NQ1": {
+      "name": "E-迷你那斯達克指數",
+      "current_price": 0,
+      "previous_close": 0,
+      "currency": "USD",
+      "change_points": 0,
+      "change_percent": 0,
+      "volume": "0",
+      "support": 0,
+      "resistance": 0,
+      "support_basis": "支撐位計算依據說明",
+      "resistance_basis": "壓力位計算依據說明",
+      "timestamp": "YYYY-MM-DD HH:MM (台灣時間)"
+    },
+    "TXF1": {
+      "name": "台灣加權指數期貨",
+      "current_price": 0,
+      "previous_close": 0,
+      "currency": "TWD",
+      "change_points": 0,
+      "change_percent": 0,
+      "volume": "0",
+      "support": 0,
+      "resistance": 0,
+      "support_basis": "支撐位計算依據說明",
+      "resistance_basis": "壓力位計算依據說明",
+      "timestamp": "YYYY-MM-DD HH:MM (台灣時間)"
+    }
+  },
+  "yesterday_analysis": {
+    "title": "昨日走勢分析",
+    "events": [
+      {
+        "title": "事件標題",
+        "description": "詳細說明"
+      }
+    ],
+    "economic_data": [
+      {
+        "indicator": "指標名稱",
+        "actual": "實際值",
+        "forecast": "預測值",
+        "previous": "前值",
+        "impact": "正面/負面/中性",
+        "note": "簡短備註"
+      }
+    ]
+  },
+  "futures_analysis": {
+    "YM1": {
+      "name": "小道瓊",
+      "points": [
+        {
+          "title": "基本面驅動因素",
+          "detail": "詳細說明"
+        },
+        {
+          "title": "技術面分析",
+          "detail": "均線位置、型態、量價關係說明"
+        }
+      ]
+    },
+    "NQ1": {
+      "name": "小那指",
+      "points": [
+        {
+          "title": "基本面驅動因素",
+          "detail": "詳細說明"
+        },
+        {
+          "title": "技術面分析",
+          "detail": "均線位置、型態、量價關係說明"
+        }
+      ]
+    },
+    "TXF1": {
+      "name": "台指期",
+      "points": [
+        {
+          "title": "基本面驅動因素",
+          "detail": "詳細說明"
+        },
+        {
+          "title": "技術面分析",
+          "detail": "均線位置、型態、量價關係說明"
+        }
+      ]
+    }
+  },
+  "today_probability": {
+    "title": "今日走勢機率評估",
+    "summary": "整體市場格局一句話總結",
+    "YM1": {
+      "up_probability": "XX%",
+      "down_probability": "XX%",
+      "analysis": "核心理由（引用具體技術指標，如RSI值、均線位置等）",
+      "key_level": "關鍵觀察價位，突破/跌破此位將改變走勢判斷"
+    },
+    "NQ1": {
+      "up_probability": "XX%",
+      "down_probability": "XX%",
+      "analysis": "核心理由（引用具體技術指標，如RSI值、均線位置等）",
+      "key_level": "關鍵觀察價位，突破/跌破此位將改變走勢判斷"
+    },
+    "TXF1": {
+      "up_probability": "XX%",
+      "down_probability": "XX%",
+      "analysis": "核心理由（引用具體技術指標，如RSI值、均線位置等）",
+      "key_level": "關鍵觀察價位，突破/跌破此位將改變走勢判斷"
+    }
+  },
+  "operation_level": {
+    "rating": "低風險/中等風險/高風險/極高風險",
+    "position_size": "正常倉位/減半倉位/觀望為主",
+    "reason": "評級依據說明"
+  },
+  "investment_advice": {
+    "short_term_strategy": [
+      "含具體價位的建議1",
+      "含具體價位的建議2",
+      "建議3",
+      "建議4"
+    ],
+    "trading_opportunities": [
+      "含進出場價位的機會1",
+      "機會2",
+      "機會3",
+      "機會4"
+    ],
+    "risk_avoidance": [
+      "風險1",
+      "風險2",
+      "風險3",
+      "風險4"
+    ],
+    "position_allocation": [
+      "具體比例配置1",
+      "配置2",
+      "配置3",
+      "配置4"
+    ]
+  },
+  "conclusion": {
+    "summary": "整體市場結論一句話",
+    "points": [
+      {
+        "title": "結論標題",
+        "detail": "詳細說明"
+      },
+      {
+        "title": "結論標題",
+        "detail": "詳細說明"
+      }
+    ],
+    "advice": "操作建議一段話"
+  },
+  "news": [
+    {
+      "title": "新聞標題",
+      "description": "新聞摘要50字以內",
+      "impact": "高/中/低",
+      "timestamp": "YYYY-MM-DD (台灣時間)"
+    }
+  ],
+  "risk_warning": {
+    "title": "風險提示",
+    "items": [
+      {
+        "title": "風險標題",
+        "detail": "詳細說明",
+        "impact_if_triggered": "若此風險發生，對三大期貨走勢的具體影響"
+      }
+    ]
+  }
+}
