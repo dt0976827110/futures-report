@@ -42,14 +42,18 @@ def get_txf():
             cols = [td.get_text(strip=True) for td in row.select("td")]
             if len(cols) > 8 and cols[0] == "TX":
                 current = float(cols[5].replace(",", ""))
-                change_pts = float(cols[6].replace("▲","").replace("▽","").replace(",",""))
-                if "▽" in cols[6]:
+                raw_chg = cols[6].replace(",", "")
+                is_down = "▽" in raw_chg
+                change_pts = float(raw_chg.replace("▲", "").replace("▽", ""))
+                if is_down:
                     change_pts = -change_pts
                 prev = round(current - change_pts, 0)
-                change_pct = float(cols[7].replace("▲","").replace("▽","").replace("%","").replace(",",""))
-                if "▽" in cols[7]:
+                raw_pct = cols[7].replace(",", "").replace("%", "")
+                is_down_pct = "▽" in raw_pct
+                change_pct = float(raw_pct.replace("▲", "").replace("▽", ""))
+                if is_down_pct:
                     change_pct = -change_pct
-                volume = cols[8].replace(",","")
+                volume = cols[8].replace(",", "")
                 return {
                     "name": "台灣加權指數期貨",
                     "current_price": current,
@@ -66,8 +70,8 @@ def get_txf():
                 }
         return {"error": "找不到TX資料"}
     except Exception as e:
-        return {"error": str(
-        
+        return {"error": str(e)}
+
 def get_vix():
     try:
         t = yf.Ticker("^VIX")
