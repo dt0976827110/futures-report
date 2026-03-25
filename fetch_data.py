@@ -34,18 +34,18 @@ def get_futures(symbol, name, currency):
 
 def get_txf():
     try:
-        url = "https://www.taifex.com.tw/cht/3/futContractsDate"
+        url = "https://www.taifex.com.tw/cht/3/futDailyMarketReport"
         res = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
         soup = BeautifulSoup(res.text, "html.parser")
         rows = soup.select("table tr")
-        for i, row in enumerate(rows[:20]):
+        for i, row in enumerate(rows[:30]):
             cols = [td.get_text(strip=True) for td in row.select("td")]
             if cols:
                 print(f"Row {i}: {cols}")
         return {"error": "debug mode"}
     except Exception as e:
         return {"error": str(e)}
-
+        
 def get_vix():
     try:
         t = yf.Ticker("^VIX")
