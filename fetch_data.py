@@ -21,8 +21,15 @@ def get_yahoo(symbol):
 def get_futures(symbol, name, currency):
     try:
         d = get_yahoo(symbol)
-        current = round(d["regularMarketPrice"], 2)
-        prev = round(d["previousClose"], 2)
+        current = round(d["previousClose"], 2)
+
+        # 抓歷史資料取前一次收盤
+        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?interval=1d&range=5d"
+        res = requests.get(url, headers=HEADERS, timeout=10)
+        closes = res.json()["chart"]["result"][0]["indicators"]["quote"][0]["close"]
+        closes = [c for c in closes if c is not None]
+        prev = round(closes[-2], 2)
+
         change_pts = round(current - prev, 2)
         change_pct = round((change_pts / prev) * 100, 2)
         return {
