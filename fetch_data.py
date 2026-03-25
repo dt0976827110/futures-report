@@ -13,11 +13,22 @@ def get_futures(symbol, name, currency):
         info = t.fast_info
         current = round(info.last_price, 2)
         
-        # 抓最近5天歷史，找成交量最大的前一日收盤
-        hist = t.history(period="5d")
-        # 排除今天（最後一筆），取前面成交量最大的那筆
-        hist_prev = hist.iloc[:-1]
-        prev = round(float(hist_prev.loc[hist_prev["Volume"].idxmax(), "Close"]), 2)
+        # 抓歷史資料，找昨天（美東時間）成交量最大的那筆
+        hist = t.history(period="5d", interval="1d")
+        
+        # 取昨天日期（美東時間，UTC-4）
+        et = timezone(timedelta(hours=-4))
+        yesterday = (datetime.now(et) - timedelta(days=1)).strftime("%Y-%m-%d")
+        
+        # 篩選昨天的資料，取成交量最大那筆
+        hist.index = hist.index.tz_convert(et)
+        hist["date"] = hist.index.strftime("%Y-%m-%d")
+        yesterday_data = hist[hist["date"] == yesterday]
+        
+        if len(yesterday_data) > 0:
+            prev = round(float(yesterday_data.loc[yesterday_data["Volume"].idxmax(), "Close"]), 2)
+        else:
+            prev = round(float(hist["Close"].iloc[-2]), 2)
         
         change_pts = round(current - prev, 2)
         change_pct = round((change_pts / prev) * 100, 2)
