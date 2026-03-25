@@ -18,12 +18,27 @@ def get_yahoo(symbol):
     res = requests.get(url, headers=HEADERS, timeout=10)
     return res.json()["chart"]["result"][0]["meta"]
 
-def debug_futures(symbol):
+def get_futures(symbol, name, currency):
     try:
         d = get_yahoo(symbol)
-        print(f"{symbol} keys:", list(d.keys()))
-        print(f"{symbol} data:", {k: d[k] for k in list(d.keys())[:20]})
-        return {"error": "debug mode"}
+        current = round(d["regularMarketPrice"], 2)
+        prev = round(d["previousClose"], 2)
+        change_pts = round(current - prev, 2)
+        change_pct = round((change_pts / prev) * 100, 2)
+        return {
+            "name": name,
+            "current_price": current,
+            "previous_close": prev,
+            "currency": currency,
+            "change_points": change_pts,
+            "change_percent": change_pct,
+            "volume": str(d.get("regularMarketVolume", 0)),
+            "support": round(prev * 0.99, 0),
+            "resistance": round(prev * 1.01, 0),
+            "support_basis": "前收盤價 -1% 估算",
+            "resistance_basis": "前收盤價 +1% 估算",
+            "timestamp": now.strftime("%Y-%m-%d %H:%M (台灣時間)")
+        }
     except Exception as e:
         return {"error": str(e)}
 
@@ -67,16 +82,61 @@ def get_txf():
     except Exception as e:
         return {"error": str(e)}
 
+def get_vix():
+    try:
+        d = get_yahoo("%5EVIX")
+        current = round(d["regularMarketPrice"], 2)
+        prev = round(d["chartPreviousClose"], 2)
+        change = round(current - prev, 2)
+        sign = "+" if change >= 0 else ""
+        level = "低" if current < 15 else "中" if current < 20 else "高" if current < 30 else "極高"
+        return {
+            "value": current,
+            "change": f"{sign}{change}",
+            "level": level,
+            "note": f"VIX 目前 {current}，市場波動{level}。"
+        }
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_dxy():
+    try:
+        d = get_yahoo("DX-Y.NYB")
+        current = round(d["regularMarketPrice"], 2)
+        prev = round(d["previousClose"], 2)
+        direction = "↑" if current >= prev else "↓"
+        return {
+            "value": current,
+            "direction": direction,
+            "note": f"美元指數 {current}，趨勢{'走強' if direction == '↑' else '走弱'}。"
+        }
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_oil():
+    try:
+        d = get_yahoo("BZ%3DF")
+        current = round(d["regularMarketPrice"], 2)
+        prev = round(d["previousClose"], 2)
+        direction = "↑" if current >= prev else "↓"
+        return {
+            "value": current,
+            "direction": direction,
+            "note": f"布蘭特原油 {current} 美元，趨勢{'上漲' if direction == '↑' else '下跌'}。"
+        }
+    except Exception as e:
+        return {"error": str(e)}
+
 data = {
     "fetch_time": now.strftime("%Y-%m-%d %H:%M (台灣時間)"),
     "market_sentiment": {
-        "vix": debug_futures("%5EVIX"),
-        "dxy": debug_futures("DX-Y.NYB"),
-        "oil_brent": debug_futures("BZ%3DF")
+        "vix": get_vix(),
+        "dxy": get_dxy(),
+        "oil_brent": get_oil()
     },
     "futures_data": {
-        "YM1": debug_futures("YM=F"),
-        "NQ1": debug_futures("NQ=F"),
+        "YM1": get_futures("YM=F", "E-迷你道瓊指數", "USD"),
+        "NQ1": get_futures("NQ=F", "E-迷你那斯達克指數", "USD"),
         "TXF1": get_txf()
     }
 }
