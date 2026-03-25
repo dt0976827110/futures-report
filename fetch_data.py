@@ -35,31 +35,14 @@ def get_futures(symbol, name, currency):
 def get_txf():
     try:
         url = "https://www.taifex.com.tw/cht/3/futContractsDate"
-        res = requests.get(url, timeout=10)
+        res = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
         soup = BeautifulSoup(res.text, "html.parser")
-        rows = soup.select("table.table_f tr")
-        for row in rows:
+        rows = soup.select("table tr")
+        for i, row in enumerate(rows[:20]):
             cols = [td.get_text(strip=True) for td in row.select("td")]
-            if len(cols) > 5 and "臺股期貨" in cols[0]:
-                current = float(cols[8].replace(",", ""))
-                prev = float(cols[7].replace(",", ""))
-                change_pts = round(current - prev, 0)
-                change_pct = round((change_pts / prev) * 100, 2)
-                return {
-                    "name": "台灣加權指數期貨",
-                    "current_price": current,
-                    "previous_close": prev,
-                    "currency": "TWD",
-                    "change_points": change_pts,
-                    "change_percent": change_pct,
-                    "volume": str(cols[10].replace(",", "")),
-                    "support": round(prev * 0.99, 0),
-                    "resistance": round(prev * 1.01, 0),
-                    "support_basis": "前收盤價 -1% 估算",
-                    "resistance_basis": "前收盤價 +1% 估算",
-                    "timestamp": now.strftime("%Y-%m-%d %H:%M (台灣時間)")
-                }
-        return {"error": "找不到臺股期貨資料"}
+            if cols:
+                print(f"Row {i}: {cols}")
+        return {"error": "debug mode"}
     except Exception as e:
         return {"error": str(e)}
 
