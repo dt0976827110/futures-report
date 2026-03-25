@@ -117,6 +117,8 @@ def get_futures(symbol, name, currency):
         lows       = [d[3] for d in history]
         volumes    = [d[4] for d in history]
         timestamps = [d[0] for d in history]
+        for d in history[-5:]:
+    print(symbol, datetime.utcfromtimestamp(d[0]).strftime('%Y-%m-%d %H:%M'), round(d[1],2))
 
         current    = round(closes[-2], 2)
         prev       = round(closes[-3], 2)
