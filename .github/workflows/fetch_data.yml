@@ -19,8 +19,8 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests yfinance beautifulsoup4
-
+        run: pip install requests beautifulsoup4 numpy
+        
       - name: Run fetch script
         run: python fetch_data.py
 
