@@ -109,8 +109,11 @@ def get_yahoo_history(symbol, range_period="3mo"):
     return data
 
 def get_futures(symbol, name, currency):
+    
     try:
         history = get_yahoo_history(symbol, "3mo")
+        for d in history[-10:]:
+            print(datetime.utcfromtimestamp(d[0]).strftime('%Y-%m-%d %H:%M'), round(d[1],2))
         closes  = [d[1] for d in history]
         highs   = [d[2] for d in history]
         lows    = [d[3] for d in history]
