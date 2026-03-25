@@ -7,21 +7,23 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-
       - name: Install dependencies
         run: pip install requests beautifulsoup4 numpy
-        
+
       - name: Run fetch script
         run: python fetch_data.py
 
