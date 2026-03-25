@@ -1,6 +1,5 @@
 import json
 import requests
-import yfinance as yf
 from datetime import datetime, timezone, timedelta
 from bs4 import BeautifulSoup
 
@@ -9,27 +8,12 @@ now = datetime.now(TW)
 
 def get_futures(symbol, name, currency):
     try:
-        t = yf.Ticker(symbol)
-        info = t.fast_info
-        current = round(info.last_price, 2)
-        
-        # 抓歷史資料，找昨天（美東時間）成交量最大的那筆
-        hist = t.history(period="5d", interval="1d")
-        
-        # 取昨天日期（美東時間，UTC-4）
-        et = timezone(timedelta(hours=-4))
-        yesterday = (datetime.now(et) - timedelta(days=1)).strftime("%Y-%m-%d")
-        
-        # 篩選昨天的資料，取成交量最大那筆
-        hist.index = hist.index.tz_convert(et)
-        hist["date"] = hist.index.strftime("%Y-%m-%d")
-        yesterday_data = hist[hist["date"] == yesterday]
-        
-        if len(yesterday_data) > 0:
-            prev = round(float(yesterday_data.loc[yesterday_data["Volume"].idxmax(), "Close"]), 2)
-        else:
-            prev = round(float(hist["Close"].iloc[-2]), 2)
-        
+        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
+        headers = {"User-Agent": "Mozilla/5.0"}
+        res = requests.get(url, headers=headers, timeout=10)
+        d = res.json()["chart"]["result"][0]["meta"]
+        current = round(d["regularMarketPrice"], 2)
+        prev = round(d["regularMarketPreviousClose"], 2)
         change_pts = round(current - prev, 2)
         change_pct = round((change_pts / prev) * 100, 2)
         return {
@@ -39,7 +23,7 @@ def get_futures(symbol, name, currency):
             "currency": currency,
             "change_points": change_pts,
             "change_percent": change_pct,
-            "volume": str(int(info.three_month_average_volume or 0)),
+            "volume": str(d.get("regularMarketVolume", 0)),
             "support": round(prev * 0.99, 0),
             "resistance": round(prev * 1.01, 0),
             "support_basis": "前收盤價 -1% 估算",
@@ -91,10 +75,12 @@ def get_txf():
 
 def get_vix():
     try:
-        t = yf.Ticker("^VIX")
-        info = t.fast_info
-        current = round(info.last_price, 2)
-        prev = round(info.previous_close, 2)
+        url = "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX"
+        headers = {"User-Agent": "Mozilla/5.0"}
+        res = requests.get(url, headers=headers, timeout=10)
+        d = res.json()["chart"]["result"][0]["meta"]
+        current = round(d["regularMarketPrice"], 2)
+        prev = round(d["regularMarketPreviousClose"], 2)
         change = round(current - prev, 2)
         sign = "+" if change >= 0 else ""
         level = "低" if current < 15 else "中" if current < 20 else "高" if current < 30 else "極高"
@@ -109,10 +95,12 @@ def get_vix():
 
 def get_dxy():
     try:
-        t = yf.Ticker("DX-Y.NYB")
-        info = t.fast_info
-        current = round(info.last_price, 2)
-        prev = round(info.previous_close, 2)
+        url = "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB"
+        headers = {"User-Agent": "Mozilla/5.0"}
+        res = requests.get(url, headers=headers, timeout=10)
+        d = res.json()["chart"]["result"][0]["meta"]
+        current = round(d["regularMarketPrice"], 2)
+        prev = round(d["regularMarketPreviousClose"], 2)
         direction = "↑" if current >= prev else "↓"
         return {
             "value": current,
@@ -124,10 +112,12 @@ def get_dxy():
 
 def get_oil():
     try:
-        t = yf.Ticker("BZ=F")
-        info = t.fast_info
-        current = round(info.last_price, 2)
-        prev = round(info.previous_close, 2)
+        url = "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF"
+        headers = {"User-Agent": "Mozilla/5.0"}
+        res = requests.get(url, headers=headers, timeout=10)
+        d = res.json()["chart"]["result"][0]["meta"]
+        current = round(d["regularMarketPrice"], 2)
+        prev = round(d["regularMarketPreviousClose"], 2)
         direction = "↑" if current >= prev else "↓"
         return {
             "value": current,
