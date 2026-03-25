@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-03-26 07:08 (台灣時間)",
+  "fetch_time": "2026-03-26 07:16 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 25.33,
@@ -13,9 +13,9 @@
       "note": "美元指數 99.64，趨勢走強。"
     },
     "oil_brent": {
-      "value": 97.92,
+      "value": 97.86,
       "direction": "↑",
-      "note": "布蘭特原油 97.92 美元，趨勢上漲。"
+      "note": "布蘭特原油 97.86 美元，趨勢上漲。"
     }
   },
   "futures_data": {
@@ -31,7 +31,7 @@
       "resistance": 46987.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-26 07:08 (台灣時間)",
+      "timestamp": "2026-03-26 07:16 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-18",
@@ -81,7 +81,7 @@
       "resistance": 24652.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-26 07:08 (台灣時間)",
+      "timestamp": "2026-03-26 07:16 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-18",
@@ -131,7 +131,7 @@
       "resistance": 33959.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-26 07:08 (台灣時間)",
+      "timestamp": "2026-03-26 07:16 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-18",
