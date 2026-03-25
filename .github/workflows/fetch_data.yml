@@ -2,10 +2,11 @@ name: Fetch Market Data
 
 on:
   schedule:
-    - cron: '45 22 * * 1-5'
+    - cron: '00 23 * * 1-5'
   workflow_dispatch:
-permissions:
-  contents: write
+  push:
+    branches:
+      - main
 jobs:
   fetch:
     runs-on: ubuntu-latest
