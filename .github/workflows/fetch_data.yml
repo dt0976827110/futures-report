@@ -1,0 +1,32 @@
+name: Fetch Market Data
+
+on:
+  schedule:
+    - cron: '50 21 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests yfinance beautifulsoup4
+
+      - name: Run fetch script
+        run: python fetch_data.py
+
+      - name: Commit and push data.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data.json
+          git commit -m "Update data.json $(date +'%Y-%m-%d %H:%M')" || echo "No changes"
+          git push
