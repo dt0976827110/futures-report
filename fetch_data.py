@@ -15,7 +15,7 @@ def get_futures(symbol, name, currency):
         
         # 用歷史資料取前一日收盤
         hist = t.history(period="5d")
-        prev = round(float(hist["Close"].iloc[-2]), 2)
+        prev = round(float(hist["Close"].iloc[-1]), 2)
         
         change_pts = round(current - prev, 2)
         change_pct = round((change_pts / prev) * 100, 2)
