@@ -20,18 +20,33 @@ def get_yahoo(symbol):
 
 def get_futures(symbol, name, currency):
     try:
-        d = get_yahoo(symbol)
-        current = round(d["previousClose"], 2)
-
         url = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?interval=1d&range=10d"
         res = requests.get(url, headers=HEADERS, timeout=10)
         result = res.json()["chart"]["result"][0]
         closes = result["indicators"]["quote"][0]["close"]
         timestamps = result["timestamp"]
-        closes_clean = [(t, c) for t, c in zip(timestamps, closes) if c is not None]
-        print(f"{symbol} closes:", [(datetime.utcfromtimestamp(t).strftime('%Y-%m-%d %H:%M'), round(c,2)) for t, c in closes_clean])
+        closes_clean = [c for t, c in zip(timestamps, closes) if c is not None]
 
-        return {"error": "debug mode"}
+        current = round(closes_clean[-2], 2)
+        prev = round(closes_clean[-3], 2)
+        change_pts = round(current - prev, 2)
+        change_pct = round((change_pts / prev) * 100, 2)
+
+        d = get_yahoo(symbol)
+        return {
+            "name": name,
+            "current_price": current,
+            "previous_close": prev,
+            "currency": currency,
+            "change_points": change_pts,
+            "change_percent": change_pct,
+            "volume": str(d.get("regularMarketVolume", 0)),
+            "support": round(prev * 0.99, 0),
+            "resistance": round(prev * 1.01, 0),
+            "support_basis": "前收盤價 -1% 估算",
+            "resistance_basis": "前收盤價 +1% 估算",
+            "timestamp": now.strftime("%Y-%m-%d %H:%M (台灣時間)")
+        }
     except Exception as e:
         return {"error": str(e)}
 
