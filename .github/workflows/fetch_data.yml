@@ -2,7 +2,7 @@ name: Fetch Market Data
 
 on:
   schedule:
-    - cron: '35 22 * * 1-5'
+    - cron: '45 22 * * 1-5'
   workflow_dispatch:
 permissions:
   contents: write
