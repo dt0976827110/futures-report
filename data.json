@@ -1,22 +1,51 @@
 {
-  "fetch_time": "2026-03-25 10:39 (台灣時間)",
+  "fetch_time": "2026-03-25 10:41 (台灣時間)",
   "market_sentiment": {
     "vix": {
-      "error": "debug mode"
+      "value": 26.95,
+      "change": "+0.8",
+      "level": "高",
+      "note": "VIX 目前 26.95，市場波動高。"
     },
     "dxy": {
-      "error": "debug mode"
+      "value": 99.26,
+      "direction": "↓",
+      "note": "美元指數 99.26，趨勢走弱。"
     },
     "oil_brent": {
-      "error": "debug mode"
+      "value": 98.78,
+      "direction": "↓",
+      "note": "布蘭特原油 98.78 美元，趨勢下跌。"
     }
   },
   "futures_data": {
     "YM1": {
-      "error": "debug mode"
+      "name": "E-迷你道瓊指數",
+      "current_price": 46736.0,
+      "previous_close": 46415.0,
+      "currency": "USD",
+      "change_points": 321.0,
+      "change_percent": 0.69,
+      "volume": "6032",
+      "support": 45951.0,
+      "resistance": 46879.0,
+      "support_basis": "前收盤價 -1% 估算",
+      "resistance_basis": "前收盤價 +1% 估算",
+      "timestamp": "2026-03-25 10:41 (台灣時間)"
     },
     "NQ1": {
-      "error": "debug mode"
+      "name": "E-迷你那斯達克指數",
+      "current_price": 24374.25,
+      "previous_close": 24213.75,
+      "currency": "USD",
+      "change_points": 160.5,
+      "change_percent": 0.66,
+      "volume": "33542",
+      "support": 23972.0,
+      "resistance": 24456.0,
+      "support_basis": "前收盤價 -1% 估算",
+      "resistance_basis": "前收盤價 +1% 估算",
+      "timestamp": "2026-03-25 10:41 (台灣時間)"
     },
     "TXF1": {
       "name": "台灣加權指數期貨",
@@ -30,7 +59,7 @@
       "resistance": 33109.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-25 10:39 (台灣時間)"
+      "timestamp": "2026-03-25 10:41 (台灣時間)"
     }
   }
 }
