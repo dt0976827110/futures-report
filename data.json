@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-03-25 10:32 (台灣時間)",
+  "fetch_time": "2026-03-25 10:34 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "error": "'regularMarketPreviousClose'"
@@ -30,7 +30,7 @@
       "resistance": 33109.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-25 10:32 (台灣時間)"
+      "timestamp": "2026-03-25 10:34 (台灣時間)"
     }
   }
 }
