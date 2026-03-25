@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-03-25 10:03 (台灣時間)",
+  "fetch_time": "2026-03-25 10:08 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 26.95,
@@ -8,47 +8,58 @@
       "note": "VIX 目前 26.95，市場波動高。"
     },
     "dxy": {
-      "value": 99.18,
+      "value": 99.2,
       "direction": "↓",
-      "note": "美元指數 99.18，趨勢走弱。"
+      "note": "美元指數 99.2，趨勢走弱。"
     },
     "oil_brent": {
-      "value": 97.89,
+      "value": 97.95,
       "direction": "↓",
-      "note": "布蘭特原油 97.89 美元，趨勢下跌。"
+      "note": "布蘭特原油 97.95 美元，趨勢下跌。"
     }
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
-      "current_price": 46814.0,
+      "current_price": 46813.0,
       "previous_close": 46313.0,
       "currency": "USD",
-      "change_points": 501.0,
+      "change_points": 500.0,
       "change_percent": 1.08,
       "volume": "116611",
       "support": 45850.0,
       "resistance": 46776.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-25 10:03 (台灣時間)"
+      "timestamp": "2026-03-25 10:08 (台灣時間)"
     },
     "NQ1": {
       "name": "E-迷你那斯達克指數",
-      "current_price": 24419.0,
+      "current_price": 24413.0,
       "previous_close": 24274.75,
       "currency": "USD",
-      "change_points": 144.25,
-      "change_percent": 0.59,
+      "change_points": 138.25,
+      "change_percent": 0.57,
       "volume": "539026",
       "support": 24032.0,
       "resistance": 24517.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-25 10:03 (台灣時間)"
+      "timestamp": "2026-03-25 10:08 (台灣時間)"
     },
     "TXF1": {
-      "error": "debug mode"
+      "name": "台灣加權指數期貨",
+      "current_price": 33459.0,
+      "previous_close": 32781.0,
+      "currency": "TWD",
+      "change_points": 678.0,
+      "change_percent": 2.07,
+      "volume": "85273",
+      "support": 32453.0,
+      "resistance": 33109.0,
+      "support_basis": "前收盤價 -1% 估算",
+      "resistance_basis": "前收盤價 +1% 估算",
+      "timestamp": "2026-03-25 10:08 (台灣時間)"
     }
   }
 }
