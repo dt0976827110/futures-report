@@ -13,9 +13,11 @@ def get_futures(symbol, name, currency):
         info = t.fast_info
         current = round(info.last_price, 2)
         
-        # 用歷史資料取前一日收盤
+        # 抓最近5天歷史，找成交量最大的前一日收盤
         hist = t.history(period="5d")
-        prev = round(float(hist["Close"].iloc[-1]), 2)
+        # 排除今天（最後一筆），取前面成交量最大的那筆
+        hist_prev = hist.iloc[:-1]
+        prev = round(float(hist_prev.loc[hist_prev["Volume"].idxmax(), "Close"]), 2)
         
         change_pts = round(current - prev, 2)
         change_pct = round((change_pts / prev) * 100, 2)
