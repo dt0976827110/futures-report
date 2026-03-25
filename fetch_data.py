@@ -12,7 +12,11 @@ def get_futures(symbol, name, currency):
         t = yf.Ticker(symbol)
         info = t.fast_info
         current = round(info.last_price, 2)
-        prev = round(info.previous_close, 2)
+        
+        # 用歷史資料取前一日收盤
+        hist = t.history(period="5d")
+        prev = round(float(hist["Close"].iloc[-2]), 2)
+        
         change_pts = round(current - prev, 2)
         change_pct = round((change_pts / prev) * 100, 2)
         return {
