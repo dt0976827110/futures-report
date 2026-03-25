@@ -38,13 +38,35 @@ def get_txf():
         res = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
         soup = BeautifulSoup(res.text, "html.parser")
         rows = soup.select("table tr")
-        for i, row in enumerate(rows[:30]):
+        for row in rows:
             cols = [td.get_text(strip=True) for td in row.select("td")]
-            if cols:
-                print(f"Row {i}: {cols}")
-        return {"error": "debug mode"}
+            if len(cols) > 8 and cols[0] == "TX":
+                current = float(cols[5].replace(",", ""))
+                change_pts = float(cols[6].replace("▲","").replace("▽","").replace(",",""))
+                if "▽" in cols[6]:
+                    change_pts = -change_pts
+                prev = round(current - change_pts, 0)
+                change_pct = float(cols[7].replace("▲","").replace("▽","").replace("%","").replace(",",""))
+                if "▽" in cols[7]:
+                    change_pct = -change_pct
+                volume = cols[8].replace(",","")
+                return {
+                    "name": "台灣加權指數期貨",
+                    "current_price": current,
+                    "previous_close": prev,
+                    "currency": "TWD",
+                    "change_points": change_pts,
+                    "change_percent": change_pct,
+                    "volume": volume,
+                    "support": round(prev * 0.99, 0),
+                    "resistance": round(prev * 1.01, 0),
+                    "support_basis": "前收盤價 -1% 估算",
+                    "resistance_basis": "前收盤價 +1% 估算",
+                    "timestamp": now.strftime("%Y-%m-%d %H:%M (台灣時間)")
+                }
+        return {"error": "找不到TX資料"}
     except Exception as e:
-        return {"error": str(e)}
+        return {"error": str(
         
 def get_vix():
     try:
