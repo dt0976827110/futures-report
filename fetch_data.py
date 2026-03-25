@@ -2,6 +2,7 @@ import json
 import requests
 import yfinance as yf
 from datetime import datetime, timezone, timedelta
+from bs4 import BeautifulSoup
 
 TW = timezone(timedelta(hours=8))
 now = datetime.now(TW)
@@ -28,6 +29,37 @@ def get_futures(symbol, name, currency):
             "resistance_basis": "前收盤價 +1% 估算",
             "timestamp": now.strftime("%Y-%m-%d %H:%M (台灣時間)")
         }
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_txf():
+    try:
+        url = "https://www.taifex.com.tw/cht/3/futContractsDate"
+        res = requests.get(url, timeout=10)
+        soup = BeautifulSoup(res.text, "html.parser")
+        rows = soup.select("table.table_f tr")
+        for row in rows:
+            cols = [td.get_text(strip=True) for td in row.select("td")]
+            if len(cols) > 5 and "臺股期貨" in cols[0]:
+                current = float(cols[8].replace(",", ""))
+                prev = float(cols[7].replace(",", ""))
+                change_pts = round(current - prev, 0)
+                change_pct = round((change_pts / prev) * 100, 2)
+                return {
+                    "name": "台灣加權指數期貨",
+                    "current_price": current,
+                    "previous_close": prev,
+                    "currency": "TWD",
+                    "change_points": change_pts,
+                    "change_percent": change_pct,
+                    "volume": str(cols[10].replace(",", "")),
+                    "support": round(prev * 0.99, 0),
+                    "resistance": round(prev * 1.01, 0),
+                    "support_basis": "前收盤價 -1% 估算",
+                    "resistance_basis": "前收盤價 +1% 估算",
+                    "timestamp": now.strftime("%Y-%m-%d %H:%M (台灣時間)")
+                }
+        return {"error": "找不到臺股期貨資料"}
     except Exception as e:
         return {"error": str(e)}
 
@@ -89,7 +121,7 @@ data = {
     "futures_data": {
         "YM1": get_futures("YM=F", "E-迷你道瓊指數", "USD"),
         "NQ1": get_futures("NQ=F", "E-迷你那斯達克指數", "USD"),
-        "TXF1": get_futures("FITX=F", "台灣加權指數期貨", "TWD")
+        "TXF1": get_txf()
     }
 }
 
