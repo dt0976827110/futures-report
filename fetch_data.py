@@ -14,6 +14,19 @@ HEADERS = {
     "Referer": "https://finance.yahoo.com/"
 }
 
+GITHUB_RAW = "https://raw.githubusercontent.com/dt0976827110/futures-report/main/YMNQ_data.json"
+
+# ─── 讀取 YMNQ_data.json ───────────────────────────────
+
+def get_ymnq_data():
+    try:
+        res = requests.get(GITHUB_RAW, timeout=10)
+        if res.status_code == 200:
+            return res.json()
+    except Exception as e:
+        print(f"讀取 YMNQ_data.json 失敗：{e}")
+    return {}
+
 # ─── 技術指標計算 ───────────────────────────────────────
 
 def calc_rsi(closes, period=14):
@@ -109,7 +122,7 @@ def get_yahoo_history(symbol, range_period="6mo"):
     ]
     return data
 
-def get_futures(symbol, name, currency):
+def get_futures(symbol, name, currency, ymnq_close=None):
     try:
         history    = get_yahoo_history(symbol, "6mo")
         closes     = [d[1] for d in history]
@@ -118,12 +131,23 @@ def get_futures(symbol, name, currency):
         volumes    = [d[4] for d in history]
         timestamps = [d[0] for d in history]
 
-        current    = round(closes[-2], 2)
-        prev       = round(closes[-3], 2)
+        # 原始的 current 和 prev
+        raw_current = round(closes[-2], 2)
+        raw_prev    = round(closes[-3], 2)
+
+        # 如果有 YMNQ_data 的收盤價，用它覆蓋
+        if ymnq_close is not None:
+            current = round(float(ymnq_close), 2)
+            prev    = raw_current  # 原本的 current 變成 previous
+        else:
+            current = raw_current
+            prev    = raw_prev
+
         change_pts = round(current - prev, 2)
         change_pct = round((change_pts / prev) * 100, 2)
 
-        five_day = [
+        # 五日歷史：原本的五日 + 補上 YMNQ 的那一天
+        five_day_raw = [
             {
                 "date":  datetime.utcfromtimestamp(timestamps[i]).strftime("%Y-%m-%d"),
                 "close": round(closes[i], 2)
@@ -131,8 +155,22 @@ def get_futures(symbol, name, currency):
             for i in range(-6, -1)
         ]
 
-        macd_data = calc_macd(closes[:-1])
-        bb_data   = calc_bollinger(closes[:-1])
+        if ymnq_close is not None:
+            # 移掉最舊一筆，補上最新收盤
+            five_day = five_day_raw[1:] + [{
+                "date":  now.strftime("%Y-%m-%d"),
+                "close": current
+            }]
+        else:
+            five_day = five_day_raw
+
+        # 技術指標用原始歷史資料計算（含最新收盤）
+        closes_for_indicator = closes[:-1]
+        if ymnq_close is not None:
+            closes_for_indicator = closes[:-1] + [current]
+
+        macd_data = calc_macd(closes_for_indicator)
+        bb_data   = calc_bollinger(closes_for_indicator)
 
         return {
             "name":           name,
@@ -149,10 +187,10 @@ def get_futures(symbol, name, currency):
             "timestamp":      now.strftime("%Y-%m-%d %H:%M (台灣時間)"),
             "five_day_history": five_day,
             "indicators": {
-                "rsi14":          calc_rsi(closes[:-1]),
-                "ma5":            calc_ma(closes[:-1], 5),
-                "ma20":           calc_ma(closes[:-1], 20),
-                "ma60":           calc_ma(closes[:-1], 60),
+                "rsi14":          calc_rsi(closes_for_indicator),
+                "ma5":            calc_ma(closes_for_indicator, 5),
+                "ma20":           calc_ma(closes_for_indicator, 20),
+                "ma60":           calc_ma(closes_for_indicator, 60),
                 "macd":           macd_data["macd"] if macd_data else None,
                 "macd_signal":    macd_data["signal"] if macd_data else None,
                 "macd_histogram": macd_data["histogram"] if macd_data else None,
@@ -291,6 +329,21 @@ def get_oil():
 
 # ─── 主程式 ────────────────────────────────────────────
 
+# 讀取 YMNQ_data.json
+ymnq = get_ymnq_data()
+ym_close = ymnq.get("YM1", {}).get("close")
+nq_close = ymnq.get("NQ1", {}).get("close")
+
+if ym_close:
+    print(f"使用 YMNQ_data YM close：{ym_close}")
+else:
+    print("YMNQ_data 無 YM 資料，使用歷史資料")
+
+if nq_close:
+    print(f"使用 YMNQ_data NQ close：{nq_close}")
+else:
+    print("YMNQ_data 無 NQ 資料，使用歷史資料")
+
 data = {
     "fetch_time": now.strftime("%Y-%m-%d %H:%M (台灣時間)"),
     "market_sentiment": {
@@ -299,8 +352,8 @@ data = {
         "oil_brent": get_oil()
     },
     "futures_data": {
-        "YM1":  get_futures("YM=F",  "E-迷你道瓊指數",     "USD"),
-        "NQ1":  get_futures("NQ=F",  "E-迷你那斯達克指數",  "USD"),
+        "YM1":  get_futures("YM=F",  "E-迷你道瓊指數",     "USD", ym_close),
+        "NQ1":  get_futures("NQ=F",  "E-迷你那斯達克指數",  "USD", nq_close),
         "TXF1": get_txf()
     }
 }
