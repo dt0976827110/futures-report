@@ -131,14 +131,10 @@ def get_futures(symbol, name, currency, ymnq_close=None):
         volumes    = [d[4] for d in history]
         timestamps = [d[0] for d in history]
 
-        # previous_close = 歷史資料最近一筆（Yahoo 歷史的 closes[-2]）
         prev = round(closes[-2], 2)
 
         if ymnq_close is not None:
-            # current_price = YMNQ 的 close（補來不及更新的昨日收盤）
             current = round(float(ymnq_close), 2)
-
-            # 五日歷史 = 歷史資料五日 + 補上 YMNQ 那一天
             five_day_raw = [
                 {
                     "date":  datetime.utcfromtimestamp(timestamps[i]).strftime("%Y-%m-%d"),
@@ -146,13 +142,10 @@ def get_futures(symbol, name, currency, ymnq_close=None):
                 }
                 for i in range(-6, -1)
             ]
-            # 移掉最舊一筆，補上 YMNQ 收盤
             five_day = five_day_raw[1:] + [{
                 "date":  (now - timedelta(days=1)).strftime("%Y-%m-%d"),
                 "close": current
             }]
-
-            # 技術指標用歷史資料 + YMNQ close 計算
             closes_for_indicator = closes[:-1] + [current]
         else:
             current = round(closes[-2], 2)
@@ -215,14 +208,14 @@ def get_txf():
             if len(cols) > 8 and cols[0] == "TX":
                 current = float(cols[5].replace(",", ""))
                 raw_chg = cols[6].replace(",", "")
-                is_down = "▽" in raw_chg
-                change_pts = float(raw_chg.replace("▲", "").replace("▽", ""))
+                is_down = "▼" in raw_chg
+                change_pts = float(raw_chg.replace("▲", "").replace("▼", ""))
                 if is_down:
                     change_pts = -change_pts
                 prev = round(current - change_pts, 0)
                 raw_pct = cols[7].replace(",", "").replace("%", "")
-                is_down_pct = "▽" in raw_pct
-                change_pct = float(raw_pct.replace("▲", "").replace("▽", ""))
+                is_down_pct = "▼" in raw_pct
+                change_pct = float(raw_pct.replace("▲", "").replace("▼", ""))
                 if is_down_pct:
                     change_pct = -change_pct
                 volume = cols[8].replace(",", "")
@@ -329,9 +322,9 @@ def get_oil():
 
 # ─── 主程式 ────────────────────────────────────────────
 
-ymnq      = get_ymnq_data()
-ym_close  = ymnq.get("YM1", {}).get("close")
-nq_close  = ymnq.get("NQ1", {}).get("close")
+ymnq     = get_ymnq_data()
+ym_close = ymnq.get("YM1", {}).get("close")
+nq_close = ymnq.get("NQ1", {}).get("close")
 
 print(f"YMNQ YM close：{ym_close}")
 print(f"YMNQ NQ close：{nq_close}")
