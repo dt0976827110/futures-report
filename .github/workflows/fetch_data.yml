@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add data.json
+          git add data.json debug_log.json
           git commit -m "Update data.json $(date +'%Y-%m-%d %H:%M')" || echo "No changes"
           git pull --rebase origin main
           git push
