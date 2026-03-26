@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-03-26 09:31 (台灣時間)",
+  "fetch_time": "2026-03-26 09:47 (台灣時間)",
   "YM_hourly": [
     {
       "datetime_utc": "2026-03-15 22:00",
@@ -688,14 +688,14 @@
     {
       "datetime_utc": "2026-03-20 20:00",
       "datetime_tw": "2026-03-21 04:00",
-      "close": 46085.0,
-      "volume": 7774
+      "close": 45893.0,
+      "volume": 0
     },
     {
       "datetime_utc": "2026-03-22 22:00",
       "datetime_tw": "2026-03-23 06:00",
       "close": 45860.0,
-      "volume": 2580
+      "volume": 3708
     },
     {
       "datetime_utc": "2026-03-22 23:00",
@@ -1007,7 +1007,7 @@
       "datetime_utc": "2026-03-25 04:00",
       "datetime_tw": "2026-03-25 12:00",
       "close": 46812.0,
-      "volume": 698
+      "volume": 737
     },
     {
       "datetime_utc": "2026-03-25 05:00",
@@ -1109,7 +1109,7 @@
       "datetime_utc": "2026-03-25 22:00",
       "datetime_tw": "2026-03-26 06:00",
       "close": 46641.0,
-      "volume": 349
+      "volume": 0
     },
     {
       "datetime_utc": "2026-03-25 23:00",
@@ -1126,12 +1126,12 @@
     {
       "datetime_utc": "2026-03-26 01:00",
       "datetime_tw": "2026-03-26 09:00",
-      "close": 46659.0,
-      "volume": 327
+      "close": 46645.0,
+      "volume": 421
     },
     {
-      "datetime_utc": "2026-03-26 01:21",
-      "datetime_tw": "2026-03-26 09:21",
+      "datetime_utc": "2026-03-26 01:37",
+      "datetime_tw": "2026-03-26 09:37",
       "close": 46655.0,
       "volume": 0
     }
@@ -1824,14 +1824,14 @@
     {
       "datetime_utc": "2026-03-20 20:00",
       "datetime_tw": "2026-03-21 04:00",
-      "close": 24206.5,
-      "volume": 28444
+      "close": 24101.5,
+      "volume": 0
     },
     {
       "datetime_utc": "2026-03-22 22:00",
       "datetime_tw": "2026-03-23 06:00",
       "close": 24044.0,
-      "volume": 12539
+      "volume": 19061
     },
     {
       "datetime_utc": "2026-03-22 23:00",
@@ -2143,7 +2143,7 @@
       "datetime_utc": "2026-03-25 04:00",
       "datetime_tw": "2026-03-25 12:00",
       "close": 24418.5,
-      "volume": 2755
+      "volume": 3631
     },
     {
       "datetime_utc": "2026-03-25 05:00",
@@ -2245,7 +2245,7 @@
       "datetime_utc": "2026-03-25 22:00",
       "datetime_tw": "2026-03-26 06:00",
       "close": 24316.25,
-      "volume": 4576
+      "volume": 0
     },
     {
       "datetime_utc": "2026-03-25 23:00",
@@ -2262,13 +2262,13 @@
     {
       "datetime_utc": "2026-03-26 01:00",
       "datetime_tw": "2026-03-26 09:00",
-      "close": 24353.75,
-      "volume": 2159
+      "close": 24340.0,
+      "volume": 3204
     },
     {
-      "datetime_utc": "2026-03-26 01:21",
-      "datetime_tw": "2026-03-26 09:21",
-      "close": 24349.0,
+      "datetime_utc": "2026-03-26 01:37",
+      "datetime_tw": "2026-03-26 09:37",
+      "close": 24342.5,
       "volume": 0
     }
   ]
