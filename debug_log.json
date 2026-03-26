@@ -1,0 +1,253 @@
+{
+  "VIX": {
+    "regularMarketPrice": 25.33,
+    "chartPreviousClose": 26.95,
+    "previousClose": 26.95
+  },
+  "DXY": {
+    "regularMarketPrice": 99.617,
+    "previousClose": 99.599
+  },
+  "OIL": {
+    "regularMarketPrice": 97.95,
+    "previousClose": 97.26
+  },
+  "YM=F": {
+    "meta": {
+      "regularMarketPrice": 46679.0,
+      "previousClose": 46711.0,
+      "chartPreviousClose": 46711.0,
+      "regularMarketVolume": 2082
+    },
+    "last_10_rows": [
+      {
+        "datetime_utc": "2026-03-12 04:00",
+        "close": 46721.0,
+        "high": 47383.0,
+        "low": 46703.0,
+        "volume": 173272
+      },
+      {
+        "datetime_utc": "2026-03-13 04:00",
+        "close": 46592.0,
+        "high": 47162.0,
+        "low": 46459.0,
+        "volume": 140360
+      },
+      {
+        "datetime_utc": "2026-03-16 04:00",
+        "close": 46984.0,
+        "high": 47218.0,
+        "low": 46392.0,
+        "volume": 89534
+      },
+      {
+        "datetime_utc": "2026-03-17 04:00",
+        "close": 47039.0,
+        "high": 47457.0,
+        "low": 46708.0,
+        "volume": 52315
+      },
+      {
+        "datetime_utc": "2026-03-18 04:00",
+        "close": 46234.0,
+        "high": 47327.0,
+        "low": 46076.0,
+        "volume": 30676
+      },
+      {
+        "datetime_utc": "2026-03-19 04:00",
+        "close": 46041.0,
+        "high": 46315.0,
+        "low": 45750.0,
+        "volume": 11040
+      },
+      {
+        "datetime_utc": "2026-03-20 04:00",
+        "close": 45897.0,
+        "high": 46212.0,
+        "low": 45713.0,
+        "volume": 155731
+      },
+      {
+        "datetime_utc": "2026-03-23 04:00",
+        "close": 46522.0,
+        "high": 47210.0,
+        "low": 45453.0,
+        "volume": 194360
+      },
+      {
+        "datetime_utc": "2026-03-24 04:00",
+        "close": 46415.0,
+        "high": 46905.0,
+        "low": 46046.0,
+        "volume": 194360
+      },
+      {
+        "datetime_utc": "2026-03-26 01:03",
+        "close": 46679.0,
+        "high": 46745.0,
+        "low": 46587.0,
+        "volume": 2082
+      }
+    ],
+    "closes_used": {
+      "closes[-1]": 46679.0,
+      "closes[-2]": 46415.0,
+      "closes[-3]": 46522.0
+    }
+  },
+  "NQ=F": {
+    "meta": {
+      "regularMarketPrice": 24367.25,
+      "previousClose": 24367.75,
+      "chartPreviousClose": 24367.75,
+      "regularMarketVolume": 18792
+    },
+    "last_10_rows": [
+      {
+        "datetime_utc": "2026-03-12 04:00",
+        "close": 24560.0,
+        "high": 24949.25,
+        "low": 24517.75,
+        "volume": 565145
+      },
+      {
+        "datetime_utc": "2026-03-13 04:00",
+        "close": 24394.25,
+        "high": 24805.25,
+        "low": 24333.75,
+        "volume": 609146
+      },
+      {
+        "datetime_utc": "2026-03-16 04:00",
+        "close": 24675.75,
+        "high": 24816.25,
+        "low": 24278.0,
+        "volume": 413547
+      },
+      {
+        "datetime_utc": "2026-03-17 04:00",
+        "close": 24795.5,
+        "high": 24896.0,
+        "low": 24517.0,
+        "volume": 204810
+      },
+      {
+        "datetime_utc": "2026-03-18 04:00",
+        "close": 24434.5,
+        "high": 24989.0,
+        "low": 24350.0,
+        "volume": 126918
+      },
+      {
+        "datetime_utc": "2026-03-19 04:00",
+        "close": 24364.0,
+        "high": 24505.25,
+        "low": 24115.0,
+        "volume": 69553
+      },
+      {
+        "datetime_utc": "2026-03-20 04:00",
+        "close": 24291.78,
+        "high": 24444.0,
+        "low": 24108.75,
+        "volume": 611673
+      },
+      {
+        "datetime_utc": "2026-03-23 04:00",
+        "close": 24408.25,
+        "high": 24763.0,
+        "low": 23772.5,
+        "volume": 683625
+      },
+      {
+        "datetime_utc": "2026-03-24 04:00",
+        "close": 24213.75,
+        "high": 24550.0,
+        "low": 24134.0,
+        "volume": 683625
+      },
+      {
+        "datetime_utc": "2026-03-26 01:03",
+        "close": 24367.25,
+        "high": 24410.0,
+        "low": 24283.25,
+        "volume": 18792
+      }
+    ],
+    "closes_used": {
+      "closes[-1]": 24367.25,
+      "closes[-2]": 24213.75,
+      "closes[-3]": 24408.25
+    }
+  },
+  "TXF1_taifex": {
+    "raw_cols": [
+      "TX",
+      "202604",
+      "33559",
+      "33930",
+      "33456",
+      "33800",
+      "▲177",
+      "▲0.53%",
+      "72885",
+      "-",
+      "-",
+      "33791"
+    ],
+    "parsed": {
+      "current": 33800.0,
+      "prev": 33623.0,
+      "change_pts": 177.0,
+      "change_pct": 0.53,
+      "volume": "72885"
+    }
+  },
+  "TWII": {
+    "last_10_rows": [
+      {
+        "datetime_utc": "2026-03-12 01:00",
+        "close": 33581.86
+      },
+      {
+        "datetime_utc": "2026-03-13 01:00",
+        "close": 33400.32
+      },
+      {
+        "datetime_utc": "2026-03-16 01:00",
+        "close": 33342.51
+      },
+      {
+        "datetime_utc": "2026-03-17 01:00",
+        "close": 33836.57
+      },
+      {
+        "datetime_utc": "2026-03-18 01:00",
+        "close": 34348.58
+      },
+      {
+        "datetime_utc": "2026-03-19 01:00",
+        "close": 33689.68
+      },
+      {
+        "datetime_utc": "2026-03-20 01:00",
+        "close": 33543.88
+      },
+      {
+        "datetime_utc": "2026-03-23 01:00",
+        "close": 32722.5
+      },
+      {
+        "datetime_utc": "2026-03-24 01:00",
+        "close": 32612.24
+      },
+      {
+        "datetime_utc": "2026-03-25 01:00",
+        "close": 33439.11
+      }
+    ]
+  },
+  "fetch_time": "2026-03-26 09:14 (台灣時間)"
+}
