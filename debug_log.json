@@ -5,19 +5,19 @@
     "previousClose": 26.95
   },
   "DXY": {
-    "regularMarketPrice": 99.617,
+    "regularMarketPrice": 99.638,
     "previousClose": 99.599
   },
   "OIL": {
-    "regularMarketPrice": 97.95,
+    "regularMarketPrice": 98.31,
     "previousClose": 97.26
   },
   "YM=F": {
     "meta": {
-      "regularMarketPrice": 46679.0,
+      "regularMarketPrice": 46661.0,
       "previousClose": 46711.0,
       "chartPreviousClose": 46711.0,
-      "regularMarketVolume": 2082
+      "regularMarketVolume": 2110
     },
     "last_10_rows": [
       {
@@ -84,25 +84,25 @@
         "volume": 194360
       },
       {
-        "datetime_utc": "2026-03-26 01:03",
-        "close": 46679.0,
+        "datetime_utc": "2026-03-26 01:06",
+        "close": 46661.0,
         "high": 46745.0,
         "low": 46587.0,
-        "volume": 2082
+        "volume": 2110
       }
     ],
     "closes_used": {
-      "closes[-1]": 46679.0,
+      "closes[-1]": 46661.0,
       "closes[-2]": 46415.0,
       "closes[-3]": 46522.0
     }
   },
   "NQ=F": {
     "meta": {
-      "regularMarketPrice": 24367.25,
+      "regularMarketPrice": 24356.75,
       "previousClose": 24367.75,
       "chartPreviousClose": 24367.75,
-      "regularMarketVolume": 18792
+      "regularMarketVolume": 19060
     },
     "last_10_rows": [
       {
@@ -169,15 +169,15 @@
         "volume": 683625
       },
       {
-        "datetime_utc": "2026-03-26 01:03",
-        "close": 24367.25,
+        "datetime_utc": "2026-03-26 01:06",
+        "close": 24356.75,
         "high": 24410.0,
         "low": 24283.25,
-        "volume": 18792
+        "volume": 19060
       }
     ],
     "closes_used": {
-      "closes[-1]": 24367.25,
+      "closes[-1]": 24356.75,
       "closes[-2]": 24213.75,
       "closes[-3]": 24408.25
     }
@@ -249,5 +249,5 @@
       }
     ]
   },
-  "fetch_time": "2026-03-26 09:14 (台灣時間)"
+  "fetch_time": "2026-03-26 09:16 (台灣時間)"
 }
