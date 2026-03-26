@@ -124,7 +124,7 @@ def get_yahoo_history(symbol, range_period="6mo"):
     ]
     return data
 
-def get_futures(symbol, name, currency, ymnq_close=None):
+def get_futures(symbol, name, currency, ymnq_close=None, ymnq_time=None):
     try:
         history    = get_yahoo_history(symbol, "6mo")
         closes     = [d[1] for d in history]
@@ -157,8 +157,12 @@ def get_futures(symbol, name, currency, ymnq_close=None):
                 }
                 for i in range(-6, -1)
             ]
+            if ymnq_time:
+                ymnq_date = ymnq_time[:10]
+            else:
+                ymnq_date = (now - timedelta(days=1)).strftime("%Y-%m-%d")
             five_day = five_day_raw[1:] + [{
-                "date":  (now - timedelta(days=1)).strftime("%Y-%m-%d"),
+                "date":  ymnq_date,
                 "close": current
             }]
             closes_for_indicator = closes[:-1] + [current]
@@ -397,8 +401,8 @@ data = {
         "oil_brent": get_oil()
     },
     "futures_data": {
-        "YM1":  get_futures("YM=F",  "E-迷你道瓊指數",    "USD", ym_close),
-        "NQ1":  get_futures("NQ=F",  "E-迷你那斯達克指數", "USD", nq_close),
+        "YM1":  get_futures("YM=F",  "E-迷你道瓊指數",    "USD", ym_close, ymnq.get("YM1", {}).get("time")),
+        "NQ1":  get_futures("NQ=F",  "E-迷你那斯達克指數", "USD", nq_close, ymnq.get("NQ1", {}).get("time")),
         "TXF1": get_txf()
     }
 }
