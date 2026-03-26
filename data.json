@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-03-26 10:44 (台灣時間)",
+  "fetch_time": "2026-03-26 10:54 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 25.33,
@@ -13,9 +13,9 @@
       "note": "美元指數 99.67，趨勢走強。"
     },
     "oil_brent": {
-      "value": 98.4,
+      "value": 98.17,
       "direction": "↑",
-      "note": "布蘭特原油 98.4 美元，趨勢上漲。"
+      "note": "布蘭特原油 98.17 美元，趨勢上漲。"
     }
   },
   "futures_data": {
@@ -31,7 +31,7 @@
       "resistance": 46879.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-26 10:44 (台灣時間)",
+      "timestamp": "2026-03-26 10:54 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-19",
@@ -81,7 +81,7 @@
       "resistance": 24456.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-26 10:44 (台灣時間)",
+      "timestamp": "2026-03-26 10:54 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-19",
@@ -131,7 +131,7 @@
       "resistance": 33959.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-26 10:44 (台灣時間)",
+      "timestamp": "2026-03-26 10:54 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-19",
@@ -155,16 +155,16 @@
         }
       ],
       "indicators": {
-        "rsi14": 52.56,
-        "ma5": 33167.16,
-        "ma20": 33598.32,
-        "ma60": 31964.79,
-        "macd": 179.79,
-        "macd_signal": 319.22,
-        "macd_histogram": -139.42,
-        "bb_upper": 35168.83,
-        "bb_middle": 33598.32,
-        "bb_lower": 32027.81,
+        "rsi14": 52.42,
+        "ma5": 33162.92,
+        "ma20": 33597.26,
+        "ma60": 31964.44,
+        "macd": 178.1,
+        "macd_signal": 318.88,
+        "macd_histogram": -140.77,
+        "bb_upper": 35168.02,
+        "bb_middle": 33597.26,
+        "bb_lower": 32026.5,
         "atr14": 895.5,
         "volume_ma5": 4611040.0
       }
