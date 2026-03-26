@@ -14,6 +14,8 @@ HEADERS = {
     "Referer": "https://finance.yahoo.com/"
 }
 
+debug_log = {}
+
 # ─── 技術指標計算 ───────────────────────────────────────
 
 def calc_rsi(closes, period=14):
@@ -117,8 +119,37 @@ def get_futures(symbol, name, currency):
         lows       = [d[3] for d in history]
         volumes    = [d[4] for d in history]
         timestamps = [d[0] for d in history]
-        for d in history[-5:]:
-            print(symbol, datetime.utcfromtimestamp(d[0]).strftime('%Y-%m-%d %H:%M'), round(d[1],2))
+
+        # debug log：記錄最後10筆原始資料
+        debug_log[symbol] = {
+            "meta": {},
+            "last_10_rows": [
+                {
+                    "datetime_utc": datetime.utcfromtimestamp(d[0]).strftime('%Y-%m-%d %H:%M'),
+                    "close": round(d[1], 2),
+                    "high":  round(d[2], 2),
+                    "low":   round(d[3], 2),
+                    "volume": d[4]
+                }
+                for d in history[-10:]
+            ],
+            "closes_used": {
+                "closes[-1]": round(closes[-1], 2),
+                "closes[-2]": round(closes[-2], 2),
+                "closes[-3]": round(closes[-3], 2),
+            }
+        }
+
+        try:
+            meta = get_yahoo_meta(symbol)
+            debug_log[symbol]["meta"] = {
+                "regularMarketPrice": meta.get("regularMarketPrice"),
+                "previousClose":      meta.get("previousClose"),
+                "chartPreviousClose": meta.get("chartPreviousClose"),
+                "regularMarketVolume": meta.get("regularMarketVolume")
+            }
+        except Exception as em:
+            debug_log[symbol]["meta"] = {"error": str(em)}
 
         current    = round(closes[-2], 2)
         prev       = round(closes[-3], 2)
@@ -191,6 +222,17 @@ def get_txf():
                     change_pct = -change_pct
                 volume = cols[8].replace(",", "")
 
+                debug_log["TXF1_taifex"] = {
+                    "raw_cols": cols[:12],
+                    "parsed": {
+                        "current": current,
+                        "prev": prev,
+                        "change_pts": change_pts,
+                        "change_pct": change_pct,
+                        "volume": volume
+                    }
+                }
+
                 try:
                     history    = get_yahoo_history("%5ETWII", "6mo")
                     closes     = [d[1] for d in history]
@@ -198,6 +240,16 @@ def get_txf():
                     lows       = [d[3] for d in history]
                     volumes    = [d[4] for d in history]
                     timestamps = [d[0] for d in history]
+
+                    debug_log["TWII"] = {
+                        "last_10_rows": [
+                            {
+                                "datetime_utc": datetime.utcfromtimestamp(d[0]).strftime('%Y-%m-%d %H:%M'),
+                                "close": round(d[1], 2)
+                            }
+                            for d in history[-10:]
+                        ]
+                    }
 
                     five_day = [
                         {
@@ -249,6 +301,11 @@ def get_txf():
 def get_vix():
     try:
         meta    = get_yahoo_meta("%5EVIX")
+        debug_log["VIX"] = {
+            "regularMarketPrice": meta.get("regularMarketPrice"),
+            "chartPreviousClose": meta.get("chartPreviousClose"),
+            "previousClose":      meta.get("previousClose")
+        }
         current = round(meta["regularMarketPrice"], 2)
         prev    = round(meta["chartPreviousClose"], 2)
         change  = round(current - prev, 2)
@@ -266,6 +323,10 @@ def get_vix():
 def get_dxy():
     try:
         meta      = get_yahoo_meta("DX-Y.NYB")
+        debug_log["DXY"] = {
+            "regularMarketPrice": meta.get("regularMarketPrice"),
+            "previousClose":      meta.get("previousClose")
+        }
         current   = round(meta["regularMarketPrice"], 2)
         prev      = round(meta["previousClose"], 2)
         direction = "↑" if current >= prev else "↓"
@@ -280,6 +341,10 @@ def get_dxy():
 def get_oil():
     try:
         meta      = get_yahoo_meta("BZ%3DF")
+        debug_log["OIL"] = {
+            "regularMarketPrice": meta.get("regularMarketPrice"),
+            "previousClose":      meta.get("previousClose")
+        }
         current   = round(meta["regularMarketPrice"], 2)
         prev      = round(meta["previousClose"], 2)
         direction = "↑" if current >= prev else "↓"
@@ -307,7 +372,13 @@ data = {
     }
 }
 
+debug_log["fetch_time"] = now.strftime("%Y-%m-%d %H:%M (台灣時間)")
+
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
+with open("debug_log.json", "w", encoding="utf-8") as f:
+    json.dump(debug_log, f, ensure_ascii=False, indent=2)
+
 print("data.json 已產出：", now.strftime("%Y-%m-%d %H:%M"))
+print("debug_log.json 已產出")
