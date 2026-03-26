@@ -16,6 +16,8 @@ HEADERS = {
 
 GITHUB_RAW = "https://raw.githubusercontent.com/dt0976827110/futures-report/main/YMNQ_data.json"
 
+debug_log = {"fetch_time": now.strftime("%Y-%m-%d %H:%M (台灣時間)")}
+
 # ─── 讀取 YMNQ_data.json ───────────────────────────────
 
 def get_ymnq_data():
@@ -131,6 +133,19 @@ def get_futures(symbol, name, currency, ymnq_close=None):
         volumes    = [d[4] for d in history]
         timestamps = [d[0] for d in history]
 
+        # debug：記錄最後 10 筆歷史收盤
+        debug_log[symbol] = {
+            "last_10_closes": [
+                {
+                    "date":  datetime.utcfromtimestamp(d[0]).strftime("%Y-%m-%d %H:%M"),
+                    "close": round(d[1], 2),
+                    "volume": d[4]
+                }
+                for d in history[-10:]
+            ],
+            "ymnq_close_used": ymnq_close
+        }
+
         prev = round(closes[-2], 2)
 
         if ymnq_close is not None:
@@ -195,6 +210,7 @@ def get_futures(symbol, name, currency, ymnq_close=None):
             }
         }
     except Exception as e:
+        debug_log[symbol] = {"error": str(e)}
         return {"error": str(e)}
 
 def get_txf():
@@ -220,6 +236,17 @@ def get_txf():
                     change_pct = -change_pct
                 volume = cols[8].replace(",", "")
 
+                debug_log["TXF1_taifex"] = {
+                    "raw_cols": cols[:12],
+                    "parsed": {
+                        "current": current,
+                        "prev": prev,
+                        "change_pts": change_pts,
+                        "change_pct": change_pct,
+                        "volume": volume
+                    }
+                }
+
                 try:
                     history    = get_yahoo_history("%5ETWII", "6mo")
                     closes     = [d[1] for d in history]
@@ -227,6 +254,16 @@ def get_txf():
                     lows       = [d[3] for d in history]
                     volumes_tw = [d[4] for d in history]
                     timestamps = [d[0] for d in history]
+
+                    debug_log["TWII"] = {
+                        "last_10_closes": [
+                            {
+                                "date":  datetime.utcfromtimestamp(d[0]).strftime("%Y-%m-%d %H:%M"),
+                                "close": round(d[1], 2)
+                            }
+                            for d in history[-10:]
+                        ]
+                    }
 
                     five_day = [
                         {
@@ -273,6 +310,7 @@ def get_txf():
                 }
         return {"error": "找不到TX資料"}
     except Exception as e:
+        debug_log["TXF1_taifex"] = {"error": str(e)}
         return {"error": str(e)}
 
 def get_vix():
@@ -283,6 +321,11 @@ def get_vix():
         change  = round(current - prev, 2)
         sign    = "+" if change >= 0 else ""
         level   = "低" if current < 15 else "中" if current < 20 else "高" if current < 30 else "極高"
+        debug_log["VIX"] = {
+            "regularMarketPrice": meta.get("regularMarketPrice"),
+            "chartPreviousClose": meta.get("chartPreviousClose"),
+            "previousClose":      meta.get("previousClose")
+        }
         return {
             "value":  current,
             "change": f"{sign}{change}",
@@ -290,6 +333,7 @@ def get_vix():
             "note":   f"VIX 目前 {current}，市場波動{level}。"
         }
     except Exception as e:
+        debug_log["VIX"] = {"error": str(e)}
         return {"error": str(e)}
 
 def get_dxy():
@@ -298,12 +342,17 @@ def get_dxy():
         current   = round(meta["regularMarketPrice"], 2)
         prev      = round(meta["previousClose"], 2)
         direction = "↑" if current >= prev else "↓"
+        debug_log["DXY"] = {
+            "regularMarketPrice": meta.get("regularMarketPrice"),
+            "previousClose":      meta.get("previousClose")
+        }
         return {
             "value":     current,
             "direction": direction,
             "note":      f"美元指數 {current}，趨勢{'走強' if direction == '↑' else '走弱'}。"
         }
     except Exception as e:
+        debug_log["DXY"] = {"error": str(e)}
         return {"error": str(e)}
 
 def get_oil():
@@ -312,12 +361,17 @@ def get_oil():
         current   = round(meta["regularMarketPrice"], 2)
         prev      = round(meta["previousClose"], 2)
         direction = "↑" if current >= prev else "↓"
+        debug_log["OIL"] = {
+            "regularMarketPrice": meta.get("regularMarketPrice"),
+            "previousClose":      meta.get("previousClose")
+        }
         return {
             "value":     current,
             "direction": direction,
             "note":      f"布蘭特原油 {current} 美元，趨勢{'上漲' if direction == '↑' else '下跌'}。"
         }
     except Exception as e:
+        debug_log["OIL"] = {"error": str(e)}
         return {"error": str(e)}
 
 # ─── 主程式 ────────────────────────────────────────────
@@ -325,6 +379,12 @@ def get_oil():
 ymnq     = get_ymnq_data()
 ym_close = ymnq.get("YM1", {}).get("close")
 nq_close = ymnq.get("NQ1", {}).get("close")
+
+debug_log["YMNQ_data"] = {
+    "YM1_close": ym_close,
+    "NQ1_close": nq_close,
+    "last_update": ymnq.get("last_update")
+}
 
 print(f"YMNQ YM close：{ym_close}")
 print(f"YMNQ NQ close：{nq_close}")
@@ -346,4 +406,8 @@ data = {
 with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
+with open("debug_log.json", "w", encoding="utf-8") as f:
+    json.dump(debug_log, f, ensure_ascii=False, indent=2)
+
 print("data.json 已產出：", now.strftime("%Y-%m-%d %H:%M"))
+print("debug_log.json 已產出")
