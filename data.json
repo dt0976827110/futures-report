@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-03-26 09:51 (台灣時間)",
+  "fetch_time": "2026-03-26 09:55 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 25.33,
@@ -13,9 +13,9 @@
       "note": "美元指數 99.61，趨勢走強。"
     },
     "oil_brent": {
-      "value": 98.0,
+      "value": 98.06,
       "direction": "↑",
-      "note": "布蘭特原油 98.0 美元，趨勢上漲。"
+      "note": "布蘭特原油 98.06 美元，趨勢上漲。"
     }
   },
   "futures_data": {
@@ -31,7 +31,7 @@
       "resistance": 46879.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-26 09:51 (台灣時間)",
+      "timestamp": "2026-03-26 09:55 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-19",
@@ -81,7 +81,7 @@
       "resistance": 24456.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-26 09:51 (台灣時間)",
+      "timestamp": "2026-03-26 09:55 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-19",
@@ -131,7 +131,7 @@
       "resistance": 33959.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-26 09:51 (台灣時間)",
+      "timestamp": "2026-03-26 09:55 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-19",
@@ -155,17 +155,17 @@
         }
       ],
       "indicators": {
-        "rsi14": 54.65,
-        "ma5": 33231.19,
-        "ma20": 33614.33,
-        "ma60": 31970.13,
-        "macd": 205.33,
-        "macd_signal": 324.32,
-        "macd_histogram": -118.99,
-        "bb_upper": 35187.76,
-        "bb_middle": 33614.33,
-        "bb_lower": 32040.89,
-        "atr14": 892.02,
+        "rsi14": 54.88,
+        "ma5": 33238.74,
+        "ma20": 33616.21,
+        "ma60": 31970.76,
+        "macd": 208.34,
+        "macd_signal": 324.93,
+        "macd_histogram": -116.58,
+        "bb_upper": 35190.81,
+        "bb_middle": 33616.21,
+        "bb_lower": 32041.62,
+        "atr14": 894.44,
         "volume_ma5": 4611040.0
       }
     }
