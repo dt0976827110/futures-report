@@ -363,12 +363,14 @@ async function init() {
 }
 
 function render(d) {
-  const date = d.report_date||'—';
-  document.getElementById('cover-date').textContent = date+' (GMT+8)';
-  document.getElementById('footer-date').textContent = 'QUANTITATIVE PULSE — '+date;
-  document.getElementById('s1-sub').textContent = d.last_update||date;
-  document.getElementById('s2-sub').textContent = date+' | 數據來源：TradingView 連續合約';
-  document.title = '國際金融期貨日報 — '+date;
+  // 使用報告的實際更新時間
+  const updateTime = d.last_update || d.report_time || '—';
+  
+  document.getElementById('cover-date').textContent = '報告更新於 ' + updateTime;
+  document.getElementById('footer-date').textContent = 'QUANTITATIVE PULSE — ' + updateTime;
+  document.getElementById('s1-sub').textContent = updateTime;
+  document.getElementById('s2-sub').textContent = (d.report_date || '—') + ' | 數據來源：TradingView 連續合約';
+  document.title = '國際金融期貨日報 — ' + (d.report_date || updateTime);
 
   renderSentiment(d.market_sentiment||{});
   renderOperationLevel(d.operation_level||{});
