@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-03-28 06:06 (台灣時間)",
+  "fetch_time": "2026-03-28 07:19 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 31.05,
@@ -31,7 +31,7 @@
       "resistance": 46692.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-28 06:06 (台灣時間)",
+      "timestamp": "2026-03-28 07:19 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-23",
@@ -81,7 +81,7 @@
       "resistance": 24032.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-28 06:06 (台灣時間)",
+      "timestamp": "2026-03-28 07:19 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-23",
@@ -122,16 +122,16 @@
     "TXF1": {
       "name": "台灣加權指數期貨",
       "current_price": 32244.0,
-      "previous_close": 31362.0,
+      "previous_close": 33120.0,
       "currency": "TWD",
-      "change_points": 882.0,
-      "change_percent": 2.66,
+      "change_points": -876.0,
+      "change_percent": -2.64,
       "volume": "71462",
-      "support": 31048.0,
-      "resistance": 31676.0,
+      "support": 32789.0,
+      "resistance": 33451.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-03-28 06:06 (台灣時間)",
+      "timestamp": "2026-03-28 07:19 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-03-23",

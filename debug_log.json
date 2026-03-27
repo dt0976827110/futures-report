@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-03-28 06:06 (台灣時間)",
+  "fetch_time": "2026-03-28 07:19 (台灣時間)",
   "YMNQ_data": {
     "YM1_close": 45424,
     "NQ1_close": 23328.5,
@@ -128,29 +128,6 @@
     ],
     "ymnq_close_used": 23328.5
   },
-  "TXF1_taifex": {
-    "raw_cols": [
-      "TX",
-      "202604",
-      "33049",
-      "33060",
-      "32244",
-      "32244",
-      "▼-882",
-      "▼-2.66%",
-      "71462",
-      "-",
-      "-",
-      "32243"
-    ],
-    "parsed": {
-      "current": 32244.0,
-      "prev": 31362.0,
-      "change_pts": 882.0,
-      "change_pct": 2.66,
-      "volume": "71462"
-    }
-  },
   "TXF1_five_day_raw": [
     {
       "date": "2026-03-23",
@@ -173,6 +150,32 @@
       "close": 33120.0
     }
   ],
+  "TXF1_taifex": {
+    "raw_cols": [
+      "TX",
+      "202604",
+      "33049",
+      "33060",
+      "32244",
+      "32244",
+      "▼-882",
+      "▼-2.66%",
+      "71462",
+      "-",
+      "-",
+      "32243"
+    ],
+    "parsed": {
+      "current": 32244.0,
+      "prev": 33120.0,
+      "change_pts": -876.0,
+      "change_pct": -2.64,
+      "taifex_change_pts": 882.0,
+      "taifex_change_pct": 2.66,
+      "volume": "71462",
+      "note": "prev 改用 five_day_history[-1]，不再用 TAIFEX 漲跌點反推"
+    }
+  },
   "TWII": {
     "last_10_closes": [
       {
