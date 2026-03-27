@@ -363,8 +363,8 @@ async function init() {
 }
 
 function render(d) {
-  // 使用報告的實際更新時間
-  const updateTime = d.last_update || d.report_time || '—';
+  // 使用台指期的更新時間
+  const updateTime = d.futures_data?.TXF1?.timestamp || '—';
   
   document.getElementById('cover-date').textContent = '報告更新於 ' + updateTime;
   document.getElementById('footer-date').textContent = 'QUANTITATIVE PULSE — ' + updateTime;
