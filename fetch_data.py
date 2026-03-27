@@ -284,16 +284,29 @@ def get_txf():
                 current = float(cols[5].replace(",", ""))
                 raw_chg = cols[6].replace(",", "")
                 is_down = "▼" in raw_chg
-                change_pts = float(raw_chg.replace("▲", "").replace("▼", ""))
+                taifex_change_pts = float(raw_chg.replace("▲", "").replace("▼", ""))
                 if is_down:
-                    change_pts = -change_pts
-                prev = round(current - change_pts, 0)
+                    taifex_change_pts = -taifex_change_pts
                 raw_pct = cols[7].replace(",", "").replace("%", "")
                 is_down_pct = "▼" in raw_pct
-                change_pct = float(raw_pct.replace("▲", "").replace("▼", ""))
+                taifex_change_pct = float(raw_pct.replace("▲", "").replace("▼", ""))
                 if is_down_pct:
-                    change_pct = -change_pct
+                    taifex_change_pct = -taifex_change_pct
                 volume = cols[8].replace(",", "")
+
+                # 五日歷史從 TAIFEX API 抓
+                five_day = get_txf_history()
+                
+                # ✅ 改用 five_day_history 的最後一天當作 previous_close
+                if five_day and len(five_day) > 0:
+                    prev = float(five_day[-1]['close'])
+                else:
+                    # 備用方案（如果五日歷史抓取失敗，才用 TAIFEX 反推）
+                    prev = round(current - taifex_change_pts, 0)
+                
+                # 重新計算正確的漲跌（基於真實的昨日收盤價）
+                change_pts = round(current - prev, 0)
+                change_pct = round((change_pts / prev) * 100, 2) if prev != 0 else 0
 
                 debug_log["TXF1_taifex"] = {
                     "raw_cols": cols[:12],
@@ -302,12 +315,12 @@ def get_txf():
                         "prev": prev,
                         "change_pts": change_pts,
                         "change_pct": change_pct,
-                        "volume": volume
+                        "taifex_change_pts": taifex_change_pts,
+                        "taifex_change_pct": taifex_change_pct,
+                        "volume": volume,
+                        "note": "prev 改用 five_day_history[-1]，不再用 TAIFEX 漲跌點反推"
                     }
                 }
-
-                # 五日歷史從 TAIFEX API 抓
-                five_day = get_txf_history()
 
                 # 技術指標用 ^TWII 歷史資料計算
                 try:
