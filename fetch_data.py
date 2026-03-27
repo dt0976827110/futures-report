@@ -126,32 +126,42 @@ def get_yahoo_history(symbol, range_period="6mo"):
 
 def get_txf_history():
     """
-    從 TAIFEX API 抓取過去 5 個交易日的台指期收盤價
+    從 TAIFEX 抓取過去 5 個交易日的台指期收盤價（POST 請求）
     """
     five_day = []
     taifex_headers = {"User-Agent": "Mozilla/5.0"}
-    
-    # 從今天往前找，跳過週末，抓最近 5 個交易日
+    url = "https://www.taifex.com.tw/cht/3/futDailyMarketReport"
+
     check_date = now.date()
     days_found = 0
     attempts = 0
-    
+
     while days_found < 5 and attempts < 15:
         attempts += 1
         check_date -= timedelta(days=1)
-        
-        # 跳過週末
+
         if check_date.weekday() >= 5:
             continue
-        
+
         date_str = check_date.strftime("%Y/%m/%d")
-        url = f"https://www.taifex.com.tw/cht/3/getFutcontract.do?queryDate={date_str}&marketCode=0&commodity_id=TX"
-        
+        payload = {
+            "queryType": "2",
+            "marketCode": "0",
+            "dateaddcnt": "",
+            "commodity_id": "TX",
+            "commodity_id2": "",
+            "queryDate": date_str,
+            "MarketCode": "0",
+            "commodity_idt": "TX",
+            "commodity_id2t": "",
+            "commodity_id2t2": ""
+        }
+
         try:
-            res = requests.get(url, timeout=10, headers=taifex_headers)
+            res = requests.post(url, data=payload, timeout=10, headers=taifex_headers)
             soup = BeautifulSoup(res.text, "html.parser")
             rows = soup.select("table tr")
-            
+
             for row in rows:
                 cols = [td.get_text(strip=True) for td in row.select("td")]
                 if len(cols) > 8 and cols[0] == "TX":
@@ -164,7 +174,7 @@ def get_txf_history():
                     break
         except Exception as e:
             print(f"抓取 {date_str} 台指期資料失敗：{e}")
-    
+
     debug_log["TXF1_five_day_raw"] = five_day
     return five_day
 
