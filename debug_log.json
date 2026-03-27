@@ -1,21 +1,21 @@
 {
-  "fetch_time": "2026-03-27 10:18 (台灣時間)",
+  "fetch_time": "2026-03-28 06:06 (台灣時間)",
   "YMNQ_data": {
-    "YM1_close": 46230,
-    "NQ1_close": 23794.25,
-    "last_update": "2026-03-26T21:01:05.383Z"
+    "YM1_close": 45424,
+    "NQ1_close": 23328.5,
+    "last_update": "2026-03-27T21:01:05.603Z"
   },
   "VIX": {
-    "regularMarketPrice": 27.44,
-    "chartPreviousClose": 25.33,
-    "previousClose": 25.33
+    "regularMarketPrice": 31.05,
+    "chartPreviousClose": 27.44,
+    "previousClose": 27.44
   },
   "DXY": {
-    "regularMarketPrice": 99.837,
+    "regularMarketPrice": 100.193,
     "previousClose": 99.9
   },
   "OIL": {
-    "regularMarketPrice": 100.0,
+    "regularMarketPrice": 106.84,
     "previousClose": 101.89
   },
   "YM=F": {
@@ -66,12 +66,12 @@
         "volume": 103663
       },
       {
-        "date": "2026-03-27 02:08",
-        "close": 46409.0,
-        "volume": 4481
+        "date": "2026-03-27 04:00",
+        "close": 45310.0,
+        "volume": 118294
       }
     ],
-    "ymnq_close_used": 46230
+    "ymnq_close_used": 45424
   },
   "NQ=F": {
     "last_10_closes": [
@@ -121,41 +121,37 @@
         "volume": 525449
       },
       {
-        "date": "2026-03-27 02:08",
-        "close": 23875.25,
-        "volume": 30054
+        "date": "2026-03-27 04:00",
+        "close": 23254.25,
+        "volume": 550632
       }
     ],
-    "ymnq_close_used": 23794.25
+    "ymnq_close_used": 23328.5
   },
   "TXF1_taifex": {
     "raw_cols": [
       "TX",
       "202604",
-      "33474",
-      "33542",
-      "32632",
-      "32807",
-      "▼-634",
-      "▼-1.90%",
-      "68139",
+      "33049",
+      "33060",
+      "32244",
+      "32244",
+      "▼-882",
+      "▼-2.66%",
+      "71462",
       "-",
       "-",
-      "32806"
+      "32243"
     ],
     "parsed": {
-      "current": 32807.0,
-      "prev": 32173.0,
-      "change_pts": 634.0,
-      "change_pct": 1.9,
-      "volume": "68139"
+      "current": 32244.0,
+      "prev": 31362.0,
+      "change_pts": 882.0,
+      "change_pct": 2.66,
+      "volume": "71462"
     }
   },
   "TXF1_five_day_raw": [
-    {
-      "date": "2026-03-20",
-      "close": 33559.0
-    },
     {
       "date": "2026-03-23",
       "close": 32532.0
@@ -171,10 +167,18 @@
     {
       "date": "2026-03-26",
       "close": 33440.0
+    },
+    {
+      "date": "2026-03-27",
+      "close": 33120.0
     }
   ],
   "TWII": {
     "last_10_closes": [
+      {
+        "date": "2026-03-13 01:00",
+        "close": 33400.32
+      },
       {
         "date": "2026-03-16 01:00",
         "close": 33342.51
@@ -210,10 +214,6 @@
       {
         "date": "2026-03-26 01:00",
         "close": 33337.62
-      },
-      {
-        "date": "2026-03-27 01:59",
-        "close": 32840.62
       }
     ]
   }
