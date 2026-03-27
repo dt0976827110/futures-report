@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-03-27 09:54 (台灣時間)",
+  "fetch_time": "2026-03-27 10:18 (台灣時間)",
   "YMNQ_data": {
     "YM1_close": 46230,
     "NQ1_close": 23794.25,
@@ -11,20 +11,15 @@
     "previousClose": 25.33
   },
   "DXY": {
-    "regularMarketPrice": 99.848,
+    "regularMarketPrice": 99.837,
     "previousClose": 99.9
   },
   "OIL": {
-    "regularMarketPrice": 100.69,
+    "regularMarketPrice": 100.0,
     "previousClose": 101.89
   },
   "YM=F": {
     "last_10_closes": [
-      {
-        "date": "2026-03-13 04:00",
-        "close": 46592.0,
-        "volume": 140360
-      },
       {
         "date": "2026-03-16 04:00",
         "close": 46984.0,
@@ -63,23 +58,23 @@
       {
         "date": "2026-03-25 04:00",
         "close": 46711.0,
-        "volume": 117908
+        "volume": 103663
       },
       {
-        "date": "2026-03-27 01:44",
-        "close": 46391.0,
-        "volume": 4100
+        "date": "2026-03-26 04:00",
+        "close": 46230.0,
+        "volume": 103663
+      },
+      {
+        "date": "2026-03-27 02:08",
+        "close": 46409.0,
+        "volume": 4481
       }
     ],
     "ymnq_close_used": 46230
   },
   "NQ=F": {
     "last_10_closes": [
-      {
-        "date": "2026-03-13 04:00",
-        "close": 24394.25,
-        "volume": 609146
-      },
       {
         "date": "2026-03-16 04:00",
         "close": 24675.75,
@@ -118,12 +113,17 @@
       {
         "date": "2026-03-25 04:00",
         "close": 24367.75,
-        "volume": 544209
+        "volume": 525449
       },
       {
-        "date": "2026-03-27 01:44",
-        "close": 23867.5,
-        "volume": 28086
+        "date": "2026-03-26 04:00",
+        "close": 23794.25,
+        "volume": 525449
+      },
+      {
+        "date": "2026-03-27 02:08",
+        "close": 23875.25,
+        "volume": 30054
       }
     ],
     "ymnq_close_used": 23794.25
@@ -151,7 +151,28 @@
       "volume": "68139"
     }
   },
-  "TXF1_five_day_raw": [],
+  "TXF1_five_day_raw": [
+    {
+      "date": "2026-03-20",
+      "close": 33559.0
+    },
+    {
+      "date": "2026-03-23",
+      "close": 32532.0
+    },
+    {
+      "date": "2026-03-24",
+      "close": 32771.0
+    },
+    {
+      "date": "2026-03-25",
+      "close": 33638.0
+    },
+    {
+      "date": "2026-03-26",
+      "close": 33440.0
+    }
+  ],
   "TWII": {
     "last_10_closes": [
       {
@@ -191,8 +212,8 @@
         "close": 33337.62
       },
       {
-        "date": "2026-03-27 01:35",
-        "close": 32918.47
+        "date": "2026-03-27 01:59",
+        "close": 32840.62
       }
     ]
   }
