@@ -124,6 +124,50 @@ def get_yahoo_history(symbol, range_period="6mo"):
     ]
     return data
 
+def get_txf_history():
+    """
+    從 TAIFEX API 抓取過去 5 個交易日的台指期收盤價
+    """
+    five_day = []
+    taifex_headers = {"User-Agent": "Mozilla/5.0"}
+    
+    # 從今天往前找，跳過週末，抓最近 5 個交易日
+    check_date = now.date()
+    days_found = 0
+    attempts = 0
+    
+    while days_found < 5 and attempts < 15:
+        attempts += 1
+        check_date -= timedelta(days=1)
+        
+        # 跳過週末
+        if check_date.weekday() >= 5:
+            continue
+        
+        date_str = check_date.strftime("%Y/%m/%d")
+        url = f"https://www.taifex.com.tw/cht/3/getFutcontract.do?queryDate={date_str}&marketCode=0&commodity_id=TX"
+        
+        try:
+            res = requests.get(url, timeout=10, headers=taifex_headers)
+            soup = BeautifulSoup(res.text, "html.parser")
+            rows = soup.select("table tr")
+            
+            for row in rows:
+                cols = [td.get_text(strip=True) for td in row.select("td")]
+                if len(cols) > 8 and cols[0] == "TX":
+                    close_price = float(cols[5].replace(",", ""))
+                    five_day.insert(0, {
+                        "date":  check_date.strftime("%Y-%m-%d"),
+                        "close": close_price
+                    })
+                    days_found += 1
+                    break
+        except Exception as e:
+            print(f"抓取 {date_str} 台指期資料失敗：{e}")
+    
+    debug_log["TXF1_five_day_raw"] = five_day
+    return five_day
+
 def get_futures(symbol, name, currency, ymnq_close=None, ymnq_time=None):
     try:
         history    = get_yahoo_history(symbol, "6mo")
@@ -133,7 +177,6 @@ def get_futures(symbol, name, currency, ymnq_close=None, ymnq_time=None):
         volumes    = [d[4] for d in history]
         timestamps = [d[0] for d in history]
 
-        # debug：記錄最後 10 筆歷史收盤
         debug_log[symbol] = {
             "last_10_closes": [
                 {
@@ -157,10 +200,12 @@ def get_futures(symbol, name, currency, ymnq_close=None, ymnq_time=None):
                 }
                 for i in range(-6, -1)
             ]
+            # YMNQ time 是 UTC，+1 天換算成台灣日期
             if ymnq_time:
-                ymnq_date = ymnq_time[:10]
+                ymnq_date_utc = datetime.strptime(ymnq_time[:10], "%Y-%m-%d")
+                ymnq_date = (ymnq_date_utc + timedelta(days=1)).strftime("%Y-%m-%d")
             else:
-                ymnq_date = (now - timedelta(days=1)).strftime("%Y-%m-%d")
+                ymnq_date = now.strftime("%Y-%m-%d")
             five_day = five_day_raw[1:] + [{
                 "date":  ymnq_date,
                 "close": current
@@ -251,13 +296,16 @@ def get_txf():
                     }
                 }
 
+                # 五日歷史從 TAIFEX API 抓
+                five_day = get_txf_history()
+
+                # 技術指標用 ^TWII 歷史資料計算
                 try:
                     history    = get_yahoo_history("%5ETWII", "6mo")
                     closes     = [d[1] for d in history]
                     highs      = [d[2] for d in history]
                     lows       = [d[3] for d in history]
                     volumes_tw = [d[4] for d in history]
-                    timestamps = [d[0] for d in history]
 
                     debug_log["TWII"] = {
                         "last_10_closes": [
@@ -269,13 +317,6 @@ def get_txf():
                         ]
                     }
 
-                    five_day = [
-                        {
-                            "date":  datetime.utcfromtimestamp(timestamps[i]).strftime("%Y-%m-%d"),
-                            "close": round(closes[i], 2)
-                        }
-                        for i in range(-6, -1)
-                    ]
                     macd_data  = calc_macd(closes)
                     bb_data    = calc_bollinger(closes)
                     indicators = {
@@ -293,7 +334,6 @@ def get_txf():
                         "volume_ma5":     calc_volume_ma(volumes_tw)
                     }
                 except Exception as e2:
-                    five_day   = []
                     indicators = {"error": str(e2)}
 
                 return {
