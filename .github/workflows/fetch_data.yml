@@ -31,3 +31,16 @@ jobs:
           git add data.json debug_log.json
           git commit -m "Update data.json $(date +'%Y-%m-%d %H:%M')" || echo "No changes"
           git push --force
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Firebase Admin SDK
+        run: npm install firebase-admin
+
+      - name: Sync report.json to Firestore
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node sync-to-firestore.js
