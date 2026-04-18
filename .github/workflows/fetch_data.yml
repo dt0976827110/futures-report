@@ -2,6 +2,9 @@ name: Fetch Market Data
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'report.json'
 
 permissions:
   contents: write
