@@ -56,7 +56,7 @@
     },
     "TXF1": {
       "name": "台灣加權指數期貨",
-      "current_price": 37742.0,
+      "current_price": 99999.0,
       "previous_close": 37083.0,
       "currency": "TWD",
       "change_points": 659.0,
