@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-04-30 06:05 (台灣時間)",
+  "fetch_time": "2026-04-30 06:28 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 18.81,
@@ -8,14 +8,14 @@
       "note": "VIX 目前 18.81，市場波動中。"
     },
     "dxy": {
-      "value": 98.93,
+      "value": 98.97,
       "direction": "↑",
-      "note": "美元指數 98.93，趨勢走強。"
+      "note": "美元指數 98.97，趨勢走強。"
     },
     "oil_brent": {
-      "value": 111.91,
+      "value": 111.58,
       "direction": "↑",
-      "note": "布蘭特原油 111.91 美元，趨勢上漲。"
+      "note": "布蘭特原油 111.58 美元，趨勢上漲。"
     }
   },
   "futures_data": {
@@ -31,7 +31,7 @@
       "resistance": 49790.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-04-30 06:05 (台灣時間)",
+      "timestamp": "2026-04-30 06:28 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-04-23",
@@ -81,7 +81,7 @@
       "resistance": 27440.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-04-30 06:05 (台灣時間)",
+      "timestamp": "2026-04-30 06:28 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-04-23",
@@ -131,7 +131,7 @@
       "resistance": 39885.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-04-30 06:05 (台灣時間)",
+      "timestamp": "2026-04-30 06:28 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-04-23",
