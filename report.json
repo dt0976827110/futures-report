@@ -1,110 +1,114 @@
 {
-  "report_date": "2026-04-30",
-  "report_time": "2026-04-30 08:30 (台灣時間)",
-  "last_update": "2026-04-30 08:30 (台灣時間)",
+  "report_date": "2026-05-01",
+  "report_time": "2026-05-01 08:30 (台灣時間)",
+  "last_update": "2026-05-01 06:05 (台灣時間)",
   "market_sentiment": {
     "vix": {
-      "value": 18.81,
-      "change": "+0.98",
+      "value": 16.89,
+      "change": "-1.92",
       "level": "中",
-      "note": "VIX 升至 18.81，反映市場對 Fed 內部異議及地緣政治風險的擔憂增加。"
+      "note": "VIX 降至 16.89，顯示市場恐慌情緒有所緩解，科技股財報利多抵銷了對通膨的擔憂。"
     },
     "dxy": {
-      "value": 98.93,
-      "direction": "↑",
-      "note": "美元指數走強至 98.93，主要受避險情緒及 Fed 鷹派官員反對寬鬆傾向支撐。"
+      "value": 98.08,
+      "direction": "↓",
+      "note": "美元指數回落至 98.08，緩解了跨國企業匯兌壓力，對美股及台股等新興市場有利。"
     },
     "oil_brent": {
-      "value": 111.91,
+      "value": 111.23,
       "direction": "↑",
-      "note": "布蘭特原油飆升至 111.91 美元，受中東局勢惡化及供應中斷憂慮驅動。"
+      "note": "油價維持在 111.23 高位，地緣政治風險仍存，持續對通膨預期構成壓力。"
     },
     "today_focus": [
-      "鮑爾會後記者會對通膨與任期去留的表態",
-      "Meta 與 Microsoft 財報後的科技股盤前情緒發酵",
-      "中東供應中斷風險對能源價格的持續衝擊"
+      "Apple (AAPL) 第一季財報發布，關注 iPhone 銷量及 AI 發展指引",
+      "美國 4 月 ISM 製造業 PMI 數據，觀察製造業景氣擴張力道",
+      "美債殖利率走勢及聯準會官員在 FOMC 會後的進一步表態"
     ]
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
-      "current_price": 49012.0,
-      "previous_close": 49297.0,
+      "current_price": 49835.0,
+      "previous_close": 49012.0,
       "currency": "USD",
-      "change_points": -285.0,
-      "change_percent": -0.58,
-      "volume": "64939",
-      "support": 48804.0,
-      "resistance": 49790.0,
-      "support_basis": "前收盤價 -1% 估算",
-      "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-04-30 06:05 (台灣時間)"
+      "change_points": 823.0,
+      "change_percent": 1.68,
+      "volume": "83926",
+      "support": 49375.0,
+      "resistance": 50608.0,
+      "support_basis": "5日均線 (MA5) 支撐位",
+      "resistance_basis": "布林通道上軌 (BB Upper) 壓力位",
+      "timestamp": "2026-05-01 06:05 (台灣時間)"
     },
     "NQ1": {
       "name": "E-迷你那斯達克指數",
-      "current_price": 27325.25,
-      "previous_close": 27168.75,
+      "current_price": 27596.0,
+      "previous_close": 27325.25,
       "currency": "USD",
-      "change_points": 156.5,
-      "change_percent": 0.58,
-      "volume": "444514",
-      "support": 26897.0,
-      "resistance": 27440.0,
-      "support_basis": "前收盤價 -1% 估算",
-      "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-04-30 06:05 (台灣時間)"
+      "change_points": 270.75,
+      "change_percent": 0.99,
+      "volume": "603738",
+      "support": 27393.0,
+      "resistance": 28382.0,
+      "support_basis": "5日均線 (MA5) 支撐位",
+      "resistance_basis": "布林通道上軌 (BB Upper) 壓力位",
+      "timestamp": "2026-05-01 06:05 (台灣時間)"
     },
     "TXF1": {
       "name": "台灣加權指數期貨",
-      "current_price": 39337.0,
-      "previous_close": 39490.0,
+      "current_price": 40103.0,
+      "previous_close": 39360.0,
       "currency": "TWD",
-      "change_points": -153.0,
-      "change_percent": -0.39,
-      "volume": "48696",
-      "support": 39095.0,
-      "resistance": 39885.0,
-      "support_basis": "前收盤價 -1% 估算",
-      "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-04-30 06:05 (台灣時間)"
+      "change_points": 743.0,
+      "change_percent": 1.89,
+      "volume": "56389",
+      "support": 39360.0,
+      "resistance": 40867.0,
+      "support_basis": "昨日收盤價及MA5附近支撐",
+      "resistance_basis": "布林通道上軌 (BB Upper) 壓力位",
+      "timestamp": "2026-05-01 06:05 (台灣時間)"
     }
   },
   "yesterday_analysis": {
     "title": "昨日走勢分析",
     "events": [
       {
-        "title": "Fed 利率決策與內部異議",
-        "description": "聯準會維持利率不變，但 4 名委員提出異議，為 1992 年來最多，顯示內部對通膨壓力存在嚴重分歧。"
+        "title": "科技巨頭財報利多",
+        "description": "Alphabet 與 Amazon 公布強勁財報，AI 投資開始轉化為實質利潤，帶動那斯達克指數強勢反彈。"
       },
       {
-        "title": "中東局勢惡化推升油價",
-        "description": "地緣政治衝突加劇及 UAE 退出 OPEC 疑慮，導致布蘭特原油飆升逾 6%，加劇全球通膨擔憂。"
+        "title": "聯準會利率決策維持不變",
+        "description": "FOMC 決議維持利率在 3.50%-3.75% 區間，鮑爾表態雖然通膨仍高，但排除進一步升息的可能性，緩解市場壓力。"
+      },
+      {
+        "title": "就業市場數據穩健",
+        "description": "初領失業金人數降至 18.9 萬人，低於預期的 21.3 萬人，顯示勞動力市場依然強勁，支撐經濟軟著陸預期。"
       }
     ],
     "economic_data": [
       {
-        "indicator": "Fed 基準利率",
-        "actual": "3.5%-3.75%",
-        "forecast": "3.5%-3.75%",
-        "previous": "3.5%-3.75%",
-        "impact": "中性",
-        "note": "符合預期，但內部異議增加顯示未來政策不確定性。"
+        "indicator": "初領失業金人數",
+        "actual": "18.9萬",
+        "forecast": "21.3萬",
+        "previous": "21.4萬",
+        "impact": "正面",
+        "note": "創下55年來新低，顯示就業市場極度強勁。"
       },
       {
-        "indicator": "美國 3 月 PCE 物價指數 (YoY)",
-        "actual": "3.5%",
-        "forecast": "2.8%",
-        "previous": "2.8%",
-        "impact": "負面",
-        "note": "顯著高於預期，通膨壓力劇增淡化降息期待。"
+        "indicator": "美國第一季GDP成長率",
+        "actual": "13.69%",
+        "forecast": "12.5%",
+        "previous": "11.2%",
+        "impact": "正面",
+        "note": "內需消費強勁，經濟成長超預期。"
       },
       {
-        "indicator": "美國 Q1 GDP 初值",
-        "actual": "1.2%",
-        "forecast": "2.3%",
-        "previous": "0.5%",
-        "impact": "負面",
-        "note": "大幅低於預期，顯示經濟增長放緩。"
+        "indicator": "標普全球美國製造業PMI",
+        "actual": "54.0",
+        "forecast": "52.5",
+        "previous": "52.3",
+        "impact": "正面",
+        "note": "製造業景氣持續擴張。"
       }
     ]
   },
@@ -114,11 +118,11 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "受 Fed 內部異議及通膨數據爆表影響，市場對高利率維持更久的擔憂壓制傳統藍籌股表現。"
+          "detail": "受惠於強勁的經濟數據（GDP 與就業）以及傳統產業在經濟軟著陸預期下的補漲行情，道瓊指數展現韌性。"
         },
         {
           "title": "技術面分析",
-          "detail": "目前價格 49012 低於 MA5 (49306.6)，顯示短期走勢偏弱；RSI14 為 57.06 處於中性偏強，但 MACD 柱狀體 45.7 顯示多頭動能萎縮。"
+          "detail": "目前價格 49835 站穩 MA5 (49375) 之上，MACD 柱狀體 (56.73) 持續擴大，顯示多頭動能強勁，正挑戰布林上軌壓力。"
         }
       ]
     },
@@ -127,11 +131,11 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "Alphabet 財報強勁支撐科技股，抵銷了 Meta 支出計畫帶來的負面影響，AI 題材仍是核心支撐。"
+          "detail": "Alphabet 與 Amazon 的 AI 獲利爆發，帶動半導體與軟體板塊集體走強，市場對科技股估值重估。"
         },
         {
           "title": "技術面分析",
-          "detail": "價格 27325.25 高於 MA5 (27260.7)，RSI14 高達 71.03 進入超買區，MACD 柱狀體 123.46 顯示多頭動能強勁，但需防範高檔回落。"
+          "detail": "RSI14 高達 73.33 進入超買區，但 MACD (729.22) 與信號線金叉發散，短線雖有過熱風險，但趨勢極強。"
         }
       ]
     },
@@ -140,125 +144,131 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "受美股震盪及台股挑戰四萬點關卡前的心理壓力影響，市場呈現量縮震盪，等待科技巨頭財報指引。"
+          "detail": "美股科技股大漲帶動台積電 ADR 走強，加上國內第一季 GDP 表現亮眼，內外資同步作多。"
         },
         {
           "title": "技術面分析",
-          "detail": "價格 39337 高於 MA5 (38732.68)，RSI14 為 76.04 處於嚴重超買區，MACD 柱狀體 344.75 顯示多頭趨勢未變，但短線乖離過大。"
+          "detail": "價格 40103 突破四萬大關，遠高於 MA20 (36284)，乖離率偏高，但成交量 MA5 顯示動能充足，多頭格局不變。"
         }
       ]
     }
   },
   "today_probability": {
     "title": "今日走勢機率評估",
-    "summary": "市場處於通膨壓力與 AI 增長動能的拉鋸戰，地緣政治風險成為短期最大變數。",
+    "summary": "科技財報與經濟數據雙重利多，市場維持多頭格局，但需留意短線超買回檔。",
     "YM1": {
-      "up_probability": "40%",
-      "down_probability": "60%",
-      "analysis": "RSI14 降至 57.06 且跌破 MA5，加上通膨數據利空，短期修正壓力較大。",
-      "key_level": "48804 (支撐位)"
+      "up_probability": "65%",
+      "down_probability": "35%",
+      "analysis": "MA5 (49375) 向上穿越 MA20，且 MACD 柱狀體轉正，基本面支撐強勁。",
+      "key_level": "49500 (若跌破此位則短線轉為震盪)"
     },
     "NQ1": {
-      "up_probability": "55%",
-      "down_probability": "45%",
-      "analysis": "MACD 柱狀體 123.46 持續擴大，AI 龍頭財報支撐多頭，但 RSI 71.03 需警惕回調。",
-      "key_level": "27440 (壓力位)"
+      "up_probability": "70%",
+      "down_probability": "30%",
+      "analysis": "RSI14 (73.33) 雖高，但受惠於 AI 題材爆發，MACD 柱狀體 (110.03) 顯示多頭加速。",
+      "key_level": "27300 (MA5 支撐位，不破則多頭持續)"
     },
     "TXF1": {
-      "up_probability": "45%",
-      "down_probability": "55%",
-      "analysis": "RSI 76.04 顯示極度超買，且美股道瓊走弱可能拖累台股開盤表現。",
-      "key_level": "39095 (支撐位)"
+      "up_probability": "75%",
+      "down_probability": "25%",
+      "analysis": "站上 40000 心理關卡，MACD (1527.83) 遠高於信號線，多方完全掌控局面。",
+      "key_level": "39500 (前波高點支撐)"
     }
   },
   "operation_level": {
-    "rating": "高風險",
-    "position_size": "減半倉位",
-    "reason": "Fed 內部異議及通膨數據爆表增加政策不確定性，地緣政治風險推升油價，市場波動將加劇。"
+    "rating": "中等風險",
+    "position_size": "正常倉位",
+    "reason": "趨勢明確向上，但多項指標進入超買區，且今日有 Apple 財報，建議設好停損參與趨勢。"
   },
   "investment_advice": {
     "short_term_strategy": [
-      "小道瓊若跌破 48800 可輕倉放空，目標 48500",
-      "小那指回測 27100 不破可嘗試做多，停損設 26900",
-      "台指期接近 39800 壓力區建議逢高減碼",
-      "關注 27440 壓力位，若帶量突破可順勢加碼那指"
+      "小那指 (NQ1) 回測 27400 附近可分批佈局多單",
+      "小道瓊 (YM1) 站穩 49800 後可加碼，目標 50500",
+      "台指期 (TXF1) 守住 39800 關卡維持偏多操作",
+      "嚴格執行移動停利，保護既有獲利"
     ],
     "trading_opportunities": [
-      "利用油價飆升機會關注能源相關標的避險",
-      "那指回測 MA5 (27260) 具備短線支撐買盤",
-      "道瓊若反彈至 49300 遇阻可視為賣點",
-      "台指期若回測 39100 支撐可尋求低接機會"
+      "利用 Apple 財報發布前的波動進行區間交易",
+      "關注半導體板塊的補漲機會，進場價參考昨日低點",
+      "DXY 走弱利多新興市場，可關注台指期突破機會",
+      "VIX 降至 17 以下，適合進行賣出選擇權策略"
     ],
     "risk_avoidance": [
-      "嚴格執行停損，避免在地緣政治消息頻發時過度曝險",
-      "避開高槓桿操作，防範 VIX 飆升帶來的瞬間波動",
-      "注意美元指數走強對新興市場資金流出的壓力",
-      "防範科技股財報利多出盡的獲利了結賣壓"
+      "避開在 Apple 財報發布瞬間重倉押注",
+      "留意油價 (111.23) 持續上漲對通膨預期的反撲",
+      "若 DXY 重新站回 100，需立即縮減多單倉位",
+      "防止技術面過熱導致的閃崩，停損位設在 MA5 下方 1%"
     ],
     "position_allocation": [
-      "現金比例提升至 50% 以應對突發波動",
-      "科技股配置比例維持 30%，聚焦 AI 龍頭",
-      "能源或避險資產配置 10%",
-      "剩餘 10% 用於短線波段操作"
+      "科技股期貨 (NQ1) 配置 40% 倉位",
+      "指數型期貨 (YM1) 配置 30% 倉位",
+      "台指期 (TXF1) 配置 20% 倉位",
+      "保留 10% 現金應對突發波動"
     ]
   },
   "conclusion": {
-    "summary": "通膨陰霾與地緣政治風險籠罩，市場情緒轉向謹慎，短期建議防禦為主。",
+    "summary": "全球市場進入 AI 獲利兌現期，經濟數據支持軟著陸，多頭趨勢確立。",
     "points": [
       {
-        "title": "通膨壓力重燃",
-        "description": "PCE 數據遠超預期，Fed 內部異議增加，降息預期大幅降溫，壓制指數估值。"
+        "title": "AI 獲利時代開啟",
+        "description": "Alphabet 與 Amazon 的表現證明 AI 投資已開始產生回報，這將支撐科技股長線估值。"
       },
       {
-        "title": "AI 支撐與地緣風險並存",
-        "description": "科技巨頭財報展現 AI 變現能力，但油價飆升帶來的成本壓力不容忽視。"
+        "title": "聯準會態度轉鴿",
+        "description": "排除升息選項為市場注入強心針，美元走弱有利於全球風險資產表現。"
       }
     ],
-    "advice": "建議投資者縮減倉位，聚焦具備財報支撐的科技龍頭，並嚴格監控地緣政治引發的能源價格波動。"
+    "advice": "目前應順勢而為，以偏多操作為主，重點關注 Apple 財報對市場情緒的延續性。"
   },
   "news": [
     {
-      "title": "Fed 利率連三凍，四名官員提異議",
-      "description": "聯準會維持利率不變，但內部對通膨擔憂加劇，1992年來最多異議票。",
+      "title": "Alphabet 獲利暴增 81%，AI 投資成效顯著",
+      "description": "Google 母公司 Alphabet 第一季利潤達 626 億美元，AI 雲端業務成長強勁，帶動股價大漲。",
       "impact": "高",
       "timestamp": "2026-04-30 (台灣時間)"
     },
     {
-      "title": "中東局勢惡化，布蘭特油價飆逾 6%",
-      "description": "地緣衝突升級及供應中斷憂慮，推升油價衝破 111 美元關卡。",
+      "title": "聯準會維持利率不變，鮑爾排除升息可能",
+      "description": "FOMC 決議維持利率，鮑爾表示雖然通膨降溫緩慢，但目前政策已具備足夠限制性。",
       "impact": "高",
       "timestamp": "2026-04-30 (台灣時間)"
     },
     {
-      "title": "Alphabet 雲端增長亮眼，Meta 支出計畫嚇壞市場",
-      "description": "科技巨頭財報分化，AI 投入與回報成為市場衡量核心。",
+      "title": "美國初領失業金人數降至 18.9 萬，創 55 年新低",
+      "description": "就業市場異常強勁，緩解了市場對經濟衰退的擔憂，支撐消費支出預期。",
       "impact": "中",
       "timestamp": "2026-04-30 (台灣時間)"
     },
     {
-      "title": "美國 3 月 PCE 達 3.5%，通膨壓力劇增",
-      "description": "物價指數顯著高於預期，淡化市場對聯準會寬鬆政策的期待。",
-      "impact": "高",
+      "title": "Amazon 雲端業務 AWS 成長加速，獲利超預期",
+      "description": "Amazon 第一季財報顯示 AWS 受惠於 AI 需求，成長率回升至 20% 以上。",
+      "impact": "中",
       "timestamp": "2026-04-30 (台灣時間)"
+    },
+    {
+      "title": "Apple 即將發布財報，市場關注 iPhone 17 預期",
+      "description": "投資人聚焦 Apple 在 AI 手機領域的佈局以及大中華區的銷售恢復情況。",
+      "impact": "高",
+      "timestamp": "2026-05-01 (台灣時間)"
     }
   ],
   "risk_warning": {
     "title": "風險提示",
     "items": [
       {
-        "title": "地緣政治全面失控",
-        "description": "若中東衝突擴大至主要產油國，油價可能衝向 130 美元。",
-        "impact_if_triggered": "將導致全球通膨失控，三大期貨可能出現 5-10% 的劇烈修正。"
+        "title": "Apple 財報指引不如預期",
+        "description": "若 Apple 對未來展望保守，可能引發科技股短線獲利了結賣壓。",
+        "impact_if_triggered": "NQ1 可能回測 27000 關卡，TXF1 同步受壓。"
       },
       {
-        "title": "Fed 轉向鷹派升息",
-        "description": "若通膨持續居高不下，Fed 可能重啟升息討論。",
-        "impact_if_triggered": "將重創科技股估值，那指與道瓊將面臨長期下行壓力。"
+        "title": "地緣政治引發油價飆升",
+        "description": "中東局勢若惡化導致油價突破 120 美元，將重新引發通膨擔憂。",
+        "impact_if_triggered": "YM1 傳統產業股受創較深，DXY 可能反彈壓抑股市。"
       },
       {
-        "title": "科技股財報集體暴雷",
-        "description": "若後續 AI 投入未能轉化為營收，市場信心將崩潰。",
-        "impact_if_triggered": "那指將領跌，帶動全球股市進入技術性熊市。"
+        "title": "技術面超買回檔",
+        "description": "三大指數 RSI 均處於高位，乖離率過大可能引發技術性修正。",
+        "impact_if_triggered": "三大期貨可能出現 2-3% 的快速回檔以修正指標。"
       }
     ]
   }
