@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-05-23 06:23 (台灣時間)",
+  "fetch_time": "2026-05-24 06:25 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 16.7,
@@ -13,9 +13,9 @@
       "note": "美元指數 99.32，趨勢走強。"
     },
     "oil_brent": {
-      "value": 103.94,
+      "value": 100.21,
       "direction": "↑",
-      "note": "布蘭特原油 103.94 美元，趨勢上漲。"
+      "note": "布蘭特原油 100.21 美元，趨勢上漲。"
     }
   },
   "futures_data": {
@@ -26,12 +26,12 @@
       "currency": "USD",
       "change_points": 283.0,
       "change_percent": 0.56,
-      "volume": "123449",
+      "volume": "119591",
       "support": 49875.0,
       "resistance": 50883.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-05-23 06:23 (台灣時間)",
+      "timestamp": "2026-05-24 06:25 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-05-18",
@@ -66,7 +66,7 @@
         "bb_middle": 49731.85,
         "bb_lower": 48931.08,
         "atr14": 595.07,
-        "volume_ma5": 114011.0
+        "volume_ma5": 113239.0
       }
     },
     "NQ1": {
@@ -76,12 +76,12 @@
       "currency": "USD",
       "change_points": 111.5,
       "change_percent": 0.38,
-      "volume": "606377",
+      "volume": "612220",
       "support": 29153.0,
       "resistance": 29742.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-05-23 06:23 (台灣時間)",
+      "timestamp": "2026-05-24 06:25 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-05-18",
@@ -116,7 +116,7 @@
         "bb_middle": 28670.96,
         "bb_lower": 27001.66,
         "atr14": 528.45,
-        "volume_ma5": 707088.0
+        "volume_ma5": 708257.0
       }
     },
     "TXF1": {
@@ -131,7 +131,7 @@
       "resistance": 42866.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-05-23 06:23 (台灣時間)",
+      "timestamp": "2026-05-24 06:25 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-05-18",
@@ -155,18 +155,18 @@
         }
       ],
       "indicators": {
-        "rsi14": 63.9,
-        "ma5": 40725.75,
-        "ma20": 40530.47,
-        "ma60": 36375.13,
-        "macd": 1182.56,
-        "macd_signal": 1465.46,
-        "macd_histogram": -282.91,
-        "bb_upper": 42866.57,
-        "bb_middle": 40530.47,
-        "bb_lower": 38194.37,
-        "atr14": 949.91,
-        "volume_ma5": 6761500.0
+        "rsi14": 68.1,
+        "ma5": 40944.88,
+        "ma20": 40758.16,
+        "ma60": 36516.71,
+        "macd": 1216.6,
+        "macd_signal": 1415.69,
+        "macd_histogram": -199.09,
+        "bb_upper": 42823.94,
+        "bb_middle": 40758.16,
+        "bb_lower": 38692.39,
+        "atr14": 889.95,
+        "volume_ma5": 6665200.0
       }
     }
   }
