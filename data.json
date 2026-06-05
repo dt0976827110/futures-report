@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-06-05 09:01 (台灣時間)",
+  "fetch_time": "2026-06-05 09:05 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 15.4,
@@ -13,30 +13,26 @@
       "note": "美元指數 99.43，趨勢走強。"
     },
     "oil_brent": {
-      "value": 95.01,
-      "direction": "↓",
-      "note": "布蘭特原油 95.01 美元，趨勢下跌。"
+      "value": 95.06,
+      "direction": "↑",
+      "note": "布蘭特原油 95.06 美元，趨勢上漲。"
     }
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
       "current_price": 51671.0,
-      "previous_close": 50803.0,
+      "previous_close": 51671.0,
       "currency": "USD",
-      "change_points": 868.0,
-      "change_percent": 1.71,
-      "volume": "96521",
-      "support": 50295.0,
-      "resistance": 51311.0,
+      "change_points": 0.0,
+      "change_percent": 0.0,
+      "volume": "100625",
+      "support": 51154.0,
+      "resistance": 52188.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-05 09:01 (台灣時間)",
+      "timestamp": "2026-06-05 09:05 (台灣時間)",
       "five_day_history": [
-        {
-          "date": "2026-05-29",
-          "close": 51077.0
-        },
         {
           "date": "2026-06-01",
           "close": 51134.0
@@ -52,41 +48,41 @@
         {
           "date": "2026-06-04",
           "close": 51671.0
+        },
+        {
+          "date": "2026-06-04",
+          "close": 51671.0
         }
       ],
       "indicators": {
         "rsi14": 67.4,
-        "ma5": 51217.0,
-        "ma20": 50354.0,
-        "ma60": 48712.85,
-        "macd": 575.05,
-        "macd_signal": 508.92,
-        "macd_histogram": 66.13,
-        "bb_upper": 51627.94,
-        "bb_middle": 50354.0,
-        "bb_lower": 49080.06,
-        "atr14": 604.86,
-        "volume_ma5": 93853.0
+        "ma5": 51335.8,
+        "ma20": 50452.55,
+        "ma60": 48783.23,
+        "macd": 601.09,
+        "macd_signal": 527.36,
+        "macd_histogram": 73.74,
+        "bb_upper": 51811.02,
+        "bb_middle": 50452.55,
+        "bb_lower": 49094.08,
+        "atr14": 640.29,
+        "volume_ma5": 98924.0
       }
     },
     "NQ1": {
       "name": "E-迷你那斯達克指數",
       "current_price": 30488.25,
-      "previous_close": 30633.25,
+      "previous_close": 30488.25,
       "currency": "USD",
-      "change_points": -145.0,
-      "change_percent": -0.47,
-      "volume": "525212",
-      "support": 30327.0,
-      "resistance": 30940.0,
+      "change_points": 0.0,
+      "change_percent": 0.0,
+      "volume": "638765",
+      "support": 30183.0,
+      "resistance": 30793.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-05 09:01 (台灣時間)",
+      "timestamp": "2026-06-05 09:05 (台灣時間)",
       "five_day_history": [
-        {
-          "date": "2026-05-29",
-          "close": 30405.25
-        },
         {
           "date": "2026-06-01",
           "close": 30566.25
@@ -102,21 +98,25 @@
         {
           "date": "2026-06-04",
           "close": 30488.25
+        },
+        {
+          "date": "2026-06-04",
+          "close": 30488.25
         }
       ],
       "indicators": {
         "rsi14": 73.27,
-        "ma5": 30561.15,
-        "ma20": 29732.89,
-        "ma60": 26985.38,
-        "macd": 843.74,
-        "macd_signal": 864.7,
-        "macd_histogram": -20.97,
-        "bb_upper": 30942.43,
-        "bb_middle": 29732.89,
-        "bb_lower": 28523.35,
-        "atr14": 471.55,
-        "volume_ma5": 552552.0
+        "ma5": 30577.75,
+        "ma20": 29823.19,
+        "ma60": 27077.12,
+        "macd": 811.58,
+        "macd_signal": 854.08,
+        "macd_histogram": -42.5,
+        "bb_upper": 30973.72,
+        "bb_middle": 29823.19,
+        "bb_lower": 28672.66,
+        "atr14": 482.16,
+        "volume_ma5": 590105.0
       }
     },
     "TXF1": {
@@ -131,7 +131,7 @@
       "resistance": 46757.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-05 09:01 (台灣時間)",
+      "timestamp": "2026-06-05 09:05 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-05-29",
