@@ -1,42 +1,38 @@
 {
-  "fetch_time": "2026-06-10 06:27 (台灣時間)",
+  "fetch_time": "2026-06-11 06:05 (台灣時間)",
   "market_sentiment": {
     "vix": {
-      "value": 19.87,
-      "change": "+0.95",
-      "level": "中",
-      "note": "VIX 目前 19.87，市場波動中。"
+      "value": 22.22,
+      "change": "+3.3",
+      "level": "高",
+      "note": "VIX 目前 22.22，市場波動高。"
     },
     "dxy": {
-      "value": 100.0,
-      "direction": "↓",
-      "note": "美元指數 100.0，趨勢走弱。"
+      "value": 100.04,
+      "direction": "↑",
+      "note": "美元指數 100.04，趨勢走強。"
     },
     "oil_brent": {
-      "value": 91.99,
+      "value": 94.71,
       "direction": "↑",
-      "note": "布蘭特原油 91.99 美元，趨勢上漲。"
+      "note": "布蘭特原油 94.71 美元，趨勢上漲。"
     }
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
-      "current_price": 50909.0,
-      "previous_close": 50856.0,
+      "current_price": 49990.0,
+      "previous_close": 50909.0,
       "currency": "USD",
-      "change_points": 53.0,
-      "change_percent": 0.1,
-      "volume": "146415",
-      "support": 50347.0,
-      "resistance": 51365.0,
+      "change_points": -919.0,
+      "change_percent": -1.81,
+      "volume": "123612",
+      "support": 50400.0,
+      "resistance": 51418.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-10 06:27 (台灣時間)",
+      "timestamp": "2026-06-11 06:05 (台灣時間)",
       "five_day_history": [
-        {
-          "date": "2026-06-03",
-          "close": 50803.0
-        },
         {
           "date": "2026-06-04",
           "close": 51671.0
@@ -52,41 +48,41 @@
         {
           "date": "2026-06-09",
           "close": 50909.0
+        },
+        {
+          "date": "2026-06-10",
+          "close": 49990.0
         }
       ],
       "indicators": {
-        "rsi14": 56.96,
-        "ma5": 51035.0,
-        "ma20": 50529.9,
-        "ma60": 48911.85,
-        "macd": 473.01,
-        "macd_signal": 505.33,
-        "macd_histogram": -32.32,
-        "bb_upper": 51730.86,
-        "bb_middle": 50529.9,
-        "bb_lower": 49328.94,
-        "atr14": 668.57,
-        "volume_ma5": 122756.0
+        "rsi14": 46.5,
+        "ma5": 50872.4,
+        "ma20": 50535.95,
+        "ma60": 48961.95,
+        "macd": 369.7,
+        "macd_signal": 478.16,
+        "macd_histogram": -108.46,
+        "bb_upper": 51724.68,
+        "bb_middle": 50535.95,
+        "bb_lower": 49347.22,
+        "atr14": 707.07,
+        "volume_ma5": 123614.0
       }
     },
     "NQ1": {
       "name": "E-迷你那斯達克指數",
-      "current_price": 29117.0,
-      "previous_close": 29454.75,
+      "current_price": 28554.0,
+      "previous_close": 29117.0,
       "currency": "USD",
-      "change_points": -337.75,
-      "change_percent": -1.15,
-      "volume": "1044741",
-      "support": 29160.0,
-      "resistance": 29749.0,
+      "change_points": -563.0,
+      "change_percent": -1.93,
+      "volume": "846024",
+      "support": 28826.0,
+      "resistance": 29408.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-10 06:27 (台灣時間)",
+      "timestamp": "2026-06-11 06:05 (台灣時間)",
       "five_day_history": [
-        {
-          "date": "2026-06-03",
-          "close": 30633.25
-        },
         {
           "date": "2026-06-04",
           "close": 30488.25
@@ -102,41 +98,41 @@
         {
           "date": "2026-06-09",
           "close": 29117.0
+        },
+        {
+          "date": "2026-06-10",
+          "close": 28554.0
         }
       ],
       "indicators": {
-        "rsi14": 48.91,
-        "ma5": 29743.95,
-        "ma20": 29740.86,
-        "ma60": 27213.05,
-        "macd": 500.07,
-        "macd_signal": 728.44,
-        "macd_histogram": -228.37,
-        "bb_upper": 30916.43,
-        "bb_middle": 29740.86,
-        "bb_lower": 28565.3,
-        "atr14": 580.62,
-        "volume_ma5": 787552.0
+        "rsi14": 42.95,
+        "ma5": 29328.1,
+        "ma20": 29710.06,
+        "ma60": 27277.69,
+        "macd": 367.51,
+        "macd_signal": 656.25,
+        "macd_histogram": -288.73,
+        "bb_upper": 30972.88,
+        "bb_middle": 29710.06,
+        "bb_lower": 28447.24,
+        "atr14": 658.84,
+        "volume_ma5": 811971.0
       }
     },
     "TXF1": {
       "name": "台灣加權指數期貨",
-      "current_price": 43878.0,
-      "previous_close": 44665.0,
+      "current_price": 42615.0,
+      "previous_close": 43422.0,
       "currency": "TWD",
-      "change_points": -787.0,
-      "change_percent": -1.76,
-      "volume": "121791",
-      "support": 44218.0,
-      "resistance": 45112.0,
+      "change_points": -807.0,
+      "change_percent": -1.86,
+      "volume": "117269",
+      "support": 42988.0,
+      "resistance": 43856.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-10 06:27 (台灣時間)",
+      "timestamp": "2026-06-11 06:05 (台灣時間)",
       "five_day_history": [
-        {
-          "date": "2026-06-03",
-          "close": 46868.0
-        },
         {
           "date": "2026-06-04",
           "close": 46294.0
@@ -152,21 +148,25 @@
         {
           "date": "2026-06-09",
           "close": 44665.0
+        },
+        {
+          "date": "2026-06-10",
+          "close": 43422.0
         }
       ],
       "indicators": {
-        "rsi14": 55.49,
-        "ma5": 45253.53,
-        "ma20": 43116.14,
-        "ma60": 38472.65,
-        "macd": 1594.57,
-        "macd_signal": 1676.49,
-        "macd_histogram": -81.92,
-        "bb_upper": 46972.08,
-        "bb_middle": 43116.14,
-        "bb_lower": 39260.2,
-        "atr14": 1261.75,
-        "volume_ma5": 9655880.0
+        "rsi14": 60.72,
+        "ma5": 45082.96,
+        "ma20": 43256.45,
+        "ma60": 38658.03,
+        "macd": 1515.41,
+        "macd_signal": 1644.24,
+        "macd_histogram": -128.83,
+        "bb_upper": 47129.1,
+        "bb_middle": 43256.45,
+        "bb_lower": 39383.79,
+        "atr14": 1322.25,
+        "volume_ma5": 8831540.0
       }
     }
   }
