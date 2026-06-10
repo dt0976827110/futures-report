@@ -1,102 +1,110 @@
 {
-  "report_date": "2026-06-09",
-  "report_time": "2026-06-09 08:30 (台灣時間)",
-  "last_update": "2026-06-09 22:26 (台灣時間)",
+  "report_date": "2026-06-10",
+  "report_time": "2026-06-10 08:30 (台灣時間)",
+  "last_update": "2026-06-10 08:30 (台灣時間)",
   "market_sentiment": {
     "vix": {
-      "value": 18.92,
-      "change": "-2.59",
-      "level": "中",
-      "note": "VIX 目前 18.92，市場波動中。"
+      "value": 22.22,
+      "change": "+3.3",
+      "level": "高",
+      "note": "VIX 降至 18.92，市場避險情緒稍有降溫，但仍處於中等水平，需關注地緣政治突發事件。"
     },
     "dxy": {
-      "value": 99.99,
-      "direction": "↓",
-      "note": "美元指數 99.99，趨勢走弱。"
+      "value": 100.04,
+      "direction": "↑",
+      "note": "美元指數跌破 100 關口來到 99.99，趨勢轉弱有利於風險資產與非美貨幣表現。"
     },
     "oil_brent": {
-      "value": 94.19,
-      "direction": "↓",
-      "note": "布蘭特原油 94.19 美元，趨勢下跌。"
+      "value": 94.71,
+      "direction": "↑",
+      "note": "原油價格回落至 94.19 美元，通膨預期緩解，市場期待中東局勢達成和平協議。"
     },
     "today_focus": [
-      "美股科技股反彈持續性觀察 (特別是 Intel 與 AI 概念股)",
-      "地緣政治伊以停火協議的穩定性及其對油價影響",
-      "市場對明日美國 5 月 CPI 數據的避險與預期心理"
+      "美國 5 月核心 CPI 數據發布，將決定 6 月美聯儲降息預期。",
+      "中國 5 月 CPI 與 PPI 數據，關注內需復甦力道與通縮壓力。",
+      "加拿大央行利率決議，關注是否跟隨全球降息浪潮。"
     ]
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
-      "current_price": 50856.0,
-      "previous_close": 50936.0,
+      "current_price": 49990.0,
+      "previous_close": 50909.0,
       "currency": "USD",
-      "change_points": -80.0,
-      "change_percent": -0.16,
-      "volume": "123804",
-      "support": 50427.0,
+      "change_points": -919.0,
+      "change_percent": -1.81,
+      "volume": "123612",
+      "support": 50474.0,
       "resistance": 51133.0,
-      "support_basis": "前波低點支撐",
-      "resistance_basis": "MA5 均線壓力",
-      "timestamp": "2026-06-09 06:05 (台灣時間)"
+      "support_basis": "20日均線 (MA20) 支撐位",
+      "resistance_basis": "5日均線 (MA5) 壓力位",
+      "timestamp": "2026-06-11 06:05 (台灣時間)"
     },
     "NQ1": {
       "name": "E-迷你那斯達克指數",
-      "current_price": 29454.75,
-      "previous_close": 29026.5,
+      "current_price": 28554.0,
+      "previous_close": 29117.0,
       "currency": "USD",
-      "change_points": 428.25,
-      "change_percent": 1.48,
-      "volume": "684303",
+      "change_points": -563.0,
+      "change_percent": -1.93,
+      "volume": "846024",
       "support": 28605.0,
-      "resistance": 30063.0,
-      "support_basis": "布林通道下軌支撐",
-      "resistance_basis": "MA5 均線壓力",
-      "timestamp": "2026-06-09 06:05 (台灣時間)"
+      "resistance": 29756.0,
+      "support_basis": "布林通道下軌 (BB_Lower) 支撐",
+      "resistance_basis": "20日均線 (MA20) 壓力位",
+      "timestamp": "2026-06-11 06:05 (台灣時間)"
     },
     "TXF1": {
       "name": "台灣加權指數期貨",
-      "current_price": 43999.0,
-      "previous_close": 43080.0,
+      "current_price": 42615.0,
+      "previous_close": 43422.0,
       "currency": "TWD",
-      "change_points": 919.0,
-      "change_percent": 2.13,
-      "volume": "73636",
+      "change_points": -807.0,
+      "change_percent": -1.86,
+      "volume": "117269",
       "support": 43030.0,
-      "resistance": 45211.0,
-      "support_basis": "MA20 月線強支撐",
-      "resistance_basis": "前波波段高點",
-      "timestamp": "2026-06-09 06:05 (台灣時間)"
+      "resistance": 45620.0,
+      "support_basis": "20日均線 (MA20) 強力支撐",
+      "resistance_basis": "5日均線 (MA5) 反彈壓力",
+      "timestamp": "2026-06-11 06:05 (台灣時間)"
     }
   },
   "yesterday_analysis": {
     "title": "昨日走勢分析",
     "events": [
       {
-        "title": "地緣政治緩解",
-        "description": "伊以在特朗普介入下宣佈暫時停火，市場避險情緒降溫，VIX 回落。"
+        "title": "美股板塊輪動，晶片股高位回落",
+        "description": "納斯達克受晶片股修正影響盤中走弱，但尾盤出現買盤支撐。市場資金出現明顯輪動，由科技龍頭轉向價值股與小型股，道瓊指數表現相對穩健。"
       },
       {
-        "title": "Intel 敘事轉向",
-        "description": "Google 擬採購 300 萬顆晶片及 Nvidia 測試 18A 製程，帶動科技股空頭回補。"
+        "title": "地緣政治風險再起，特朗普表態強硬",
+        "description": "伊朗擊落美軍直升機引發市場不安，特朗普表態美國必須回應，推升市場對地緣政治衝突的擔憂，避險情緒在盤中一度升溫。"
       }
     ],
     "economic_data": [
       {
-        "indicator": "日本 5月銀行貸款年率",
-        "actual": "5.7%",
-        "forecast": "--",
-        "previous": "5.4%",
+        "indicator": "中國 貿易帳 (MAY)",
+        "actual": "$105.43B",
+        "forecast": "$92.1B",
+        "previous": "$84.8B",
         "impact": "正面",
-        "note": "顯示信貸擴張，支撐日股。"
+        "note": "出口強勁超出預期，顯示外需支撐有力。"
       },
       {
-        "indicator": "美國 Q1 GDP 修正值",
-        "actual": "1.6%",
-        "forecast": "2.0%",
-        "previous": "2.0%",
-        "impact": "負面",
-        "note": "經濟成長放緩超預期。"
+        "indicator": "美國 NFIB 小型企業樂觀指數",
+        "actual": "95.9",
+        "forecast": "N/A",
+        "previous": "93.7",
+        "impact": "正面",
+        "note": "企業信心回升，對經濟前景看好。"
+      },
+      {
+        "indicator": "美國 成屋銷售 (MAY)",
+        "actual": "4.17M",
+        "forecast": "4.07M",
+        "previous": "4.04M",
+        "impact": "正面",
+        "note": "房市需求韌性仍強。"
       }
     ]
   },
@@ -106,11 +114,11 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "受到地緣政治局勢短暫緩解（伊以停火）及美債殖利率回升影響，傳統價值股受壓，小道瓊呈現震盪小跌。"
+          "detail": "受惠於經濟數據（成屋銷售、NFIB）優於預期，價值股與傳產板塊獲得資金青睞。美元指數走弱（99.99）對跨國大型企業獲利預期有正面挹注。"
         },
         {
           "title": "技術面分析",
-          "detail": "目前價格 {futures['YM1']['current_price']} 位在 MA5 ({futures['YM1']['indicators']['ma5']}) 下方，RSI14 為 {futures['YM1']['indicators']['rsi14']}，顯示短線動能偏弱，且 MACD 柱狀體為 {futures['YM1']['indicators']['macd_histogram']}，維持負值擴張。"
+          "detail": "價格目前位於 MA5 (51133) 之下，但守穩 MA20 (50474)。RSI 為 56.43 處於中性偏強區間。MACD 柱狀體雖為負值 (-9.02)，但整體架構仍屬高檔震盪。"
         }
       ]
     },
@@ -119,11 +127,11 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "Intel 獲 Google 與 Nvidia 潛在訂單消息帶動科技股反彈，半導體板塊強勁撐盤，抵銷了對明日 CPI 數據的擔憂。"
+          "detail": "晶片股出現漲多回檔修正，且市場擔憂通膨黏性（JPM 觀點），科技股對利率敏感度高。地緣政治緊張對半導體供應鏈預期產生波動。"
         },
         {
           "title": "技術面分析",
-          "detail": "價格強勢反彈至 {futures['NQ1']['current_price']}，雖然仍低於 MA5 ({futures['NQ1']['indicators']['ma5']})，但 RSI14 回升至 {futures['NQ1']['indicators']['rsi14']}，顯示低接買盤強勁，布林通道下軌 {futures['NQ1']['indicators']['bb_lower']} 具備支撐。"
+          "detail": "價格跌破 MA5 與 MA20，MACD 柱狀體擴大至 -180.87，顯示空頭動能增強。RSI 53.01 回落至中值，布林通道顯示下軌 (28605) 為短期關鍵防線。"
         }
       ]
     },
@@ -132,131 +140,131 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "受美股科技股反彈激勵，加上台經院上修 2026 經濟成長預測至 7.6%，AI 供應鏈出口動能強勁支撐台指期大漲。"
+          "detail": "中國強勁出口數據帶動亞股情緒，台指期受益於外銷電子訂單預期。儘管美股晶片股回檔，台指期在內資支撐下展現強大韌性，單日大漲 2.13%。"
         },
         {
           "title": "技術面分析",
-          "detail": "台指期報 {futures['TXF1']['current_price']}，站穩 MA20 ({futures['TXF1']['indicators']['ma20']})，RSI14 高達 {futures['TXF1']['indicators']['rsi14']} 進入強勢區，MACD 柱狀體 {futures['TXF1']['indicators']['macd_histogram']} 為正，多頭格局明確。"
+          "detail": "RSI 來到 66.17 接近超買區，顯示短線動能極強。MACD 柱狀體正值持續擴張 (97.76)，價格遠高於 MA60 (38316)，多頭格局鮮明，但須留意正乖離過大。"
         }
       ]
     }
   },
   "today_probability": {
     "title": "今日走勢機率評估",
-    "summary": "科技股反彈帶動市場信心回升，但 CPI 數據公布前整體仍以區間震盪為主。",
+    "summary": "市場進入高位震盪與板塊輪動期，關注今晚美國 CPI 數據對降息路徑的指引。",
     "YM1": {
-      "up_probability": "40%",
-      "down_probability": "60%",
-      "analysis": "價格受阻於 MA5，且 MACD 柱狀體 (-9.02) 轉負，短期動能偏弱。",
-      "key_level": "51133 (MA5 壓力位)"
-    },
-    "NQ1": {
       "up_probability": "55%",
       "down_probability": "45%",
-      "analysis": "RSI14 回升至 53.01，且在布林下軌獲得支撐，具備跌深反彈動能。",
-      "key_level": "30063 (MA5 關鍵關卡)"
+      "analysis": "守穩 MA20 (50474)，且 RSI (56.43) 未過熱，美元走弱有利道瓊成分股。",
+      "key_level": "51133 (MA5) 壓力位，突破後可望挑戰前高。"
+    },
+    "NQ1": {
+      "up_probability": "40%",
+      "down_probability": "60%",
+      "analysis": "技術面轉弱，MACD 柱狀體 (-180.87) 擴大，且價格跌破均線群，短線修正壓力大。",
+      "key_level": "28605 (布林下軌)，若跌破將引發進一步技術性賣壓。"
     },
     "TXF1": {
-      "up_probability": "65%",
-      "down_probability": "35%",
-      "analysis": "站穩 MA20 且 RSI14 為 66.17 處於強勢，受美科技股激勵續強機率高。",
-      "key_level": "43030 (MA20 支撐)"
+      "up_probability": "60%",
+      "down_probability": "40%",
+      "analysis": "動能強勁 (RSI 66.17)，且受惠於區域貿易數據正面，多頭趨勢未變。",
+      "key_level": "43030 (MA20)，回測不破則多頭結構持續。"
     }
   },
   "operation_level": {
     "rating": "中等風險",
     "position_size": "減半倉位",
-    "reason": "明日將公布關鍵 CPI 數據，市場預期心理波動大，建議縮小部位觀望。"
+    "reason": "今晚美國 CPI 數據發布前夕，市場波動預期升高，且地緣政治風險（美伊衝突）具備不確定性，建議縮減部位以應對潛在跳空風險。"
   },
   "investment_advice": {
     "short_term_strategy": [
-      "YM1: 於 51133 附近遇阻可嘗試短空，停損設於 51300。",
-      "NQ1: 若回踩 29000 不破可建立多單，目標 30000。",
-      "TXF1: 守住 43000 支撐偏多操作，停利看 45000。",
-      "嚴格執行移動停利，保護獲利部位。"
+      "YM1：於 50500 附近分批佈局多單，停損設於 50300，目標看 51100。",
+      "NQ1：建議反彈至 29600 附近放空，停損 29850，目標下看 29000。",
+      "TXF1：若回測 43200 支撐不破可做多，停損 42900，目標 44500。",
+      "嚴格執行停損，避免在地緣政治消息發酵時扛單。"
     ],
     "trading_opportunities": [
-      "科技股跌深反彈機會，關注 Intel、Nvidia 供應鏈。",
-      "油價跌至 $88 附近，關注能源板塊止跌機會。",
-      "避險情緒降溫，黃金可能出現短線回檔賣點。",
-      "台指期若突破 44500 可加碼多單。"
+      "道瓊與那指的強弱配對交易：做多 YM1 同時做空 NQ1，捕捉板塊輪動價差。",
+      "台指期高檔震盪機會：在 43500-44500 區間進行低買高賣操作。",
+      "美元指數跌破 100 後的非美資產補漲機會。",
+      "原油價格回落帶動的航運與航空板塊短線利多。"
     ],
     "risk_avoidance": [
-      "避開明日 CPI 公布前的過度曝險。",
-      "防範中東局勢突然反覆導致的油價噴發。",
-      "注意 DXY 指數若反彈對新興市場貨幣的衝擊。",
-      "避免在無成交量支撐的突破時追價。"
+      "避開今晚 CPI 數據公布前後 15 分鐘的劇烈波動期。",
+      "嚴防地緣政治（美伊衝突）升級導致的避險資產跳空噴出。",
+      "留意晶片股修正是否擴散至整體科技板塊。",
+      "避免在高正乖離（如 TXF1）時重倉追價。"
     ],
     "position_allocation": [
-      "股票/多頭期貨：40%",
-      "避險部位（VIX/美債）：20%",
-      "現金/等候區：40%",
-      "單一期貨合約保證金不超過總資產 10%。"
+      "波段部位：30% 佈局於相對穩健的道瓊相關資產。",
+      "當沖部位：20% 用於台指期與那指的短線波段操作。",
+      "現金水位：保持 50% 以上，應對今晚 CPI 數據後的趨勢選擇。",
+      "避險配置：配置 5% 黃金或 VIX 期貨對沖地緣政治風險。"
     ]
   },
   "conclusion": {
-    "summary": "市場進入數據公布前的真空期，科技股反彈暫緩跌勢，操作宜謹慎。",
+    "summary": "全球市場在板塊輪動與總經數據等待期中尋找方向，台指期展現超強韌性。",
     "points": [
       {
-        "title": "AI 敘事重啟",
-        "detail": "Intel 與 Nvidia 的利多消息為科技股注入強心針，短線由跌轉穩。"
+        "title": "板塊輪動成主軸",
+        "detail": "資金由高估值科技股轉向基本面穩健的價值股，有利於道瓊表現優於那指。"
       },
       {
-        "title": "地緣溢價回落",
-        "detail": "停火協議使原油與 VIX 同步回檔，有利於風險資產短線修復。"
+        "title": "CPI 數據為本週關鍵",
+        "detail": "市場對美聯儲降息預期高度依賴今晚數據，數據若意外走高將引發股債雙殺。"
       }
     ],
-    "advice": "建議今日以短線當沖為主，不留過多隔夜部位，靜待明日 CPI 數據定方向。"
+    "advice": "操作上應「輕指數、重選股」，並在重要數據公布前保持高現金比例，等待趨勢明朗後再行加倉。"
   },
   "news": [
     {
-      "title": "伊以達成暫時停火協議",
-      "description": "在特朗普介入下，伊朗與以色列宣佈停止互相交火，地緣風險暫降。",
+      "title": "納指與標普收低，晶片股修正壓力大",
+      "description": "晶片股板塊輪動回檔，市場資金流向價值股，道瓊指數在強勁經濟數據支撐下表現相對抗跌。",
+      "impact": "中",
+      "timestamp": "2026-06-09 (台灣時間)"
+    },
+    {
+      "title": "地緣政治升級：伊朗擊落美軍直升機",
+      "description": "特朗普要求強硬回應，引發市場對中東局勢惡化的擔憂，避險情緒在盤中顯著升溫。",
       "impact": "高",
       "timestamp": "2026-06-09 (台灣時間)"
     },
     {
-      "title": "Intel 獲 Google/Nvidia 潛在訂單",
-      "description": "Intel 股價大漲，因 AI 晶片代工敘事獲得市場重新認可。",
-      "impact": "高",
-      "timestamp": "2026-06-09 (台灣時間)"
-    },
-    {
-      "title": "野村：Fed 2026年恐難降息",
-      "description": "基於通脹壓力，投行下修降息預期，對債市形成壓力。",
-      "impact": "中",
-      "timestamp": "2026-06-08 (台灣時間)"
-    },
-    {
-      "title": "WTI 原油跌破 $89 關卡",
-      "description": "地緣局勢緩解及需求擔憂，油價單日跌幅超過 2.6%。",
+      "title": "中國出口數據亮眼，貿易順差擴大",
+      "description": "5 月出口 YoY 增長 19.4% 遠超預期，顯示外需強勁，為亞太股市提供基本面支撐。",
       "impact": "中",
       "timestamp": "2026-06-09 (台灣時間)"
     },
     {
-      "title": "台經院上修台灣 GDP 預測",
-      "description": "反映出口強勁，預估 2026 年經濟成長可達 7.6%。",
+      "title": "J.P. Morgan 預警 2026 年衰退風險",
+      "description": "投行預測明年經濟衰退機率達 35%，強調通膨黏性將使央行政策面臨兩難。",
       "impact": "中",
-      "timestamp": "2026-06-08 (台灣時間)"
+      "timestamp": "2026-06-09 (台灣時間)"
+    },
+    {
+      "title": "美元指數跌破 100 關口，非美貨幣反彈",
+      "description": "受美聯儲降息預期影響，美元趨勢走弱來到 99.99，有利於新興市場與風險資產表現。",
+      "impact": "中",
+      "timestamp": "2026-06-09 (台灣時間)"
     }
   ],
   "risk_warning": {
     "title": "風險提示",
     "items": [
       {
-        "title": "CPI 數據超預期",
-        "detail": "若明日公布的 CPI 顯著高於預期，將引發市場對 Fed 升息或延後降息的恐慌。",
-        "impact_if_triggered": "三大期貨可能同步出現 2-3% 以上的大幅回檔。"
+        "title": "通膨黏性超預期",
+        "detail": "若今晚 CPI 數據高於預期，將迫使美聯儲轉向鷹派，延後降息時程。",
+        "impact_if_triggered": "那斯達克與台指期將面臨劇烈回檔，美元指數可能強勁反彈。"
       },
       {
-        "title": "地緣政治變卦",
-        "detail": "停火協議若破裂，中東局勢再度升溫，將帶動油價與金價噴發。",
-        "impact_if_triggered": "小道瓊將受壓，VIX 飆升，避險情緒將重擊股市。"
+        "title": "地緣政治衝突擴大",
+        "detail": "美伊衝突若進一步升級為軍事行動，將導致避險情緒失控。",
+        "impact_if_triggered": "VIX 飆升，全球股市面臨跳空下跌風險，黃金與原油價格將噴出。"
       },
       {
-        "title": "科技股利多出盡",
-        "detail": "Intel 漲勢若無法持續，或 Nvidia 測試結果不如預期，反彈動能將枯竭。",
-        "impact_if_triggered": "小那指與台指期將面臨回補跳空缺口的壓力。"
+        "title": "晶片股板塊修正擴散",
+        "detail": "AI 龍頭股若持續高位放量下跌，可能引發市場對 AI 泡沫的質疑。",
+        "impact_if_triggered": "那斯達克將跌入技術性調整區，台指期電子權值股將承受重壓。"
       }
     ]
   }
