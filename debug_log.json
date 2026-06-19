@@ -1,30 +1,25 @@
 {
-  "fetch_time": "2026-06-19 06:31 (台灣時間)",
+  "fetch_time": "2026-06-20 06:31 (台灣時間)",
   "YMNQ_data": {
     "YM1_close": 52008,
     "NQ1_close": 30719.75,
     "last_update": "2026-06-18T21:01:08.864Z"
   },
   "VIX": {
-    "regularMarketPrice": 16.4,
-    "chartPreviousClose": 16.41,
-    "previousClose": 16.41
+    "regularMarketPrice": 16.78,
+    "chartPreviousClose": 18.44,
+    "previousClose": 18.44
   },
   "DXY": {
-    "regularMarketPrice": 100.814,
-    "previousClose": 100.089
+    "regularMarketPrice": 100.849,
+    "previousClose": 100.849
   },
   "OIL": {
-    "regularMarketPrice": 79.39,
+    "regularMarketPrice": 80.59,
     "previousClose": 79.85
   },
   "YM=F": {
     "last_10_closes": [
-      {
-        "date": "2026-06-05 04:00",
-        "close": 50936.0,
-        "volume": 146415
-      },
       {
         "date": "2026-06-08 04:00",
         "close": 50856.0,
@@ -63,23 +58,23 @@
       {
         "date": "2026-06-17 04:00",
         "close": 51519.0,
-        "volume": 38318
+        "volume": 15312
       },
       {
         "date": "2026-06-18 04:00",
-        "close": 52007.0,
-        "volume": 190
+        "close": 51962.0,
+        "volume": 15312
+      },
+      {
+        "date": "2026-06-19 16:59",
+        "close": 51888.0,
+        "volume": 14132
       }
     ],
     "ymnq_close_used": 52008
   },
   "NQ=F": {
     "last_10_closes": [
-      {
-        "date": "2026-06-05 04:00",
-        "close": 29026.5,
-        "volume": 1044741
-      },
       {
         "date": "2026-06-08 04:00",
         "close": 29454.75,
@@ -118,12 +113,17 @@
       {
         "date": "2026-06-17 04:00",
         "close": 29687.5,
-        "volume": 215042
+        "volume": 92564
       },
       {
         "date": "2026-06-18 04:00",
-        "close": 30689.0,
-        "volume": 2600
+        "close": 30263.35,
+        "volume": 92564
+      },
+      {
+        "date": "2026-06-19 16:59",
+        "close": 30647.0,
+        "volume": 103597
       }
     ],
     "ymnq_close_used": 30719.75
