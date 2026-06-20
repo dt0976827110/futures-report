@@ -1,9 +1,9 @@
 {
-  "fetch_time": "2026-06-20 06:31 (台灣時間)",
+  "fetch_time": "2026-06-21 06:29 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 16.78,
-      "change": "-1.66",
+      "change": "+0.38",
       "level": "中",
       "note": "VIX 目前 16.78，市場波動中。"
     },
@@ -26,12 +26,12 @@
       "currency": "USD",
       "change_points": 46.0,
       "change_percent": 0.09,
-      "volume": "15312",
+      "volume": "92045",
       "support": 51442.0,
       "resistance": 52482.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-20 06:31 (台灣時間)",
+      "timestamp": "2026-06-21 06:29 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-06-15",
@@ -66,7 +66,7 @@
         "bb_middle": 51141.65,
         "bb_lower": 50073.67,
         "atr14": 802.86,
-        "volume_ma5": 42070.0
+        "volume_ma5": 57416.0
       }
     },
     "NQ1": {
@@ -76,12 +76,12 @@
       "currency": "USD",
       "change_points": 456.4,
       "change_percent": 1.51,
-      "volume": "92564",
+      "volume": "563315",
       "support": 29961.0,
       "resistance": 30566.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-20 06:31 (台灣時間)",
+      "timestamp": "2026-06-21 06:29 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-06-15",
@@ -116,7 +116,7 @@
         "bb_middle": 29964.8,
         "bb_lower": 28746.75,
         "atr14": 818.96,
-        "volume_ma5": 248864.0
+        "volume_ma5": 343014.0
       }
     },
     "TXF1": {
@@ -131,7 +131,7 @@
       "resistance": 47237.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-20 06:31 (台灣時間)",
+      "timestamp": "2026-06-21 06:29 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-06-12",
@@ -155,18 +155,18 @@
         }
       ],
       "indicators": {
-        "rsi14": 63.33,
-        "ma5": 44880.41,
-        "ma20": 44368.49,
-        "ma60": 39749.13,
-        "macd": 1177.27,
-        "macd_signal": 1281.83,
-        "macd_histogram": -104.56,
-        "bb_upper": 46951.73,
-        "bb_middle": 44368.49,
-        "bb_lower": 41785.25,
-        "atr14": 1282.86,
-        "volume_ma5": 6613640.0
+        "rsi14": 65.52,
+        "ma5": 45543.56,
+        "ma20": 44623.34,
+        "ma60": 39978.18,
+        "macd": 1232.31,
+        "macd_signal": 1271.93,
+        "macd_histogram": -39.61,
+        "bb_upper": 46966.89,
+        "bb_middle": 44623.34,
+        "bb_lower": 42279.78,
+        "atr14": 1239.34,
+        "volume_ma5": 7222620.0
       }
     }
   }
