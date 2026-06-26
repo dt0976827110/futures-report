@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-06-27 06:05 (台灣時間)",
+  "fetch_time": "2026-06-27 06:23 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 18.41,
@@ -31,7 +31,7 @@
       "resistance": 52862.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-27 06:05 (台灣時間)",
+      "timestamp": "2026-06-27 06:23 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-06-22",
@@ -81,7 +81,7 @@
       "resistance": 30022.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-27 06:05 (台灣時間)",
+      "timestamp": "2026-06-27 06:23 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-06-22",
@@ -131,7 +131,7 @@
       "resistance": 44817.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-27 06:05 (台灣時間)",
+      "timestamp": "2026-06-27 06:23 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-06-22",
