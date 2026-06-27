@@ -1,21 +1,21 @@
 {
-  "fetch_time": "2026-06-27 06:23 (台灣時間)",
+  "fetch_time": "2026-06-28 06:23 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 18.41,
-      "change": "-0.22",
+      "change": "-0.48",
       "level": "中",
       "note": "VIX 目前 18.41，市場波動中。"
     },
     "dxy": {
       "value": 101.37,
-      "direction": "↓",
-      "note": "美元指數 101.37，趨勢走弱。"
+      "direction": "↑",
+      "note": "美元指數 101.37，趨勢走強。"
     },
     "oil_brent": {
-      "value": 73.57,
+      "value": 72.6,
       "direction": "↓",
-      "note": "布蘭特原油 73.57 美元，趨勢下跌。"
+      "note": "布蘭特原油 72.6 美元，趨勢下跌。"
     }
   },
   "futures_data": {
@@ -26,12 +26,12 @@
       "currency": "USD",
       "change_points": -130.0,
       "change_percent": -0.25,
-      "volume": "98055",
+      "volume": "113919",
       "support": 51816.0,
       "resistance": 52862.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-27 06:23 (台灣時間)",
+      "timestamp": "2026-06-28 06:23 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-06-22",
@@ -55,18 +55,18 @@
         }
       ],
       "indicators": {
-        "rsi14": 62.01,
+        "rsi14": 62.02,
         "ma5": 52205.6,
         "ma20": 51458.65,
         "ma60": 49992.57,
-        "macd": 564.66,
-        "macd_signal": 522.29,
-        "macd_histogram": 42.37,
+        "macd": 564.68,
+        "macd_signal": 522.32,
+        "macd_histogram": 42.36,
         "bb_upper": 52702.41,
         "bb_middle": 51458.65,
         "bb_lower": 50214.89,
         "atr14": 800.71,
-        "volume_ma5": 95230.0
+        "volume_ma5": 98403.0
       }
     },
     "NQ1": {
@@ -76,12 +76,12 @@
       "currency": "USD",
       "change_points": -356.5,
       "change_percent": -1.2,
-      "volume": "682714",
+      "volume": "657543",
       "support": 29428.0,
       "resistance": 30022.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-27 06:23 (台灣時間)",
+      "timestamp": "2026-06-28 06:23 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-06-22",
@@ -109,14 +109,14 @@
         "ma5": 29785.35,
         "ma20": 29875.83,
         "ma60": 28336.11,
-        "macd": 194.09,
-        "macd_signal": 321.2,
+        "macd": 194.1,
+        "macd_signal": 321.21,
         "macd_histogram": -127.11,
         "bb_upper": 31106.24,
         "bb_middle": 29875.83,
         "bb_lower": 28645.42,
         "atr14": 964.03,
-        "volume_ma5": 660127.0
+        "volume_ma5": 655093.0
       }
     },
     "TXF1": {
@@ -131,7 +131,7 @@
       "resistance": 44817.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-06-27 06:23 (台灣時間)",
+      "timestamp": "2026-06-28 06:23 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-06-22",
