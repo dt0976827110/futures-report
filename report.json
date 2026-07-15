@@ -1,110 +1,110 @@
 {
-  "report_date": "2026-07-15",
-  "report_time": "2026-07-15 08:30 (台灣時間)",
-  "last_update": "2026-07-15 08:30 (台灣時間)",
+  "report_date": "2026-07-16",
+  "report_time": "2026-07-16 08:30 (台灣時間)",
+  "last_update": "2026-07-16 08:30 (台灣時間)",
   "market_sentiment": {
     "vix": {
-      "value": 16.5,
-      "change": "-0.66",
+      "value": 15.67,
+      "change": "-0.83",
       "level": "中",
-      "note": "VIX 下降至 16.5，顯示市場在通膨數據後恐慌情緒有所緩解。"
+      "note": "VIX 目前 15.67，市場波動中。"
     },
     "dxy": {
-      "value": 100.94,
+      "value": 100.5,
       "direction": "↓",
-      "note": "美元指數走弱至 100.94，主要受 CPI 低於預期影響，市場強化降息預期。"
+      "note": "美元指數 100.5，趨勢走弱。"
     },
     "oil_brent": {
-      "value": 85.54,
+      "value": 85.63,
       "direction": "↑",
-      "note": "油價回升至 85.54 美元，反映通膨降溫可能帶動經濟需求增長。"
+      "note": "布蘭特原油 85.63 美元，趨勢上漲。"
     },
     "today_focus": [
-      "中國 Q2 GDP 與 6 月經濟活動數據（預期放緩至 4.6%）",
-      "美國 6 月 PPI 生產者物價指數（預期 YoY 6.3%）",
-      "聯準會 Williams 發表談話，市場關注對 CPI 的解讀"
+      "美國 6 月零售銷售數據 (預期 0.5%)",
+      "每週初請失業金人數 (預期 216K)",
+      "費城聯儲製造業指數與多位美聯儲官員談話"
     ]
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
-      "current_price": 52791.0,
-      "previous_close": 52764.0,
+      "current_price": 52900.0,
+      "previous_close": 52791.0,
       "currency": "USD",
-      "change_points": 27.0,
-      "change_percent": 0.05,
-      "volume": "68290",
-      "support": 52490,
-      "resistance": 53000,
-      "support_basis": "20日均線(MA20)支撐位",
-      "resistance_basis": "整數心理關卡壓力",
-      "timestamp": "2026-07-15 06:22 (台灣時間)"
+      "change_points": 109.0,
+      "change_percent": 0.21,
+      "volume": "73067",
+      "support": 52550,
+      "resistance": 53320,
+      "support_basis": "MA20 均線 52548 附近支撐",
+      "resistance_basis": "布林通道上軌 53467 附近壓力",
+      "timestamp": "2026-07-16 06:05 (台灣時間)"
     },
     "NQ1": {
       "name": "E-迷你那斯達克指數",
-      "current_price": 29790.25,
-      "previous_close": 29475.75,
+      "current_price": 29693.25,
+      "previous_close": 29790.25,
       "currency": "USD",
-      "change_points": 314.5,
-      "change_percent": 1.07,
-      "volume": "431679",
-      "support": 29188,
-      "resistance": 30032,
-      "support_basis": "60日均線(MA60)強支撐",
-      "resistance_basis": "前波高點壓力位",
-      "timestamp": "2026-07-15 06:22 (台灣時間)"
+      "change_points": -97.0,
+      "change_percent": -0.33,
+      "volume": "516287",
+      "support": 29230,
+      "resistance": 30000,
+      "support_basis": "MA60 均線 29235 附近支撐",
+      "resistance_basis": "整數心理關卡與 MA5 壓力",
+      "timestamp": "2026-07-16 06:05 (台灣時間)"
     },
     "TXF1": {
       "name": "台灣加權指數期貨",
-      "current_price": 45015.0,
-      "previous_close": 44815.0,
+      "current_price": 45817.0,
+      "previous_close": 45830.0,
       "currency": "TWD",
-      "change_points": 200.0,
-      "change_percent": 0.45,
-      "volume": "35067",
-      "support": 44248,
-      "resistance": 45701,
-      "support_basis": "布林通道下軌支撐",
-      "resistance_basis": "5日均線(MA5)反壓",
-      "timestamp": "2026-07-15 06:22 (台灣時間)"
+      "change_points": -13.0,
+      "change_percent": -0.03,
+      "volume": "53394",
+      "support": 45340,
+      "resistance": 46010,
+      "support_basis": "MA5 均線 45337 附近支撐",
+      "resistance_basis": "MA20 均線 46008 附近壓力",
+      "timestamp": "2026-07-16 06:05 (台灣時間)"
     }
   },
   "yesterday_analysis": {
     "title": "昨日走勢分析",
     "events": [
       {
-        "title": "美國 6 月 CPI 顯著降溫",
-        "description": "CPI 年增率降至 3.5%，核心 CPI 降至 2.6% 均低於預期，點燃市場對 9 月降息的強烈預期。"
+        "title": "美國 PPI 數據低於預期",
+        "description": "6月PPI年增率降至5.5%，顯示通膨壓力進一步緩解，強化市場對9月降息的期待。"
       },
       {
-        "title": "銀行股財報開紅盤",
-        "description": "摩根大通利潤創歷史新高，提振市場對 Q2 財報季的信心，帶動價值股與金融板塊走強。"
+        "title": "中國經濟增長放緩",
+        "description": "Q2 GDP 增長 4.3% 低於預期，房地產疲軟抵消了工業生產的微幅回升。"
       }
     ],
     "economic_data": [
       {
-        "indicator": "美國 6 月 CPI (YoY)",
-        "actual": "3.5%",
-        "forecast": "3.8%",
-        "previous": "4.2%",
+        "indicator": "US PPI MoM (Jun)",
+        "actual": "-0.3%",
+        "forecast": "0%",
+        "previous": "0.6%",
         "impact": "正面",
-        "note": "顯著降溫，降息預期升溫"
+        "note": "通膨降溫超預期"
       },
       {
-        "indicator": "美國 6 月核心 CPI (YoY)",
-        "actual": "2.6%",
-        "forecast": "2.8%",
-        "previous": "2.9%",
-        "impact": "正面",
-        "note": "核心通膨壓力緩解"
+        "indicator": "China GDP YoY (Q2)",
+        "actual": "4.3%",
+        "forecast": "4.5%",
+        "previous": "5%",
+        "impact": "負面",
+        "note": "增長動力不足"
       },
       {
-        "indicator": "美國 6 月 CPI (MoM)",
-        "actual": "-0.4%",
-        "forecast": "-0.1%",
-        "previous": "0.5%",
+        "indicator": "US Core PPI MoM (Jun)",
+        "actual": "0.2%",
+        "forecast": "0.4%",
+        "previous": "0.1%",
         "impact": "正面",
-        "note": "出現通縮跡象，利好風險資產"
+        "note": "核心通膨受控"
       }
     ]
   },
@@ -114,11 +114,11 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "受銀行股強勁財報與通膨降溫雙重利好，道瓊指數展現韌性，資金流向價值股。"
+          "detail": "PPI 數據利好帶動傳統藍籌股走強，美元指數 DXY 走弱至 100.5 亦提供支撐。"
         },
         {
           "title": "技術面分析",
-          "detail": "站穩 MA5 (52769) 與 MA20 (52490) 之上，RSI14 為 59.91 接近強勢區，短線偏多。"
+          "detail": "價格站穩 MA5 (52824) 之上，RSI 為 61.19 處於強勢區，MACD 柱狀體雖為負值但有收斂跡象。"
         }
       ]
     },
@@ -127,11 +127,11 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "通膨數據低於預期令美債收益率下滑，直接提振科技股動能，小那指強勢反彈 1.07%。"
+          "detail": "半導體板塊出現獲利回吐壓力，抵消了降息預期的利多，科技股整體走勢疲軟。"
         },
         {
           "title": "技術面分析",
-          "detail": "重回 MA5 之上，RSI14 回升至 50.96，MACD 柱狀體負值縮小 ( -59.99 )，跌勢趨緩。"
+          "detail": "跌破 MA5 與 MA20 支撐，RSI 回落至 50.03 中性水位，布林通道中軌 (29841) 轉為壓力。"
         }
       ]
     },
@@ -140,105 +140,111 @@
       "points": [
         {
           "title": "基本面驅動因素",
-          "detail": "美股科技股反彈帶動台指期夜盤走強，市場靜待中國 GDP 數據對亞洲市場的指引。"
+          "detail": "受美股科技股走弱拖累，台指期開盤後表現平淡，維持在平盤附近震盪。"
         },
         {
           "title": "技術面分析",
-          "detail": "回測布林下軌 44248 後止跌，目前仍受制於 MA5 (45701) 反壓，處於弱勢反彈格局。"
+          "detail": "處於 MA5 與 MA20 之間震盪，MACD 柱狀體擴大至 -320.19 顯示空頭動能較強。"
         }
       ]
     }
   },
   "today_probability": {
     "title": "今日走勢機率評估",
-    "summary": "通膨數據利好效應持續，市場情緒轉向樂觀，但需留意高位獲利回吐壓力。",
+    "summary": "通膨降溫支撐道瓊，科技股獲利回吐壓抑那指，整體市場呈現分化格局。",
     "YM1": {
-      "up_probability": "60%",
-      "down_probability": "40%",
-      "analysis": "站穩所有短期均線，且 RSI 59.91 具備向上動能，MACD 柱狀體雖負但有收斂跡象。",
-      "key_level": "53000 整數關卡若突破，將開啟新一波漲勢。"
+      "up_probability": "65%",
+      "down_probability": "35%",
+      "analysis": "RSI 61.19 顯示動能仍偏多，且價格高於所有主要均線 (MA5, MA20, MA60)。",
+      "key_level": "53319 (前高壓力位)"
     },
     "NQ1": {
-      "up_probability": "55%",
-      "down_probability": "45%",
-      "analysis": "受益於收益率下滑，科技股買盤回流，RSI 回到 50 以上中性偏強。",
-      "key_level": "29884 (MA20) 為關鍵壓力，站回後方可確立轉強。"
+      "up_probability": "45%",
+      "down_probability": "55%",
+      "analysis": "RSI 50.03 轉趨中性，MACD 訊號線死叉向下，短線回測 MA60 (29235) 機率高。",
+      "key_level": "29841 (MA20 壓力)"
     },
     "TXF1": {
-      "up_probability": "50%",
-      "down_probability": "50%",
-      "analysis": "夜盤跟漲美股，但日盤仍需面對 MA5 與 MA20 的沈重反壓，RSI 50.92 處於多空分界。",
-      "key_level": "45701 (MA5) 若能站穩，才有機會挑戰 46000 壓力。"
+      "up_probability": "48%",
+      "down_probability": "52%",
+      "analysis": "MACD 柱狀體負值擴大，且 RSI 47.07 低於 50，技術面偏弱震盪。",
+      "key_level": "46008 (MA20 壓力)"
     }
   },
   "operation_level": {
     "rating": "中等風險",
-    "position_size": "正常倉位",
-    "reason": "通膨利好確立，市場波動率 VIX 下降，趨勢由空轉向震盪偏多。"
+    "position_size": "減半倉位",
+    "reason": "市場板塊分化明顯，那指回檔壓力未除，建議等待零售數據確認消費力道。"
   },
   "investment_advice": {
     "short_term_strategy": [
-      "YM1：於 52700-52800 建立多單，停損設於 52500。",
-      "NQ1：回測 29600 附近做多，目標 30000，停損 29400。",
-      "TXF1：若站上 45200 可短多，目標 45700，停損 44900。",
-      "整體建議：分批布局多單，關注 PPI 數據是否持續印證通膨降溫。"
+      "道瓊 YM1 建議在 52600 附近逢低佈局多單",
+      "那指 NQ1 若反彈至 29850 無力可考慮避險空單",
+      "台指期 TXF1 於 45500 附近觀察 MA5 支撐力度",
+      "零售數據公佈前保持觀望，避免數據洗盤"
     ],
     "trading_opportunities": [
-      "YM1：若突破 53000 可加碼多單。",
-      "NQ1：若站回 MA20 (29884) 視為強勢訊號。",
-      "TXF1：若開盤跳空站上 MA5，可順勢做多。",
-      "DXY 走弱利好非美貨幣，可留意台幣匯率與台指期連動。"
+      "YM1 突破 53000 後可追多至 53300",
+      "NQ1 跌破 29600 則看至 29250",
+      "TXF1 區間操作 45400 - 45900",
+      "美元指數走弱有利於非美貨幣期貨表現"
     ],
     "risk_avoidance": [
-      "留意 PPI 數據若意外走高，可能引發短線利多出盡賣壓。",
-      "中國 GDP 數據若大幅差於預期，恐拖累亞洲盤勢。",
-      "嚴格執行移動停利，保護已獲利部位。",
-      "避開在高位壓力區盲目追價。"
+      "嚴格執行 1% 總資金停損限制",
+      "避免在那指回檔初期盲目抄底",
+      "注意地緣政治引發的油價波動風險",
+      "零售數據若遠超預期可能引發通膨擔憂"
     ],
     "position_allocation": [
-      "權益類資產配置提升至 60%。",
-      "道瓊期貨 (YM1) 佔比 25%，那指 (NQ1) 佔比 20%。",
-      "台指期 (TXF1) 佔比 15%，維持靈活調整。",
-      "現金儲備維持 40%，以利在回檔時加碼。"
+      "指數期貨配置比例建議為 30%",
+      "道瓊多單可佔期貨倉位之 50%",
+      "那指空單對沖比例建議為 20%",
+      "現金水位維持在 50% 以上以應對波動"
     ]
   },
   "conclusion": {
-    "summary": "通膨警報解除，市場進入數據利好後的修復期，操作轉向積極但需控制節奏。",
+    "summary": "通膨降溫利多已部分反映，市場焦點轉向經濟增長韌性與企業獲利。",
     "points": [
       {
-        "title": "通膨降溫確立降息預期",
-        "detail": "6 月 CPI 數據全線低於預期，9 月降息已成市場共識，對風險資產形成強力支撐。"
+        "title": "道瓊指數相對強勢",
+        "detail": "在降息預期與通膨降溫背景下，資金由科技股流向價值股與藍籌股。"
       },
       {
-        "title": "財報季開局強勁",
-        "detail": "銀行龍頭財報亮眼，顯示美國實體經濟與金融體系依然穩健，支撐指數高位運行。"
+        "title": "科技股面臨修正",
+        "detail": "那斯達克受指標股回檔影響，短期技術面轉弱，需時間消化浮額。"
       }
     ],
-    "advice": "建議在回檔支撐位積極布局多單，重點關注科技股的反彈動能與 PPI 數據表現。"
+    "advice": "操作上宜採『強者恆強』策略，優先關注道瓊，對那指保持謹慎。"
   },
   "news": [
     {
-      "title": "美國 CPI 意外降溫，9 月降息預期飆升",
-      "description": "6 月 CPI 降至 3.5%，市場預期聯準會最快 9 月降息，美元走弱。",
+      "title": "美 6 月 PPI 年增 5.5% 低於預期",
+      "description": "通膨壓力顯著減輕，聯準會 9 月降息機率升至 80% 以上。",
       "impact": "高",
       "timestamp": "2026-07-15 (台灣時間)"
     },
     {
-      "title": "摩根大通利潤創紀錄，銀行股領漲",
-      "description": "JPM 第二季利潤大增 41%，投資銀行業務復甦，提振市場信心。",
+      "title": "中 Q2 GDP 增長 4.3% 遜於預期",
+      "description": "顯示內需疲軟，市場期待政府出台更多刺激政策。",
+      "impact": "中",
+      "timestamp": "2026-07-15 (台灣時間)"
+    },
+    {
+      "title": "Williams：通膨正朝目標邁進",
+      "description": "美聯儲官員談話釋放鴿派訊號，支撐市場情緒。",
+      "impact": "中",
+      "timestamp": "2026-07-15 (台灣時間)"
+    },
+    {
+      "title": "EIA 原油庫存意外下降",
+      "description": "庫存減少 169 萬桶，布蘭特原油站穩 85 美元關卡。",
+      "impact": "中",
+      "timestamp": "2026-07-15 (台灣時間)"
+    },
+    {
+      "title": "半導體板塊集體回檔",
+      "description": "受地緣政治與財測影響，科技股短線承壓。",
       "impact": "高",
-      "timestamp": "2026-07-15 (台灣時間)"
-    },
-    {
-      "title": "今日關注美國 PPI 數據",
-      "description": "PPI 將進一步揭示生產端通膨壓力，若持續放緩將強化通膨降溫論點。",
-      "impact": "中",
-      "timestamp": "2026-07-15 (台灣時間)"
-    },
-    {
-      "title": "中國 Q2 GDP 數據今日揭曉",
-      "description": "市場預期中國第二季經濟增速將放緩，關注其對亞太市場的影響。",
-      "impact": "中",
       "timestamp": "2026-07-15 (台灣時間)"
     }
   ],
@@ -246,19 +252,19 @@
     "title": "風險提示",
     "items": [
       {
-        "title": "PPI 數據意外走高",
-        "detail": "若生產者物價指數反彈，將引發市場對通膨反覆的擔憂。",
-        "impact_if_triggered": "美債收益率回升，科技股反彈受阻。"
+        "title": "消費支出不及預期",
+        "detail": "若今日零售數據疲軟，市場將由『通膨降溫』轉向『衰退擔憂』。",
+        "impact_if_triggered": "三大期貨可能同步出現較大幅度修正。"
       },
       {
-        "title": "中國經濟增長低於預期",
-        "detail": "若 GDP 增速大幅跌破 4.5%，恐引發全球對需求放緩的憂慮。",
-        "impact_if_triggered": "台指期與亞洲股市面臨沈重賣壓。"
+        "title": "美元反彈風險",
+        "detail": "若美債收益率回升帶動美元反彈，將壓抑大宗商品與股市。",
+        "impact_if_triggered": "YM1 與 NQ1 上漲動能將受限。"
       },
       {
-        "title": "獲利回吐壓力",
-        "detail": "市場在利多消息後可能出現「利多出盡」的短線賣盤。",
-        "impact_if_triggered": "指數在高位出現長上影線或黑 K 吞噬。"
+        "title": "地緣政治升溫",
+        "detail": "中東或貿易爭端突發事件可能引發市場避險情緒。",
+        "impact_if_triggered": "VIX 飆升，股市波動加劇。"
       }
     ]
   }
