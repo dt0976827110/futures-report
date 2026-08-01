@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-08-01 06:26 (台灣時間)",
+  "fetch_time": "2026-08-02 06:24 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 15.99,
@@ -26,12 +26,12 @@
       "currency": "USD",
       "change_points": 255.0,
       "change_percent": 0.49,
-      "volume": "146075",
+      "volume": "97296",
       "support": 51856.0,
       "resistance": 52904.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-01 06:26 (台灣時間)",
+      "timestamp": "2026-08-02 06:24 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-07-27",
@@ -66,7 +66,7 @@
         "bb_middle": 52578.25,
         "bb_lower": 51770.22,
         "atr14": 668.07,
-        "volume_ma5": 115451.0
+        "volume_ma5": 105695.0
       }
     },
     "NQ1": {
@@ -76,12 +76,12 @@
       "currency": "USD",
       "change_points": 166.5,
       "change_percent": 0.59,
-      "volume": "815515",
+      "volume": "737532",
       "support": 27955.0,
       "resistance": 28520.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-01 06:26 (台灣時間)",
+      "timestamp": "2026-08-02 06:24 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-07-27",
@@ -116,7 +116,7 @@
         "bb_middle": 29000.17,
         "bb_lower": 27518.33,
         "atr14": 715.89,
-        "volume_ma5": 698991.0
+        "volume_ma5": 683395.0
       }
     },
     "TXF1": {
@@ -131,7 +131,7 @@
       "resistance": 44115.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-01 06:26 (台灣時間)",
+      "timestamp": "2026-08-02 06:24 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-07-27",
@@ -155,18 +155,18 @@
         }
       ],
       "indicators": {
-        "rsi14": 31.23,
-        "ma5": 41772.97,
-        "ma20": 44295.98,
-        "ma60": 44056.07,
-        "macd": -970.3,
-        "macd_signal": -381.85,
-        "macd_histogram": -588.45,
-        "bb_upper": 48262.88,
-        "bb_middle": 44295.98,
-        "bb_lower": 40329.09,
-        "atr14": 1471.43,
-        "volume_ma5": 5064220.0
+        "rsi14": 47.35,
+        "ma5": 41665.96,
+        "ma20": 44114.76,
+        "ma60": 44089.08,
+        "macd": -876.93,
+        "macd_signal": -480.87,
+        "macd_histogram": -396.07,
+        "bb_upper": 47946.58,
+        "bb_middle": 44114.76,
+        "bb_lower": 40282.94,
+        "atr14": 1630.22,
+        "volume_ma5": 5168580.0
       }
     }
   }
