@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-08-16 06:30 (台灣時間)",
+  "fetch_time": "2026-08-17 06:33 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 14.25,
@@ -13,30 +13,26 @@
       "note": "美元指數 99.64，趨勢走弱。"
     },
     "oil_brent": {
-      "value": 88.52,
+      "value": 88.79,
       "direction": "↑",
-      "note": "布蘭特原油 88.52 美元，趨勢上漲。"
+      "note": "布蘭特原油 88.79 美元，趨勢上漲。"
     }
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
       "current_price": 53807.0,
-      "previous_close": 53935.0,
+      "previous_close": 53807.0,
       "currency": "USD",
-      "change_points": -128.0,
-      "change_percent": -0.24,
+      "change_points": 0.0,
+      "change_percent": 0.0,
       "volume": "51904",
-      "support": 53396.0,
-      "resistance": 54474.0,
+      "support": 53269.0,
+      "resistance": 54345.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-16 06:30 (台灣時間)",
+      "timestamp": "2026-08-17 06:33 (台灣時間)",
       "five_day_history": [
-        {
-          "date": "2026-08-10",
-          "close": 54063.0
-        },
         {
           "date": "2026-08-11",
           "close": 53880.0
@@ -52,41 +48,41 @@
         {
           "date": "2026-08-14",
           "close": 53807.0
+        },
+        {
+          "date": "2026-08-14",
+          "close": 53807.0
         }
       ],
       "indicators": {
         "rsi14": 58.15,
-        "ma5": 53911.2,
-        "ma20": 53145.3,
-        "ma60": 52246.68,
-        "macd": 465.29,
-        "macd_signal": 436.01,
-        "macd_histogram": 29.28,
-        "bb_upper": 54932.06,
-        "bb_middle": 53145.3,
-        "bb_lower": 51358.54,
-        "atr14": 666.93,
-        "volume_ma5": 50477.0
+        "ma5": 53860.0,
+        "ma20": 53232.0,
+        "ma60": 52308.57,
+        "macd": 442.15,
+        "macd_signal": 437.24,
+        "macd_histogram": 4.91,
+        "bb_upper": 54969.83,
+        "bb_middle": 53232.0,
+        "bb_lower": 51494.17,
+        "atr14": 637.5,
+        "volume_ma5": 49791.0
       }
     },
     "NQ1": {
       "name": "E-迷你那斯達克指數",
       "current_price": 30141.75,
-      "previous_close": 30188.5,
+      "previous_close": 30141.75,
       "currency": "USD",
-      "change_points": -46.75,
-      "change_percent": -0.15,
+      "change_points": 0.0,
+      "change_percent": 0.0,
       "volume": "460408",
-      "support": 29887.0,
-      "resistance": 30490.0,
+      "support": 29840.0,
+      "resistance": 30443.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-16 06:30 (台灣時間)",
+      "timestamp": "2026-08-17 06:33 (台灣時間)",
       "five_day_history": [
-        {
-          "date": "2026-08-10",
-          "close": 29737.0
-        },
         {
           "date": "2026-08-11",
           "close": 29626.0
@@ -102,21 +98,25 @@
         {
           "date": "2026-08-14",
           "close": 30141.75
+        },
+        {
+          "date": "2026-08-14",
+          "close": 30141.75
         }
       ],
       "indicators": {
         "rsi14": 59.05,
-        "ma5": 29909.3,
-        "ma20": 29075.74,
-        "ma60": 29563.51,
-        "macd": 206.41,
-        "macd_signal": 31.06,
-        "macd_histogram": 175.35,
-        "bb_upper": 30668.16,
-        "bb_middle": 29075.74,
-        "bb_lower": 27483.32,
-        "atr14": 639.29,
-        "volume_ma5": 450567.0
+        "ma5": 29990.25,
+        "ma20": 29143.89,
+        "ma60": 29576.03,
+        "macd": 234.96,
+        "macd_signal": 71.84,
+        "macd_histogram": 163.12,
+        "bb_upper": 30795.21,
+        "bb_middle": 29143.89,
+        "bb_lower": 27492.57,
+        "atr14": 598.59,
+        "volume_ma5": 436419.0
       }
     },
     "TXF1": {
@@ -131,7 +131,7 @@
       "resistance": 46299.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-16 06:30 (台灣時間)",
+      "timestamp": "2026-08-17 06:33 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-08-10",
