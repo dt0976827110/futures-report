@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-08-19 06:05 (台灣時間)",
+  "fetch_time": "2026-08-19 06:22 (台灣時間)",
   "market_sentiment": {
     "vix": {
       "value": 15.84,
@@ -8,14 +8,14 @@
       "note": "VIX 目前 15.84，市場波動中。"
     },
     "dxy": {
-      "value": 99.66,
+      "value": 99.64,
       "direction": "↑",
-      "note": "美元指數 99.66，趨勢走強。"
+      "note": "美元指數 99.64，趨勢走強。"
     },
     "oil_brent": {
-      "value": 91.27,
+      "value": 91.37,
       "direction": "↑",
-      "note": "布蘭特原油 91.27 美元，趨勢上漲。"
+      "note": "布蘭特原油 91.37 美元，趨勢上漲。"
     }
   },
   "futures_data": {
@@ -31,7 +31,7 @@
       "resistance": 54079.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-19 06:05 (台灣時間)",
+      "timestamp": "2026-08-19 06:22 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-08-12",
@@ -81,7 +81,7 @@
       "resistance": 30397.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-19 06:05 (台灣時間)",
+      "timestamp": "2026-08-19 06:22 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-08-12",
@@ -131,7 +131,7 @@
       "resistance": 45536.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-19 06:05 (台灣時間)",
+      "timestamp": "2026-08-19 06:22 (台灣時間)",
       "five_day_history": [
         {
           "date": "2026-08-12",
@@ -155,17 +155,17 @@
         }
       ],
       "indicators": {
-        "rsi14": 57.47,
+        "rsi14": 58.5,
         "ma5": 45665.71,
-        "ma20": 43885.01,
-        "ma60": 44566.47,
-        "macd": 340.95,
-        "macd_signal": -10.99,
-        "macd_histogram": 351.94,
-        "bb_upper": 47409.17,
-        "bb_middle": 43885.01,
-        "bb_lower": 40360.86,
-        "atr14": 1269.02,
+        "ma20": 43956.63,
+        "ma60": 44743.37,
+        "macd": 380.72,
+        "macd_signal": 25.03,
+        "macd_histogram": 355.69,
+        "bb_upper": 47333.81,
+        "bb_middle": 43956.63,
+        "bb_lower": 40579.46,
+        "atr14": 1152.22,
         "volume_ma5": 5276220.0
       }
     }
