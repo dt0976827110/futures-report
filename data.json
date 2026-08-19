@@ -1,42 +1,38 @@
 {
-  "fetch_time": "2026-08-19 06:22 (台灣時間)",
+  "fetch_time": "2026-08-20 06:05 (台灣時間)",
   "market_sentiment": {
     "vix": {
-      "value": 15.84,
-      "change": "+0.65",
-      "level": "中",
-      "note": "VIX 目前 15.84，市場波動中。"
+      "value": 14.89,
+      "change": "-0.95",
+      "level": "低",
+      "note": "VIX 目前 14.89，市場波動低。"
     },
     "dxy": {
-      "value": 99.64,
-      "direction": "↑",
-      "note": "美元指數 99.64，趨勢走強。"
+      "value": 98.78,
+      "direction": "↓",
+      "note": "美元指數 98.78，趨勢走弱。"
     },
     "oil_brent": {
-      "value": 91.37,
-      "direction": "↑",
-      "note": "布蘭特原油 91.37 美元，趨勢上漲。"
+      "value": 91.57,
+      "direction": "↓",
+      "note": "布蘭特原油 91.57 美元，趨勢下跌。"
     }
   },
   "futures_data": {
     "YM1": {
       "name": "E-迷你道瓊指數",
-      "current_price": 53403.0,
-      "previous_close": 53544.0,
+      "current_price": 53530.0,
+      "previous_close": 53403.0,
       "currency": "USD",
-      "change_points": -141.0,
-      "change_percent": -0.26,
-      "volume": "45129",
-      "support": 53009.0,
-      "resistance": 54079.0,
+      "change_points": 127.0,
+      "change_percent": 0.24,
+      "volume": "51164",
+      "support": 52869.0,
+      "resistance": 53937.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-19 06:22 (台灣時間)",
+      "timestamp": "2026-08-20 06:05 (台灣時間)",
       "five_day_history": [
-        {
-          "date": "2026-08-12",
-          "close": 53871.0
-        },
         {
           "date": "2026-08-13",
           "close": 53935.0
@@ -52,41 +48,41 @@
         {
           "date": "2026-08-18",
           "close": 53403.0
+        },
+        {
+          "date": "2026-08-19",
+          "close": 53530.0
         }
       ],
       "indicators": {
-        "rsi14": 52.57,
-        "ma5": 53712.0,
-        "ma20": 53266.85,
-        "ma60": 52354.58,
-        "macd": 370.55,
-        "macd_signal": 420.54,
-        "macd_histogram": -49.99,
-        "bb_upper": 54955.01,
-        "bb_middle": 53266.85,
-        "bb_lower": 51578.69,
-        "atr14": 606.14,
-        "volume_ma5": 47558.0
+        "rsi14": 54.14,
+        "ma5": 53643.8,
+        "ma20": 53320.9,
+        "ma60": 52402.38,
+        "macd": 336.82,
+        "macd_signal": 403.81,
+        "macd_histogram": -67.0,
+        "bb_upper": 54969.62,
+        "bb_middle": 53320.9,
+        "bb_lower": 51672.18,
+        "atr14": 526.14,
+        "volume_ma5": 49203.0
       }
     },
     "NQ1": {
       "name": "E-迷你那斯達克指數",
-      "current_price": 29586.0,
-      "previous_close": 30096.0,
+      "current_price": 29512.75,
+      "previous_close": 29586.0,
       "currency": "USD",
-      "change_points": -510.0,
-      "change_percent": -1.69,
-      "volume": "405685",
-      "support": 29795.0,
-      "resistance": 30397.0,
+      "change_points": -73.25,
+      "change_percent": -0.25,
+      "volume": "404828",
+      "support": 29290.0,
+      "resistance": 29882.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-19 06:22 (台灣時間)",
+      "timestamp": "2026-08-20 06:05 (台灣時間)",
       "five_day_history": [
-        {
-          "date": "2026-08-12",
-          "close": 29853.25
-        },
         {
           "date": "2026-08-13",
           "close": 30188.5
@@ -102,41 +98,41 @@
         {
           "date": "2026-08-18",
           "close": 29586.0
+        },
+        {
+          "date": "2026-08-19",
+          "close": 29512.75
         }
       ],
       "indicators": {
-        "rsi14": 51.73,
-        "ma5": 29973.1,
-        "ma20": 29155.1,
-        "ma60": 29577.58,
-        "macd": 207.49,
-        "macd_signal": 98.37,
-        "macd_histogram": 109.12,
-        "bb_upper": 30810.9,
-        "bb_middle": 29155.1,
-        "bb_lower": 27499.3,
-        "atr14": 574.59,
-        "volume_ma5": 427733.0
+        "rsi14": 50.84,
+        "ma5": 29905.0,
+        "ma20": 29171.67,
+        "ma60": 29576.81,
+        "macd": 180.63,
+        "macd_signal": 114.83,
+        "macd_histogram": 65.8,
+        "bb_upper": 30834.81,
+        "bb_middle": 29171.67,
+        "bb_lower": 27508.54,
+        "atr14": 548.2,
+        "volume_ma5": 417656.0
       }
     },
     "TXF1": {
       "name": "台灣加權指數期貨",
-      "current_price": 44527.0,
-      "previous_close": 45085.0,
+      "current_price": 44802.0,
+      "previous_close": 44612.0,
       "currency": "TWD",
-      "change_points": -558.0,
-      "change_percent": -1.24,
-      "volume": "28126",
-      "support": 44634.0,
-      "resistance": 45536.0,
+      "change_points": 190.0,
+      "change_percent": 0.43,
+      "volume": "41519",
+      "support": 44166.0,
+      "resistance": 45058.0,
       "support_basis": "前收盤價 -1% 估算",
       "resistance_basis": "前收盤價 +1% 估算",
-      "timestamp": "2026-08-19 06:22 (台灣時間)",
+      "timestamp": "2026-08-20 06:05 (台灣時間)",
       "five_day_history": [
-        {
-          "date": "2026-08-12",
-          "close": 45528.0
-        },
         {
           "date": "2026-08-13",
           "close": 46005.0
@@ -152,21 +148,25 @@
         {
           "date": "2026-08-18",
           "close": 45085.0
+        },
+        {
+          "date": "2026-08-19",
+          "close": 44612.0
         }
       ],
       "indicators": {
-        "rsi14": 58.5,
-        "ma5": 45665.71,
-        "ma20": 43956.63,
-        "ma60": 44743.37,
-        "macd": 380.72,
-        "macd_signal": 25.03,
-        "macd_histogram": 355.69,
-        "bb_upper": 47333.81,
-        "bb_middle": 43956.63,
-        "bb_lower": 40579.46,
-        "atr14": 1152.22,
-        "volume_ma5": 5276220.0
+        "rsi14": 54.15,
+        "ma5": 45703.3,
+        "ma20": 43869.2,
+        "ma60": 44652.03,
+        "macd": 350.42,
+        "macd_signal": 61.29,
+        "macd_histogram": 289.13,
+        "bb_upper": 47364.7,
+        "bb_middle": 43869.2,
+        "bb_lower": 40373.69,
+        "atr14": 1181.13,
+        "volume_ma5": 5179180.0
       }
     }
   }
