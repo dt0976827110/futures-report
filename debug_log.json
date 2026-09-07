@@ -1,21 +1,21 @@
 {
-  "fetch_time": "2026-09-07 06:30 (台灣時間)",
+  "fetch_time": "2026-09-08 06:36 (台灣時間)",
   "YMNQ_data": {
     "YM1_close": 53440,
     "NQ1_close": 29565.25,
     "last_update": "2026-09-04T21:01:15.285Z"
   },
   "VIX": {
-    "regularMarketPrice": 14.53,
-    "chartPreviousClose": 14.32,
-    "previousClose": 14.32
+    "regularMarketPrice": 15.3,
+    "chartPreviousClose": 14.53,
+    "previousClose": 14.53
   },
   "DXY": {
-    "regularMarketPrice": 99.162,
+    "regularMarketPrice": 99.176,
     "previousClose": 99.176
   },
   "OIL": {
-    "regularMarketPrice": 96.28,
+    "regularMarketPrice": 97.29,
     "previousClose": 96.28
   },
   "YM=F": {
@@ -66,9 +66,9 @@
         "volume": 71095
       },
       {
-        "date": "2026-09-06 22:19",
-        "close": 53440.0,
-        "volume": 159
+        "date": "2026-09-07 22:26",
+        "close": 53130.0,
+        "volume": 11123
       }
     ],
     "ymnq_close_used": 53440
@@ -121,18 +121,14 @@
         "volume": 539285
       },
       {
-        "date": "2026-09-06 22:20",
-        "close": 29565.25,
-        "volume": 2429
+        "date": "2026-09-07 22:26",
+        "close": 29555.25,
+        "volume": 90746
       }
     ],
     "ymnq_close_used": 29565.25
   },
   "TXF1_five_day_raw": [
-    {
-      "date": "2026-08-31",
-      "close": 45983.0
-    },
     {
       "date": "2026-09-01",
       "close": 47209.0
@@ -148,31 +144,35 @@
     {
       "date": "2026-09-04",
       "close": 46704.0
+    },
+    {
+      "date": "2026-09-07",
+      "close": 47470.0
     }
   ],
   "TXF1_taifex": {
     "raw_cols": [
       "TX",
       "202609",
-      "46622",
-      "47236",
-      "46560",
-      "47182",
-      "▲473",
-      "▲1.01%",
-      "33845",
+      "47513",
+      "47536",
+      "47251",
+      "47329",
+      "▼-133",
+      "▼-0.28%",
+      "9784",
       "-",
       "-",
-      "47178"
+      "47328"
     ],
     "parsed": {
-      "current": 47182.0,
-      "prev": 46704.0,
-      "change_pts": 478.0,
-      "change_pct": 1.02,
-      "taifex_change_pts": 473.0,
-      "taifex_change_pct": 1.01,
-      "volume": "33845",
+      "current": 47329.0,
+      "prev": 47470.0,
+      "change_pts": -141.0,
+      "change_pct": -0.3,
+      "taifex_change_pts": 133.0,
+      "taifex_change_pct": 0.28,
+      "volume": "9784",
       "note": "prev 改用 five_day_history[-1]，不再用 TAIFEX 漲跌點反推"
     }
   },
