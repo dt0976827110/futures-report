@@ -1,30 +1,25 @@
 {
-  "fetch_time": "2026-09-09 06:30 (台灣時間)",
+  "fetch_time": "2026-09-10 06:05 (台灣時間)",
   "YMNQ_data": {
-    "YM1_close": 52832,
-    "NQ1_close": 29538.75,
-    "last_update": "2026-09-08T21:01:12.022Z"
+    "YM1_close": 52425,
+    "NQ1_close": 29448.75,
+    "last_update": "2026-09-09T21:01:09.443Z"
   },
   "VIX": {
-    "regularMarketPrice": 15.72,
-    "chartPreviousClose": 14.53,
-    "previousClose": 14.53
+    "regularMarketPrice": 16.46,
+    "chartPreviousClose": 15.72,
+    "previousClose": 15.72
   },
   "DXY": {
-    "regularMarketPrice": 98.836,
-    "previousClose": 99.176
+    "regularMarketPrice": 98.772,
+    "previousClose": 98.787
   },
   "OIL": {
-    "regularMarketPrice": 99.5,
-    "previousClose": 97.92
+    "regularMarketPrice": 101.63,
+    "previousClose": 101.21
   },
   "YM=F": {
     "last_10_closes": [
-      {
-        "date": "2026-08-25 04:00",
-        "close": 53645.0,
-        "volume": 53250
-      },
       {
         "date": "2026-08-26 04:00",
         "close": 53521.0,
@@ -66,20 +61,20 @@
         "volume": 62511
       },
       {
-        "date": "2026-09-08 22:19",
-        "close": 52818.0,
-        "volume": 122
+        "date": "2026-09-08 04:00",
+        "close": 52832.0,
+        "volume": 62511
+      },
+      {
+        "date": "2026-09-09 04:00",
+        "close": 52473.0,
+        "volume": 69170
       }
     ],
-    "ymnq_close_used": 52832
+    "ymnq_close_used": 52425
   },
   "NQ=F": {
     "last_10_closes": [
-      {
-        "date": "2026-08-25 04:00",
-        "close": 29276.75,
-        "volume": 487191
-      },
       {
         "date": "2026-08-26 04:00",
         "close": 29289.5,
@@ -121,18 +116,19 @@
         "volume": 472983
       },
       {
-        "date": "2026-09-08 22:20",
-        "close": 29523.5,
-        "volume": 2016
+        "date": "2026-09-08 04:00",
+        "close": 29538.75,
+        "volume": 0
+      },
+      {
+        "date": "2026-09-09 04:00",
+        "close": 29460.0,
+        "volume": 492284
       }
     ],
-    "ymnq_close_used": 29538.75
+    "ymnq_close_used": 29448.75
   },
   "TXF1_five_day_raw": [
-    {
-      "date": "2026-09-02",
-      "close": 46189.0
-    },
     {
       "date": "2026-09-03",
       "close": 45837.0
@@ -148,40 +144,40 @@
     {
       "date": "2026-09-08",
       "close": 46980.0
+    },
+    {
+      "date": "2026-09-09",
+      "close": 47187.0
     }
   ],
   "TXF1_taifex": {
     "raw_cols": [
       "TX",
       "202609",
-      "46855",
-      "47273",
-      "46561",
-      "47055",
-      "▲100",
-      "▲0.21%",
-      "31998",
+      "47214",
+      "47295",
+      "46747",
+      "46984",
+      "▼-194",
+      "▼-0.41%",
+      "31951",
       "-",
       "-",
-      "47045"
+      "46983"
     ],
     "parsed": {
-      "current": 47055.0,
-      "prev": 46980.0,
-      "change_pts": 75.0,
-      "change_pct": 0.16,
-      "taifex_change_pts": 100.0,
-      "taifex_change_pct": 0.21,
-      "volume": "31998",
+      "current": 46984.0,
+      "prev": 47187.0,
+      "change_pts": -203.0,
+      "change_pct": -0.43,
+      "taifex_change_pts": 194.0,
+      "taifex_change_pct": 0.41,
+      "volume": "31951",
       "note": "prev 改用 five_day_history[-1]，不再用 TAIFEX 漲跌點反推"
     }
   },
   "TWII": {
     "last_10_closes": [
-      {
-        "date": "2026-08-25 01:00",
-        "close": 45169.46
-      },
       {
         "date": "2026-08-26 01:00",
         "close": 45832.62
@@ -217,6 +213,10 @@
       {
         "date": "2026-09-07 01:00",
         "close": 47326.27
+      },
+      {
+        "date": "2026-09-08 01:00",
+        "close": 47105.78
       }
     ]
   }
