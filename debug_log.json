@@ -1,5 +1,5 @@
 {
-  "fetch_time": "2026-09-10 06:05 (台灣時間)",
+  "fetch_time": "2026-09-10 06:28 (台灣時間)",
   "YMNQ_data": {
     "YM1_close": 52425,
     "NQ1_close": 29448.75,
@@ -11,11 +11,11 @@
     "previousClose": 15.72
   },
   "DXY": {
-    "regularMarketPrice": 98.772,
+    "regularMarketPrice": 98.783,
     "previousClose": 98.787
   },
   "OIL": {
-    "regularMarketPrice": 101.63,
+    "regularMarketPrice": 102.14,
     "previousClose": 101.21
   },
   "YM=F": {
@@ -67,8 +67,8 @@
       },
       {
         "date": "2026-09-09 04:00",
-        "close": 52473.0,
-        "volume": 69170
+        "close": 52481.0,
+        "volume": 204
       }
     ],
     "ymnq_close_used": 52425
@@ -122,8 +122,8 @@
       },
       {
         "date": "2026-09-09 04:00",
-        "close": 29460.0,
-        "volume": 492284
+        "close": 29426.0,
+        "volume": 2379
       }
     ],
     "ymnq_close_used": 29448.75
